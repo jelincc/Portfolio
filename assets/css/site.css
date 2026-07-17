@@ -24,8 +24,8 @@
   --radius-lg:   28px;
   --radius-md:   18px;
   --radius-sm:   12px;
-  --measure:     660px;
-  --wide:        980px;
+  --measure:     1200px;
+  --wide:        1200px;
   --glow-blue:   0 0 1px rgba(91,147,255,.9), 0 0 60px rgba(91,147,255,.25);
 }
 
@@ -86,7 +86,7 @@ h2 {
 h3 {
   font-size: 16px; font-weight: 700; color: var(--t1); line-height: 1.5; margin: 0 0 6px;
 }
-p { font-size: 16px; font-weight: 400; color: var(--t2); line-height: 1.8; margin: 0 0 16px; }
+p { font-size: 16px; font-weight: 400; color: var(--t2); line-height: 1.8; margin: 0 0 16px; max-width: 720px; }
 p:last-child { margin-bottom: 0; }
 p.lead { font-size: 19px; color: var(--t2); line-height: 1.7; }
 strong { color: var(--t1); font-weight: 700; }
@@ -185,6 +185,7 @@ section.block.tight { padding: 44px 0; }
   border-radius: var(--radius-md);
   padding: 28px 32px; color: var(--t2); font-size: 15px; line-height: 1.85;
   margin: 32px 0;
+  max-width: 780px;
 }
 .callout strong { color: var(--t1); }
 .callout .hl { color: #A9C4FF; }
