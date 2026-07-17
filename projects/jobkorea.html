@@ -3,932 +3,276 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>잡코리아 개편기 — 최지원</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-  :root {
-    --bg:        #F2F4F6;
-    --white:     #FFFFFF;
-    --card:      #F8F9FA;
-    --card2:     #F2F4F6;
-    --border:    #E5EBF0;
-    --t1:        #191F28;
-    --t2:        #6B7684;
-    --t3:        #B0B8C1;
-    --blue:      #3182F6;
-    --blue-bg:   #EBF3FF;
-    --dark:      #191F28;
-    --green:     #05C072;
-    --green-bg:  #E8FAF3;
-    --radius-lg: 20px;
-    --radius-md: 14px;
-    --radius-sm: 10px;
-    --shadow:    0 2px 16px rgba(0,0,0,.06);
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'Inter', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-    background: var(--bg);
-    color: var(--t1);
-    padding: 48px 24px 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  /* ── 슬라이드 메타 라벨 ── */
-  .meta {
-    width: 780px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 4px;
-  }
-  .meta-num  { font-size: 11px; font-weight: 600; color: var(--t3); letter-spacing: .08em; }
-  .meta-tag  { font-size: 11px; font-weight: 500; color: var(--t3); }
-
-  /* ── 슬라이드 공통 ── */
-  .slide {
-    width: 780px;
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-  }
-
-  .slide-inner { padding: 36px 40px; display: flex; flex-direction: column; gap: 20px; }
-
-  /* ── 타이포 ── */
-  .label {
-    font-size: 11px; font-weight: 600;
-    letter-spacing: .08em; text-transform: uppercase;
-    color: var(--t3);
-    margin-bottom: 6px;
-  }
-  h1 { font-size: 30px; font-weight: 800; line-height: 1.25; color: var(--t1); }
-  h2 { font-size: 20px; font-weight: 700; line-height: 1.4; color: var(--t1); }
-  h3 { font-size: 14px; font-weight: 600; color: var(--t1); line-height: 1.4; }
-  p  { font-size: 13px; font-weight: 400; color: var(--t2); line-height: 1.7; }
-
-  /* ── 칩 ── */
-  .chip {
-    display: inline-flex; align-items: center;
-    font-size: 11px; font-weight: 600;
-    padding: 4px 10px; border-radius: 20px;
-    background: var(--card2); color: var(--t2);
-  }
-  .chip.blue { background: var(--blue-bg); color: var(--blue); }
-  .chip.dark { background: var(--dark);    color: #fff; }
-
-  /* ── 카드 ── */
-  .card {
-    background: var(--card);
-    border-radius: var(--radius-md);
-    padding: 20px;
-  }
-  .card.dark { background: var(--dark); color: #fff; }
-  .card.blue { background: var(--blue-bg); }
-  .card.outline { background: var(--white); border: 1.5px solid var(--border); }
-
-  /* ── 이미지 플레이스홀더 ── */
-  .ph {
-    background: var(--card2);
-    border-radius: var(--radius-sm);
-    border: 1.5px dashed var(--border);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--t3); font-size: 11px; font-weight: 500;
-    flex-shrink: 0;
-  }
-
-  /* ── 구분선 ── */
-  .divider { height: 1px; background: var(--border); }
-
-  /* ─────────────────────────────────────── */
-  /* 01 HERO */
-  /* ─────────────────────────────────────── */
-  .hero-body { display: flex; gap: 32px; align-items: flex-start; }
-  .hero-left { flex: 1; display: flex; flex-direction: column; gap: 16px; }
-  .hero-chips { display: flex; gap: 6px; flex-wrap: wrap; }
-  .hero-right { width: 220px; display: flex; flex-direction: column; gap: 8px; }
-
-  .stat-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
-  .stat-box {
-    background: var(--card);
-    border-radius: var(--radius-sm);
-    padding: 12px 14px;
-  }
-  .stat-box .num { font-size: 22px; font-weight: 800; color: var(--t1); }
-  .stat-box .lbl { font-size: 10px; font-weight: 500; color: var(--t3); margin-top: 2px; }
-  .stat-box.accent .num { color: var(--blue); }
-
-  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
-
-  /* ─────────────────────────────────────── */
-  /* 02 문제 정의 */
-  /* ─────────────────────────────────────── */
-  .context-bar {
-    background: var(--card);
-    border-radius: var(--radius-sm);
-    padding: 12px 16px;
-    display: flex; align-items: center; gap: 10px;
-    font-size: 12px; color: var(--t2);
-  }
-  .context-bar strong { color: var(--t1); }
-  .context-bar .tag {
-    margin-left: auto; white-space: nowrap;
-    font-size: 11px; font-weight: 600;
-    background: var(--dark); color: #fff;
-    padding: 3px 10px; border-radius: 20px;
-  }
-
-  .four-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-  .four-card {
-    background: var(--card);
-    border-radius: var(--radius-sm);
-    padding: 16px 14px;
-  }
-  .four-card .icon { font-size: 20px; margin-bottom: 8px; }
-  .four-card h3 { font-size: 12px; margin-bottom: 4px; }
-  .four-card p  { font-size: 11px; color: var(--t2); line-height: 1.5; }
-
-  .formula {
-    background: var(--dark);
-    border-radius: var(--radius-md);
-    padding: 18px 24px;
-    font-size: 13px; color: rgba(255,255,255,.65);
-    line-height: 1.8;
-  }
-  .formula strong { color: #fff; }
-  .formula .hl { color: #5DA8FF; font-weight: 600; }
-
-  /* ─────────────────────────────────────── */
-  /* 03 가설 */
-  /* ─────────────────────────────────────── */
-  .hypo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .hypo-card {
-    background: var(--card);
-    border-radius: var(--radius-md);
-    padding: 22px;
-    display: flex; flex-direction: column; gap: 0;
-  }
-  .hypo-letter {
-    font-size: 40px; font-weight: 800;
-    color: var(--border); line-height: 1; margin-bottom: 12px;
-  }
-  .hypo-if   { font-size: 11px; font-weight: 500; color: var(--t3); margin-bottom: 3px; }
-  .hypo-then { font-size: 13px; font-weight: 600; color: var(--t1); }
-  .hypo-result {
-    margin-top: 14px; padding: 12px 14px;
-    background: var(--dark); border-radius: var(--radius-sm);
-    display: flex; flex-direction: column; gap: 3px;
-  }
-  .hypo-result .rlabel { font-size: 10px; color: rgba(255,255,255,.4); }
-  .hypo-result .rval   { font-size: 12px; font-weight: 600; color: #fff; }
-
-  .priority {
-    display: flex; align-items: center; gap: 6px;
-    margin-top: 12px; font-size: 11px; color: var(--t3);
-  }
-  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); }
-  .dot.on { background: var(--blue); }
-
-  /* ─────────────────────────────────────── */
-  /* 04 근거 */
-  /* ─────────────────────────────────────── */
-  .ev-top { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-  .ev-card {
-    background: var(--card);
-    border-radius: var(--radius-md);
-    padding: 18px;
-    display: flex; flex-direction: column; gap: 6px;
-  }
-  .ev-nums { display: flex; gap: 14px; align-items: flex-end; margin-top: 4px; }
-  .ev-big  { font-size: 30px; font-weight: 800; color: var(--t1); line-height: 1; }
-  .ev-sm   { font-size: 22px; font-weight: 700; color: var(--t3); line-height: 1; }
-  .ev-sub  { font-size: 10px; color: var(--t3); margin-top: 1px; }
-  .ev-note { font-size: 11px; color: var(--t2); margin-top: 6px; line-height: 1.5; }
-
-  .ev-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-
-  .bar-row  { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
-  .bar-item { display: flex; align-items: center; gap: 10px; }
-  .bar      { height: 10px; border-radius: 4px; }
-  .bar.b1   { background: var(--t1); }
-  .bar.b2   { background: var(--t3); }
-  .bar.b3   { background: var(--border); }
-  .bar-lbl  { font-size: 11px; color: var(--t2); white-space: nowrap; }
-  .bar-pct  { font-size: 11px; font-weight: 700; color: var(--t1); }
-
-  .quote-list { display: flex; flex-direction: column; gap: 7px; margin-top: 8px; }
-  .quote {
-    font-size: 12px; color: var(--t2);
-    padding: 9px 12px;
-    background: var(--white);
-    border-left: 2.5px solid var(--border);
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  }
-
-  .insight-box {
-    background: var(--dark);
-    border-radius: var(--radius-md);
-    padding: 16px 22px;
-    font-size: 12px; color: rgba(255,255,255,.6);
-    line-height: 1.8;
-  }
-  .insight-box strong { color: #fff; }
-  .insight-box .hl    { color: #5DA8FF; }
-
-  /* ─────────────────────────────────────── */
-  /* 05 디자인 결정 */
-  /* ─────────────────────────────────────── */
-  .decision-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-  .dc-card {
-    background: var(--dark);
-    border-radius: var(--radius-md);
-    padding: 18px;
-    display: flex; flex-direction: column; gap: 8px;
-  }
-  .dc-icon  { font-size: 22px; }
-  .dc-title { font-size: 13px; font-weight: 600; color: #fff; line-height: 1.4; }
-  .dc-desc  { font-size: 11px; color: rgba(255,255,255,.5); line-height: 1.5; margin-top: 2px; }
-
-  .flow-row {
-    background: var(--card);
-    border-radius: var(--radius-sm);
-    padding: 12px 16px;
-    display: flex; align-items: center; gap: 8px;
-    flex-wrap: wrap;
-  }
-  .flow-lbl { font-size: 11px; font-weight: 600; color: var(--t2); white-space: nowrap; margin-right: 4px; }
-  .flow-step {
-    font-size: 11px; font-weight: 500; color: var(--t2);
-    background: var(--white); border: 1px solid var(--border);
-    padding: 4px 10px; border-radius: 20px;
-  }
-  .flow-step.active { background: var(--dark); color: #fff; border-color: var(--dark); }
-  .flow-arrow { font-size: 12px; color: var(--t3); }
-
-  .tradeoff {
-    background: var(--card);
-    border-radius: var(--radius-md);
-    padding: 16px 20px;
-    display: flex; align-items: center; gap: 16px;
-  }
-  .tradeoff-lbl { font-size: 11px; font-weight: 600; color: var(--t2); white-space: nowrap; }
-  .tradeoff-vs  { display: flex; align-items: center; gap: 8px; flex: 1; }
-  .tv-item {
-    flex: 1; text-align: center; font-size: 11px; font-weight: 600; color: var(--t2);
-    background: var(--white); border: 1px solid var(--border);
-    padding: 10px 8px; border-radius: var(--radius-sm);
-  }
-  .tv-item span { display: block; font-size: 10px; font-weight: 400; color: var(--t3); margin-top: 2px; }
-  .vs-badge {
-    font-size: 10px; font-weight: 700; color: var(--t3);
-    background: var(--border); padding: 2px 6px; border-radius: 4px;
-  }
-  .tradeoff-sol {
-    flex: 1.2; font-size: 11px; color: var(--t2); line-height: 1.7;
-    padding-left: 16px; border-left: 1px solid var(--border);
-  }
-  .tradeoff-sol strong { color: var(--t1); }
-
-  /* ─────────────────────────────────────── */
-  /* 06 UT 검증 */
-  /* ─────────────────────────────────────── */
-  .ut-top { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-  .ut-meta {
-    background: var(--card);
-    border-radius: var(--radius-md);
-    padding: 20px;
-  }
-  .ut-meta.dark { background: var(--dark); }
-  .ut-big  { font-size: 28px; font-weight: 800; color: var(--t1); line-height: 1; margin: 6px 0 4px; }
-  .ut-big.w { color: #fff; }
-  .ut-sub  { font-size: 11px; color: var(--t2); line-height: 1.6; }
-  .ut-sub.w { color: rgba(255,255,255,.5); }
-
-  .ut-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .ut-score {
-    background: var(--card);
-    border-radius: var(--radius-md);
-    padding: 20px;
-  }
-  .score-compare { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
-  .sc-box {
-    flex: 1; text-align: center; padding: 12px;
-    border-radius: var(--radius-sm);
-    background: var(--card2);
-  }
-  .sc-box.on { background: var(--dark); }
-  .sc-box .snum { font-size: 28px; font-weight: 800; color: var(--t2); }
-  .sc-box.on .snum { color: #fff; }
-  .sc-box .stag  { font-size: 10px; color: var(--t3); margin-top: 2px; }
-  .sc-box.on .stag { color: rgba(255,255,255,.4); }
-  .sc-arrow { font-size: 16px; color: var(--border); }
-
-  .issue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
-  .issue-item {
-    background: var(--card);
-    border-radius: var(--radius-sm);
-    padding: 11px 13px;
-    display: flex; gap: 8px; align-items: flex-start;
-    font-size: 11px; color: var(--t2); line-height: 1.5;
-  }
-  .issue-icon { font-size: 13px; flex-shrink: 0; }
-
-  /* ─────────────────────────────────────── */
-  /* 07 결과 */
-  /* ─────────────────────────────────────── */
-  .result-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .screen-stack  { display: flex; flex-direction: column; gap: 10px; }
-  .screen-ph {
-    background: var(--card2);
-    border-radius: var(--radius-md);
-    border: 1.5px dashed var(--border);
-    overflow: hidden;
-    flex: 1;
-  }
-  .screen-bar-top {
-    background: var(--border);
-    padding: 8px 14px;
-    font-size: 10px; font-weight: 600; color: var(--t3);
-  }
-  .screen-body { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
-  .sr { height: 14px; background: var(--border); border-radius: 4px; }
-  .sr.hero { height: 80px; }
-  .sr.card { height: 44px; }
-  .sr.short { width: 55%; }
-
-  .result-right { display: flex; flex-direction: column; gap: 10px; }
-  .stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
-  .result-stat {
-    background: var(--card);
-    border-radius: var(--radius-sm);
-    padding: 14px 12px; text-align: center;
-  }
-  .rs-num   { font-size: 22px; font-weight: 800; color: var(--blue); }
-  .rs-label { font-size: 10px; font-weight: 500; color: var(--t3); margin-top: 3px; }
-  .rs-prev  { font-size: 10px; color: var(--border); margin-top: 4px; }
-
-  .voc-box {
-    background: var(--card);
-    border-radius: var(--radius-md);
-    padding: 16px 18px;
-    display: flex; gap: 16px;
-  }
-  .voc-col { flex: 1; }
-  .voc-q {
-    font-size: 11px; color: var(--t2);
-    background: var(--white); border: 1px solid var(--border);
-    padding: 6px 10px; border-radius: 6px;
-    margin-top: 6px;
-  }
-  .next-txt { font-size: 11px; color: var(--t2); line-height: 1.7; margin-top: 6px; }
-
-  .ph-note { font-size: 10px; color: var(--t3); text-align: center; }
-
-  /* ── 사이트 네비게이션 ── */
-  .site-nav {
-    width: 780px;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 4px 4px 4px;
-    margin-bottom: 4px;
-  }
-  .site-nav a {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-size: 13px; font-weight: 600; color: var(--t2);
-    text-decoration: none;
-  }
-  .site-nav a:hover { color: var(--blue); }
-  .site-nav .next-link {
-    font-size: 12px; font-weight: 600; color: var(--t3);
-    text-decoration: none;
-  }
-  .site-nav .next-link:hover { color: var(--blue); }
-</style>
+<title>잡코리아 메인 개편 — 최지원</title>
+<link rel="stylesheet" href="../assets/css/site.css" />
 </head>
 <body>
+<div class="ambient"></div>
 
-<div class="site-nav">
-  <a href="../index.html">← 최지원 포트폴리오</a>
-  <a class="next-link" href="jobplanet.html">잡플래닛 홈·GNB 개편 보기 →</a>
-</div>
+<header class="site-header">
+  <div class="container-wide">
+    <a class="brand" href="../index.html">최지원<span class="full"> · Product Designer</span></a>
+    <nav>
+      <a href="../index.html">← 포트폴리오</a>
+      <a class="next" href="jobplanet.html">잡플래닛 홈·GNB 개편 →</a>
+    </nav>
+  </div>
+</header>
 
 <!-- ═══════════════════════════════════ -->
 <!-- 01 HERO -->
 <!-- ═══════════════════════════════════ -->
-<div class="meta">
-  <span class="meta-num">01 / 08</span>
-  <span class="meta-tag">프로젝트 소개</span>
-</div>
-<div class="slide">
-  <div class="slide-inner">
-    <div class="hero-chips">
+<section class="hero">
+  <div class="container">
+    <div class="chips">
       <span class="chip">B2C · 구직 플랫폼</span>
       <span class="chip">12주</span>
       <span class="chip">기획 · 디자인 단독</span>
       <span class="chip blue">Cold Start 해결</span>
     </div>
-    <div class="hero-body">
-      <div class="hero-left">
-        <h1>기업 노출에서<br>사용자 맞춤 제안으로</h1>
-        <p style="max-width:360px;">비로그인 방문자 70%의 Cold Start 문제를 온보딩과 AI 추천으로 해결. 잡코리아 메인을 광고판에서 개인화 게이트로 재정의했습니다.</p>
-        <div class="stat-row">
-          <div class="stat-box accent">
-            <div class="num">+221%</div>
-            <div class="lbl">APP CTR</div>
-          </div>
-          <div class="stat-box accent">
-            <div class="num">+142%</div>
-            <div class="lbl">PC CTR</div>
-          </div>
-          <div class="stat-box accent">
-            <div class="num">+28%</div>
-            <div class="lbl">APP CVR</div>
-          </div>
-        </div>
-        <div class="badge-row">
-          <span class="chip">월 세션 1,200만</span>
-          <span class="chip">UT 18/20 To-be 선호</span>
-          <span class="chip">만족도 3.1 → 4.3</span>
-        </div>
-      </div>
-      <div class="hero-right">
-        <div class="ph" style="height:200px; width:100%;">화면 목업</div>
-      </div>
+    <h1>기업 노출에서<br>사용자 맞춤 제안으로</h1>
+    <p class="lead" style="max-width:520px;">
+      비로그인 방문자 70%의 Cold Start 문제를 온보딩과 AI 추천으로 해결.
+      잡코리아 메인을 광고판에서 개인화 게이트로 재정의했습니다.
+    </p>
+
+    <div class="stat-row" style="max-width:520px;">
+      <div class="stat"><div class="num accent">+221%</div><div class="label">APP CTR</div></div>
+      <div class="stat"><div class="num accent">+142%</div><div class="label">PC CTR</div></div>
+      <div class="stat"><div class="num accent">+28%</div><div class="label">APP CVR</div></div>
+    </div>
+    <div class="chips">
+      <span class="chip">월 세션 1,200만</span>
+      <span class="chip">UT 18/20 To-be 선호</span>
+      <span class="chip">만족도 3.1 → 4.3</span>
+    </div>
+
+    <div class="visual">
+      <div class="visual-frame"><span class="mark">화면 예정</span></div>
     </div>
   </div>
-</div>
+</section>
 
+<div class="glow-line"></div>
 
 <!-- ═══════════════════════════════════ -->
 <!-- 02 문제 정의 -->
 <!-- ═══════════════════════════════════ -->
-<div class="meta">
-  <span class="meta-num">02 / 08</span>
-  <span class="meta-tag">문제 정의</span>
-</div>
-<div class="slide">
-  <div class="slide-inner">
-    <div class="context-bar">
-      <span>잡코리아 메인 — 월 세션 <strong>1,200만</strong> · 페이지뷰 <strong>6,300만</strong> · 광고 티어(VVIP→First) 고정 노출 구조</span>
-      <span class="tag">게이트 역할 부재</span>
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">문제 정의</span>
+    <h2>메인이 게이트 역할을 못 하고 있었다</h2>
+    <p>
+      잡코리아 메인은 월 세션 1,200만, 페이지뷰 6,300만 규모지만, 광고 티어(VVIP→First)가 고정 노출되는 구조였습니다.
+      신입·비로그인 구직자가 첫 방문 시 개인화 데이터(Cold Start) 없이 광고 티어 공고만 마주치고,
+      자신과 관련 없는 콘텐츠 때문에 <strong>모바일 이탈률 23.6%</strong>를 기록하며 지원으로 이어지지 못했습니다.
+    </p>
+
+    <div class="card-grid cols-3">
+      <div class="card"><h3>대상</h3><p style="font-size:13px;">신입·비로그인 구직자 (Cold Start 상태)</p></div>
+      <div class="card"><h3>상황</h3><p style="font-size:13px;">잡코리아 메인 첫 방문</p></div>
+      <div class="card"><h3>고통</h3><p style="font-size:13px;">내 공고가 없어 무엇을 해야 할지 모름</p></div>
     </div>
-    <div class="four-grid">
-      <div class="four-card">
-        <div class="icon">👤</div>
-        <h3>대상</h3>
-        <p>신입·비로그인 구직자<br>(Cold Start 상태)</p>
-      </div>
-      <div class="four-card">
-        <div class="icon">📍</div>
-        <h3>상황</h3>
-        <p>잡코리아 메인 첫 방문</p>
-      </div>
-      <div class="four-card">
-        <div class="icon">😣</div>
-        <h3>고통</h3>
-        <p>내 공고가 없어 무엇을 해야 할지 모름</p>
-      </div>
-      <div class="four-card">
-        <div class="icon">🎯</div>
-        <h3>성공 기준</h3>
-        <p>공고 CTR·CVR 상승<br>이탈률 감소</p>
-      </div>
-    </div>
-    <div class="formula">
-      <strong>신입·비로그인 구직자</strong>가 <strong>잡코리아 메인 첫 방문 시</strong>,
-      개인화 데이터(Cold Start)가 없어 광고 티어 공고만 노출됨.
-      자신과 관련 없는 콘텐츠로 인해 <span class="hl">모바일 이탈률 23.6%</span>, 공고 지원으로 연결되지 않는다.
+
+    <div class="callout light">
+      <strong>성공 기준</strong> — 공고 CTR·CVR 상승, 이탈률 감소
     </div>
   </div>
-</div>
-
+</section>
 
 <!-- ═══════════════════════════════════ -->
 <!-- 03 가설 -->
 <!-- ═══════════════════════════════════ -->
-<div class="meta">
-  <span class="meta-num">03 / 08</span>
-  <span class="meta-tag">가설</span>
-</div>
-<div class="slide">
-  <div class="slide-inner">
-    <div>
-      <div class="label">가설 사고</div>
-      <h2>2개 가설 — 우선순위와 검증 결과</h2>
-    </div>
-    <div class="hypo-grid">
-      <div class="hypo-card">
-        <div class="hypo-letter">A</div>
-        <div class="hypo-if">만약 —</div>
-        <div class="hypo-then">첫 방문 시 직군·경력 정보를 수집하면</div>
-        <div class="hypo-if" style="margin-top:10px;">그러면 —</div>
-        <div class="hypo-then">맞춤 공고 연결률이 높아져 CTR이 오를 것</div>
-        <div class="priority">
-          <div class="dot on"></div><div class="dot on"></div>
-          <span>우선순위 높음 — 개인화의 전제 조건</span>
-        </div>
-        <div class="hypo-result">
-          <div class="rlabel">UT 검증 결과</div>
-          <div class="rval">20명 중 18명 To-be 선호 · 만족도 <strong style="color:#5DA8FF;">4.3</strong></div>
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">가설</span>
+    <h2>2개 가설 — 우선순위와 검증 결과</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <div style="font-size:36px; font-weight:800; color:var(--border-strong); line-height:1; margin-bottom:10px; opacity:.5;">A</div>
+        <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">만약 —</p>
+        <h3>첫 방문 시 직군·경력 정보를 수집하면</h3>
+        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">그러면 —</p>
+        <p style="color:var(--t1); font-weight:600; font-size:14px;">맞춤 공고 연결률이 높아져 CTR이 오를 것</p>
+        <p style="font-size:12px; margin-top:10px;">우선순위 높음 — 개인화의 전제 조건</p>
+        <div class="callout" style="margin:14px 0 0; padding:14px 16px;">
+          <div class="eyebrow" style="margin-bottom:4px;">UT 검증 결과</div>
+          20명 중 <strong class="hl">18명</strong> To-be 선호 · 만족도 <strong class="hl">4.3</strong>
         </div>
       </div>
-      <div class="hypo-card">
-        <div class="hypo-letter">B</div>
-        <div class="hypo-if">만약 —</div>
-        <div class="hypo-then">AI 기반 매칭 카드가 노출되면</div>
-        <div class="hypo-if" style="margin-top:10px;">그러면 —</div>
-        <div class="hypo-then">기존 고정 배너 대비 CVR이 오를 것</div>
-        <div class="priority">
-          <div class="dot on"></div><div class="dot"></div>
-          <span>A 검증 이후 순차 진행</span>
-        </div>
-        <div class="hypo-result">
-          <div class="rlabel">출시 후 실측</div>
-          <div class="rval">APP CTR <strong style="color:#5DA8FF;">+221%</strong> · PC CTR <strong style="color:#5DA8FF;">+142%</strong> · CVR <strong style="color:#5DA8FF;">+28%</strong></div>
+      <div class="card">
+        <div style="font-size:36px; font-weight:800; line-height:1; margin-bottom:10px; opacity:.5;">B</div>
+        <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">만약 —</p>
+        <h3>AI 기반 매칭 카드가 노출되면</h3>
+        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">그러면 —</p>
+        <p style="color:var(--t1); font-weight:600; font-size:14px;">기존 고정 배너 대비 CVR이 오를 것</p>
+        <p style="font-size:12px; margin-top:10px;">A 검증 이후 순차 진행</p>
+        <div class="callout" style="margin:14px 0 0; padding:14px 16px;">
+          <div class="eyebrow" style="margin-bottom:4px;">출시 후 실측</div>
+          APP CTR <strong class="hl">+221%</strong> · PC CTR <strong class="hl">+142%</strong> · CVR <strong class="hl">+28%</strong>
         </div>
       </div>
     </div>
   </div>
-</div>
-
+</section>
 
 <!-- ═══════════════════════════════════ -->
 <!-- 04 근거 -->
 <!-- ═══════════════════════════════════ -->
-<div class="meta">
-  <span class="meta-num">04 / 08</span>
-  <span class="meta-tag">근거</span>
-</div>
-<div class="slide">
-  <div class="slide-inner">
-    <div>
-      <div class="label">근거 기반 설득</div>
-      <h2>GA 분석 · 행동 데이터 · 인터뷰</h2>
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">근거 기반 설득</span>
+    <h2>GA 분석 · 행동 데이터 · 인터뷰</h2>
+    <p>
+      비로그인 방문자는 모바일 <strong>70%</strong>, PC <strong>54%</strong>로 대부분 개인화 데이터가 없는 상태였고,
+      모바일 이탈률(<strong>23.6%</strong>)은 PC(9.8%)의 2.4배, 체류시간은 모바일 1:18로 PC 2:28보다 크게 짧았습니다.
+      첫 화면에서 방향이 결정된다는 뜻이었습니다.
+    </p>
+
+    <div class="card" style="margin:24px 0;">
+      <h3 style="margin-bottom:10px;">섹션별 클릭 분포 (GA)</h3>
+      <table>
+        <tr><td style="width:60%;">공고 클릭 — 1위</td><td class="strong-cell">51%</td></tr>
+        <tr><td>AI 추천 — 2위</td><td class="strong-cell">35%</td></tr>
+        <tr><td>기타 섹션</td><td>14%</td></tr>
+      </table>
+      <p style="font-size:12px; margin-top:10px;">AI 추천 수요가 이미 2위 — 노출 방식이 문제였습니다.</p>
     </div>
 
-    <div class="ev-top">
-      <div class="ev-card">
-        <div class="label">비로그인 비율</div>
-        <div class="ev-nums">
-          <div>
-            <div class="ev-big">70%</div>
-            <div class="ev-sub">모바일</div>
-          </div>
-          <div>
-            <div class="ev-sm">54%</div>
-            <div class="ev-sub">PC</div>
-          </div>
-        </div>
-        <div class="ev-note">방문자 대부분이 비로그인 상태<br>→ 개인화 데이터 없음 (Cold Start)</div>
-      </div>
-      <div class="ev-card">
-        <div class="label">이탈률 격차</div>
-        <div class="ev-nums">
-          <div>
-            <div class="ev-big">23.6%</div>
-            <div class="ev-sub">모바일</div>
-          </div>
-          <div>
-            <div class="ev-sm">9.8%</div>
-            <div class="ev-sub">PC</div>
-          </div>
-        </div>
-        <div class="ev-note">모바일 이탈이 PC 대비 2.4배<br>→ 첫 화면 개선 우선순위 근거</div>
-      </div>
-      <div class="ev-card">
-        <div class="label">체류시간 격차</div>
-        <div class="ev-nums">
-          <div>
-            <div class="ev-big">1:18</div>
-            <div class="ev-sub">모바일</div>
-          </div>
-          <div>
-            <div class="ev-sm">2:28</div>
-            <div class="ev-sub">PC</div>
-          </div>
-        </div>
-        <div class="ev-note">모바일은 빠르게 이탈<br>→ 첫 화면에서 방향이 결정됨</div>
-      </div>
-    </div>
+    <div class="quote">"메인이 광고판 같다"</div>
+    <div class="quote">"나랑 상관없는 공고만 보인다"</div>
+    <div class="quote">"맨 하단까지 내려본 적이 없다"</div>
 
-    <div class="ev-bottom">
-      <div class="ev-card">
-        <div class="label">섹션별 클릭 분포 (GA)</div>
-        <div class="bar-row">
-          <div class="bar-item">
-            <div class="bar b1" style="width:52%;"></div>
-            <span class="bar-pct">51%</span>
-            <span class="bar-lbl">공고 클릭 — 1위</span>
-          </div>
-          <div class="bar-item">
-            <div class="bar b2" style="width:35%;"></div>
-            <span class="bar-pct">35%</span>
-            <span class="bar-lbl">AI 추천 — 2위</span>
-          </div>
-          <div class="bar-item">
-            <div class="bar b3" style="width:14%;"></div>
-            <span class="bar-pct">14%</span>
-            <span class="bar-lbl">기타 섹션</span>
-          </div>
-        </div>
-        <p style="margin-top:10px; font-size:11px;">AI 추천 수요가 이미 2위 → 노출 방식이 문제</p>
-      </div>
-      <div class="ev-card">
-        <div class="label">사용자 인터뷰 VOC</div>
-        <div class="quote-list">
-          <div class="quote">"메인이 광고판 같다"</div>
-          <div class="quote">"나랑 상관없는 공고만 보인다"</div>
-          <div class="quote">"맨 하단까지 내려본 적이 없다"</div>
-        </div>
-        <p style="margin-top:10px; font-size:11px;">→ GA 이탈의 원인이 콘텐츠 비매칭으로 재확인</p>
-      </div>
-    </div>
-
-    <div class="insight-box">
+    <div class="callout">
       <strong>핵심 인사이트</strong> — 사용자는 공고를 보려는 의도가 명확하고(51%), AI 추천 수요도 이미 있다(35%).
       문제는 비로그인 70%에게 개인화 정보 없이 <span class="hl">광고 티어만 노출</span>된다는 것.
-      콘텐츠 의도 ≠ 노출 구조의 불일치가 이탈의 원인.
+      콘텐츠 의도와 노출 구조의 불일치가 이탈의 원인이었습니다.
     </div>
   </div>
-</div>
-
+</section>
 
 <!-- ═══════════════════════════════════ -->
 <!-- 05 디자인 결정 -->
 <!-- ═══════════════════════════════════ -->
-<div class="meta">
-  <span class="meta-num">05 / 08</span>
-  <span class="meta-tag">디자인 결정 · Trade-off</span>
-</div>
-<div class="slide">
-  <div class="slide-inner">
-    <div>
-      <div class="label">의사결정</div>
-      <h2>To-be 4가지 구성 — UT로 검증</h2>
-    </div>
-    <div class="decision-grid">
-      <div class="dc-card">
-        <div class="dc-icon">🗂️</div>
-        <div class="dc-title">메인 레이아웃<br>구조 변경</div>
-        <div class="dc-desc">정보 계층 재설계. 사용자 목적에 맞게 섹션 순서 재배치.</div>
-      </div>
-      <div class="dc-card">
-        <div class="dc-icon">🔐</div>
-        <div class="dc-title">로그인 유도<br>배너</div>
-        <div class="dc-desc">로그인 시 더 정확한 추천 가능함을 명시. 자연스러운 전환 유도.</div>
-      </div>
-      <div class="dc-card">
-        <div class="dc-icon">👋</div>
-        <div class="dc-title">온보딩 도입</div>
-        <div class="dc-desc">로그인 없이도 직군·경력 수집. 첫 방문부터 개인화 가능.</div>
-      </div>
-      <div class="dc-card">
-        <div class="dc-icon">🤖</div>
-        <div class="dc-title">AI 추천 카드</div>
-        <div class="dc-desc">수집 정보 기반 맞춤 공고 노출. 광고 티어 내 AI 매칭 점수 적용.</div>
-      </div>
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">의사결정 · Trade-off</span>
+    <h2>To-be 4가지 구성 — UT로 검증</h2>
+
+    <div class="card-grid">
+      <div class="card"><h3>🗂️ 메인 레이아웃 구조 변경</h3><p style="font-size:13px;">정보 계층 재설계. 사용자 목적에 맞게 섹션 순서 재배치.</p></div>
+      <div class="card"><h3>🔐 로그인 유도 배너</h3><p style="font-size:13px;">로그인 시 더 정확한 추천 가능함을 명시. 자연스러운 전환 유도.</p></div>
+      <div class="card"><h3>👋 온보딩 도입</h3><p style="font-size:13px;">로그인 없이도 직군·경력 수집. 첫 방문부터 개인화 가능.</p></div>
+      <div class="card"><h3>🤖 AI 추천 카드</h3><p style="font-size:13px;">수집 정보 기반 맞춤 공고 노출. 광고 티어 내 AI 매칭 점수 적용.</p></div>
     </div>
 
-    <div class="flow-row">
-      <span class="flow-lbl">To-be 플로우</span>
-      <span class="flow-step">첫 방문</span>
-      <span class="flow-arrow">→</span>
-      <span class="flow-step">온보딩</span>
-      <span class="flow-arrow">→</span>
-      <span class="flow-step">AI 매칭</span>
-      <span class="flow-arrow">→</span>
-      <span class="flow-step active">개인화 메인</span>
-      <span class="flow-arrow">→</span>
-      <span class="flow-step">로그인 유도</span>
-      <span class="flow-arrow">→</span>
-      <span class="flow-step">정밀 추천</span>
-    </div>
+    <p style="margin-top:24px; font-size:13px;"><strong style="color:var(--t1);">To-be 플로우</strong> — 첫 방문 → 온보딩 → AI 매칭 → 개인화 메인 → 로그인 유도 → 정밀 추천</p>
 
-    <div class="tradeoff">
-      <span class="tradeoff-lbl">핵심 Trade-off</span>
-      <div class="tradeoff-vs">
-        <div class="tv-item">순수 AI 추천<span>광고주 수익 리스크</span></div>
-        <span class="vs-badge">VS</span>
-        <div class="tv-item">광고 티어만 유지<span>사용자 이탈 지속</span></div>
-      </div>
-      <div class="tradeoff-sol">
-        광고 티어(VVIP→First) 구조는 유지하되,<br>
-        각 티어 내에서 <strong>AI 매칭 점수</strong>로 우선 노출.<br>
-        비즈니스 제약 안에서 개인화를 레이어로 추가.
-      </div>
+    <div class="callout light" style="margin-top:20px;">
+      <strong>핵심 Trade-off</strong> — 순수 AI 추천(광고주 수익 리스크) vs 광고 티어만 유지(사용자 이탈 지속).
+      광고 티어(VVIP→First) 구조는 유지하되, 각 티어 내에서 <strong>AI 매칭 점수</strong>로 우선 노출해
+      비즈니스 제약 안에서 개인화를 레이어로 추가했습니다.
     </div>
   </div>
-</div>
-
+</section>
 
 <!-- ═══════════════════════════════════ -->
 <!-- 06 UT 검증 -->
 <!-- ═══════════════════════════════════ -->
-<div class="meta">
-  <span class="meta-num">06 / 08</span>
-  <span class="meta-tag">UT 검증</span>
-</div>
-<div class="slide">
-  <div class="slide-inner">
-    <div>
-      <div class="label">UT 검증 — As-is vs To-be</div>
-      <h2>Hybrid UT · 20명 · As-is vs To-be 비교</h2>
-    </div>
-    <div class="ut-top">
-      <div class="ut-meta">
-        <div class="label">방법론</div>
-        <div class="ut-big">Hybrid</div>
-        <div class="ut-sub">대면 9명 + 비대면 11명<br>Task 1: 메인 탐색 (5분)<br>Task 2: 공고 찾기 (5분)</div>
-      </div>
-      <div class="ut-meta">
-        <div class="label">참여자</div>
-        <div class="ut-big">20명</div>
-        <div class="ut-sub">신입 · 경력 · 구직중 · 재직중<br>20~40대</div>
-      </div>
-      <div class="ut-meta dark">
-        <div class="label" style="color:rgba(255,255,255,.4);">To-be 선호</div>
-        <div class="ut-big w">18 / 20</div>
-        <div class="ut-sub w">"내 공고를 보여주는 느낌"<br>"AI 추천이 편하다"</div>
-      </div>
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">UT 검증 — As-is vs To-be</span>
+    <h2>Hybrid UT · 20명 · As-is vs To-be 비교</h2>
+
+    <div class="card-grid cols-3">
+      <div class="card"><h3>방법론</h3><p style="font-size:13px;">대면 9명 + 비대면 11명<br>Task 1: 메인 탐색(5분)<br>Task 2: 공고 찾기(5분)</p></div>
+      <div class="card"><h3>참여자</h3><p style="font-size:13px;">신입·경력·구직중·재직중<br>20~40대 총 20명</p></div>
+      <div class="card" style="background:rgba(91,147,255,.08); border-color:rgba(91,147,255,.25);"><h3>To-be 선호</h3><p style="font-size:13px;">18 / 20명 — "내 공고를 보여주는 느낌", "AI 추천이 편하다"</p></div>
     </div>
 
-    <div class="ut-bottom">
-      <div class="ut-score">
-        <div class="label">전체 만족도 (5점 기준)</div>
-        <div class="score-compare">
-          <div class="sc-box">
-            <div class="snum">3.1</div>
-            <div class="stag">AS-IS</div>
-          </div>
-          <div class="sc-arrow">→</div>
-          <div class="sc-box on">
-            <div class="snum">4.3</div>
-            <div class="stag">TO-BE</div>
-          </div>
-        </div>
-        <div class="quote-list" style="margin-top:12px;">
-          <div class="quote">"이전보다 훨씬 찾기 쉬웠다"</div>
-          <div class="quote">"내 공고를 찾아주는 것 같다"</div>
-        </div>
-      </div>
-      <div class="ut-score">
-        <div class="label">발견된 이슈 → 개선 방향</div>
-        <div class="issue-grid">
-          <div class="issue-item">
-            <span class="issue-icon">🤔</span>
-            <span>AI Insight 신뢰도 부족 → 추천 근거 노출 개선</span>
-          </div>
-          <div class="issue-item">
-            <span class="issue-icon">🏷️</span>
-            <span>AD 표시·아이콘 의미 불명확 → 라벨 정비</span>
-          </div>
-          <div class="issue-item">
-            <span class="issue-icon">📋</span>
-            <span>섹션명 혼재 → "추천 JOB" 통일</span>
-          </div>
-          <div class="issue-item">
-            <span class="issue-icon">🖥️</span>
-            <span>PC 레이아웃 밀도 이슈 → A/B 테스트 예정</span>
-          </div>
-        </div>
-      </div>
+    <div class="stat-row">
+      <div class="stat"><div class="num">3.1 → 4.3</div><div class="label">전체 만족도 (5점 기준)</div></div>
+    </div>
+    <div class="quote">"이전보다 훨씬 찾기 쉬웠다"</div>
+    <div class="quote">"내 공고를 찾아주는 것 같다"</div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:10px;">발견된 이슈 → 개선 방향</h3>
+      <p style="font-size:13px; margin-bottom:6px;">🤔 AI Insight 신뢰도 부족 → 추천 근거 노출 개선</p>
+      <p style="font-size:13px; margin-bottom:6px;">🏷️ AD 표시·아이콘 의미 불명확 → 라벨 정비</p>
+      <p style="font-size:13px; margin-bottom:6px;">📋 섹션명 혼재 → "추천 JOB" 통일</p>
+      <p style="font-size:13px;">🖥️ PC 레이아웃 밀도 이슈 → A/B 테스트 예정</p>
     </div>
   </div>
-</div>
-
+</section>
 
 <!-- ═══════════════════════════════════ -->
 <!-- 07 최종 디자인 -->
 <!-- ═══════════════════════════════════ -->
-<div class="meta">
-  <span class="meta-num">07 / 08</span>
-  <span class="meta-tag">최종 디자인</span>
-</div>
-<div class="slide">
-  <div class="slide-inner">
-    <div>
-      <div class="label">최종 디자인</div>
-      <h2>온보딩 · AI 추천 카드 · 개인화 메인</h2>
-    </div>
-    <!-- 3단 화면 가로 배치 -->
-    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
-      <div style="display:flex; flex-direction:column; gap:6px;">
-        <div class="screen-ph" style="height:340px;">
-          <div class="screen-bar-top">온보딩 — 직군·경력 수집</div>
-          <div class="screen-body" style="gap:10px; padding:16px;">
-            <div class="sr hero" style="height:120px;"></div>
-            <div class="sr short"></div>
-            <div class="sr"></div>
-            <div class="sr short" style="width:40%;"></div>
-          </div>
-        </div>
-        <p class="ph-note">Cold Start 해소</p>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:6px;">
-        <div class="screen-ph" style="height:340px;">
-          <div class="screen-bar-top">메인 — AI 추천 카드</div>
-          <div class="screen-body" style="gap:10px; padding:16px;">
-            <div class="sr short"></div>
-            <div class="sr card" style="height:60px;"></div>
-            <div class="sr card" style="height:60px;"></div>
-            <div class="sr card" style="height:60px;"></div>
-          </div>
-        </div>
-        <p class="ph-note">광고 티어 내 개인화 레이어</p>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:6px;">
-        <div class="screen-ph" style="height:340px;">
-          <div class="screen-bar-top">로그인 유도 배너</div>
-          <div class="screen-body" style="gap:10px; padding:16px;">
-            <div class="sr card" style="height:80px;"></div>
-            <div class="sr short"></div>
-            <div class="sr"></div>
-            <div class="sr card" style="height:60px;"></div>
-          </div>
-        </div>
-        <p class="ph-note">정밀 추천 전환</p>
-      </div>
-    </div>
-    <p class="ph-note" style="margin-top:4px;">실제 화면 이미지로 교체 예정</p>
-  </div>
-</div>
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">최종 디자인</span>
+    <h2>온보딩 · AI 추천 카드 · 개인화 메인</h2>
 
+    <div class="card-grid cols-3">
+      <div>
+        <div class="visual-frame"><span class="mark">화면 예정</span></div>
+        <p class="visual-caption">온보딩 — 직군·경력 수집 · Cold Start 해소</p>
+      </div>
+      <div>
+        <div class="visual-frame"><span class="mark">화면 예정</span></div>
+        <p class="visual-caption">메인 — AI 추천 카드 · 광고 티어 내 개인화 레이어</p>
+      </div>
+      <div>
+        <div class="visual-frame"><span class="mark">화면 예정</span></div>
+        <p class="visual-caption">로그인 유도 배너 · 정밀 추천 전환</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══════════════════════════════════ -->
 <!-- 08 결과 -->
 <!-- ═══════════════════════════════════ -->
-<div class="meta">
-  <span class="meta-num">08 / 08</span>
-  <span class="meta-tag">결과 · 남은 과제</span>
-</div>
-<div class="slide">
-  <div class="slide-inner">
-    <div>
-      <div class="label">결과</div>
-      <h2>가설 A · B 모두 검증 — 출시 후 실측</h2>
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">결과 · 남은 과제</span>
+    <h2>가설 A·B 모두 검증 — 출시 후 실측</h2>
+
+    <div class="hero-stat">
+      <span class="num">+221%</span>
+      <span class="label">APP CTR<br><span style="color:var(--t3);">9.45% → 30.35%</span></span>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="num accent">+142%</div><div class="label">PC CTR</div><div class="sub">6.76% → 16.37%</div></div>
+      <div class="stat"><div class="num accent">+28%</div><div class="label">APP CVR</div><div class="sub">9.39% → 12.02%</div></div>
     </div>
 
-    <!-- 수치 크게 -->
-    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
-      <div style="background:var(--card); border-radius:var(--radius-md); padding:28px 24px;">
-        <div class="label">APP CTR</div>
-        <div style="font-size:48px; font-weight:800; color:var(--blue); line-height:1; margin:8px 0 6px;">+221%</div>
-        <div style="font-size:12px; color:var(--t3);">9.45% → 30.35%</div>
+    <div class="card-grid" style="margin-top:8px;">
+      <div class="card">
+        <h3>출시 후 VOC</h3>
+        <div class="quote">"이전으로 돌려줘요"</div>
+        <div class="quote">"추천이 하나도 안 맞아요"</div>
+        <div class="quote">"UI가 불편해요"</div>
+        <p style="font-size:12px; margin-top:8px;">UT에서 미리 발견한 이슈 → 출시 후 VOC로 재확인</p>
       </div>
-      <div style="background:var(--card); border-radius:var(--radius-md); padding:28px 24px;">
-        <div class="label">PC CTR</div>
-        <div style="font-size:48px; font-weight:800; color:var(--blue); line-height:1; margin:8px 0 6px;">+142%</div>
-        <div style="font-size:12px; color:var(--t3);">6.76% → 16.37%</div>
-      </div>
-      <div style="background:var(--card); border-radius:var(--radius-md); padding:28px 24px;">
-        <div class="label">APP CVR</div>
-        <div style="font-size:48px; font-weight:800; color:var(--blue); line-height:1; margin:8px 0 6px;">+28%</div>
-        <div style="font-size:12px; color:var(--t3);">9.39% → 12.02%</div>
-      </div>
-    </div>
-
-    <!-- VOC + 다음 과제 -->
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
-      <div class="ev-card">
-        <div class="label">출시 후 VOC</div>
-        <div class="quote-list">
-          <div class="quote">"이전으로 돌려줘요"</div>
-          <div class="quote">"추천이 하나도 안 맞아요"</div>
-          <div class="quote">"UI가 불편해요"</div>
-        </div>
-        <p style="font-size:11px; margin-top:10px;">UT에서 미리 발견한 이슈 → 출시 후 VOC로 재확인</p>
-      </div>
-      <div class="ev-card">
-        <div class="label">다음 과제</div>
-        <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:12px; color:var(--t2);">
-            <span style="color:var(--blue); font-weight:700; flex-shrink:0;">01</span>
-            AI 추천 근거 노출 — "왜 이 공고인지" 설명 추가
-          </div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:12px; color:var(--t2);">
-            <span style="color:var(--blue); font-weight:700; flex-shrink:0;">02</span>
-            섹션명·라벨 정비 — UT 혼란 구간 해소
-          </div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:12px; color:var(--t2);">
-            <span style="color:var(--blue); font-weight:700; flex-shrink:0;">03</span>
-            PC 레이아웃 A/B 테스트 — 정보 밀도 최적화
-          </div>
-        </div>
+      <div class="card">
+        <h3>다음 과제</h3>
+        <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">01</strong> AI 추천 근거 노출 — "왜 이 공고인지" 설명 추가</p>
+        <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">02</strong> 섹션명·라벨 정비 — UT 혼란 구간 해소</p>
+        <p style="font-size:13px;"><strong class="hl">03</strong> PC 레이아웃 A/B 테스트 — 정보 밀도 최적화</p>
       </div>
     </div>
 
-    <div class="insight-box">
-      <strong>학습</strong> — UT에서 선제적으로 발견한 AI 신뢰도·라벨 이슈가 출시 후 VOC와 정확히 일치.
-      <span class="hl">리서치가 실제 사용자 반응을 예측</span>했음을 검증. 수치 개선과 동시에 잔여 과제가 명확히 남아 있어 지속 개선 중.
+    <div class="callout">
+      <strong>학습</strong> — UT에서 선제적으로 발견한 AI 신뢰도·라벨 이슈가 출시 후 VOC와 정확히 일치했습니다.
+      <span class="hl">리서치가 실제 사용자 반응을 예측</span>했음을 검증. 수치 개선과 동시에 잔여 과제가 명확히 남아 있어 지속 개선 중입니다.
     </div>
   </div>
-</div>
+</section>
+
+<footer class="site-footer">© 2026 최지원. Product Designer Portfolio.</footer>
 
 </body>
 </html>
