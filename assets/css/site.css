@@ -45,6 +45,10 @@ body {
 
 img { max-width: 100%; display: block; }
 
+/* ── 화살표 아이콘 (텍스트 "→" 대체) ── */
+.arrow-ico { width: 13px; height: 13px; vertical-align: -1px; margin: 0 3px; color: var(--t3); flex-shrink: 0; }
+.next .arrow-ico { color: currentColor; width: 12px; height: 12px; margin-left: 2px; }
+
 /* ── 배경 앰비언트 글로우 (body 최상단에 삽입) ── */
 .ambient {
   position: fixed; inset: 0; z-index: -1; pointer-events: none;
