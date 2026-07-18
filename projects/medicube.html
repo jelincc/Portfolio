@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>에이지알 블루투스 연동 개선 — 최지원</title>
+<link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body>
+<div class="ambient"></div>
+
+<header class="site-header">
+  <div class="container-wide">
+    <a class="brand" href="../index.html">최지원<span class="full"> · Product Designer</span></a>
+    <nav>
+      <a href="../index.html"><svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>포트폴리오</a>
+      <a class="next" href="jobplanet.html">잡플래닛 홈·GNB 개편<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 01 HERO -->
+<!-- ═══════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="chips">
+      <span class="chip">메디큐브 · 에이지알(AGE-R)</span>
+      <span class="chip">뷰티 디바이스 · 앱 연동</span>
+      <span class="chip">기획 · 디자인 단독</span>
+      <span class="chip blue">1차 출시 후 2차 개선</span>
+    </div>
+    <h1>복잡한 연동을<br>한 번에 이해되는 경험으로</h1>
+    <p class="lead" style="max-width:540px;">
+      뷰티 디바이스 신규 출시로 처음 도입된 블루투스 연동 기능을 기획·디자인. 출시 후 발견된 오인지·CS 문제를
+      자동 인식과 1뎁스 컨트롤로 재설계해 두 차례에 걸쳐 개선했습니다.
+    </p>
+
+    <div class="stat-row" style="max-width:560px;">
+      <div class="stat"><div class="num accent">+20%</div><div class="label">디바이스 등록자 중 연동 사용</div></div>
+      <div class="stat"><div class="num accent">+16%p↑</div><div class="label">연동 비율</div></div>
+      <div class="stat"><div class="num accent">-20%↓</div><div class="label">연동 관련 문의</div></div>
+    </div>
+
+    <div class="visual">
+      <div class="visual-frame"><span class="mark">화면 예정</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 02 문제 정의 -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">문제 정의</span>
+    <h2>연동은 설명 없이 이해돼야 했다</h2>
+    <p>
+      신규 뷰티 디바이스 출시로 처음 도입된 기능이라 4050세대 중심 고객이 설명 없이도 바로 쓸 수 있어야 했습니다.
+      출시 후에는 자동연동을 오인지한 고객의 CS 문의가 이어졌고, <strong>디바이스 등록자 중 실제 연동을 사용하는 비율은 약 45%</strong>에 그쳤습니다.
+      디바이스를 여러 대 가진 고객은 배너가 하나만 노출돼 기존 연결을 해제하고 다시 등록하는 일을 반복했습니다.
+    </p>
+
+    <div class="card-grid cols-3">
+      <div class="card"><h3>대상</h3><p style="font-size:13px;">에이지알 디바이스 보유 고객 (4050세대 중심)</p></div>
+      <div class="card"><h3>상황</h3><p style="font-size:13px;">신규 디바이스 출시로 블루투스 연동 최초 도입</p></div>
+      <div class="card"><h3>고통</h3><p style="font-size:13px;">자동연동 오인지로 CS 문의, 다중 디바이스 재등록 반복</p></div>
+    </div>
+
+    <div class="callout light">
+      <strong>성공 기준</strong> — 설명 없이 이해 가능한 한손 조작 UI, 연동 사용률 상승, CS 문의 감소
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 03 가설 -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Pain Point · 개선 방향</span>
+    <h2>출시 후 발견한 2가지 문제와 해결 방향</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <div style="font-size:36px; font-weight:800; color:var(--border-strong); line-height:1; margin-bottom:10px; opacity:.5;">01</div>
+        <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">Pain Point —</p>
+        <h3>자동연동을 오인지해 CS 문의가 이어지고, 등록자 중 45%만 실제 연동을 사용</h3>
+        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">해결 방향 —</p>
+        <p style="color:var(--t1); font-weight:600; font-size:14px;">전원 켜진 디바이스를 자동 인식해 퀵연결을 바로 제안하면 사용률이 오를 것</p>
+        <div class="callout" style="margin:14px 0 0; padding:14px 16px;">
+          <div class="eyebrow" style="margin-bottom:4px;">적용 후</div>
+          디바이스 등록자 중 연동 사용 <strong class="hl">약 20% 증가</strong>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:36px; font-weight:800; line-height:1; margin-bottom:10px; opacity:.5;">02</div>
+        <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">Pain Point —</p>
+        <h3>디바이스를 여러 대 등록해도 배너가 하나만 노출돼 해제와 재등록을 반복</h3>
+        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">해결 방향 —</p>
+        <p style="color:var(--t1); font-weight:600; font-size:14px;">홈에 연결 가능한 디바이스 전체를 목록으로 보여주고, 연결된 디바이스는 1뎁스에서 바로 제어하게 하면 반복 등록이 줄 것</p>
+        <div class="callout" style="margin:14px 0 0; padding:14px 16px;">
+          <div class="eyebrow" style="margin-bottom:4px;">적용 후</div>
+          연동 비율 <strong class="hl">약 16%p 이상 증가</strong> · 문의 <strong class="hl">약 20% 이상 감소</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 04 근거 -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">근거 기반 설득</span>
+    <h2>VOC · 사용성 테스트</h2>
+    <p>
+      내부 커뮤니티 문의의 <strong>34%</strong>, CS 문의의 <strong>30%</strong>가 블루투스 연동 관련이었습니다.
+      2뎁스 이상으로 들어가면 진입장벽이 급격히 높아지는 4050세대의 특성을 감안해, 연결된 디바이스는
+      최대한 얕은 뎁스에서 제어할 수 있도록 설계 방향을 잡았습니다.
+    </p>
+
+    <div class="card" style="margin:24px 0;">
+      <h3 style="margin-bottom:10px;">사용성 테스트 (1·2차, 프로토타입 4종 비교, 약 60명)</h3>
+      <table>
+        <tr><td style="width:65%;">한 화면 노출형 레이아웃 선호</td><td class="strong-cell">65%</td></tr>
+        <tr><td>LED 상태 직관적 표현 — 긍정 응답</td><td class="strong-cell">80%</td></tr>
+      </table>
+      <p style="font-size:12px; margin-top:10px;">"LED가 메인 정보인데 화면에서 덜 강조돼 있다"는 부정 피드백도 11건 있었습니다.</p>
+    </div>
+
+    <div class="quote">"연동을 어떻게 하는 건지 설명이 없어도 알 것 같다"</div>
+    <div class="quote">"LED 색이 지금 상태를 바로 보여줘서 편하다"</div>
+
+    <div class="callout">
+      <strong>핵심 인사이트</strong> — 문제의 절반 이상은 <span class="hl">"몰라서"가 아니라 "먼저 물어보지 않아서"</span> 생겼습니다.
+      매번 사용자가 연결 방법을 찾아야 했던 구조를, 디바이스가 켜지면 앱이 먼저 인식하고 제안하는 구조로 뒤집는 것이 핵심 방향이었습니다.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 05 디자인 결정 -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">의사결정</span>
+    <h2>자동 인식 + 1뎁스 컨트롤</h2>
+
+    <div class="card-grid">
+      <div class="card"><h3>🔵 자동 인식 · 퀵연결</h3><p style="font-size:13px;">주변에 전원이 켜진 디바이스가 있으면 자동으로 인식해 바텀시트로 연결을 제안.</p></div>
+      <div class="card"><h3>📋 홈 디바이스 목록</h3><p style="font-size:13px;">연결 가능한 디바이스를 홈에서 전체 목록으로 노출. 여러 대를 등록해도 배너 하나로 막히지 않음.</p></div>
+      <div class="card"><h3>🎚️ 1뎁스 컨트롤</h3><p style="font-size:13px;">이미 연결된 디바이스는 목록에서 한 번의 진입으로 바로 제어 화면 도달.</p></div>
+      <div class="card"><h3>✍️ UX 라이팅 분리</h3><p style="font-size:13px;">"확인"이 목적인 문안과 "연결"이 목적인 문안을 구분해 다음 행동을 명확히 안내.</p></div>
+    </div>
+
+    <div class="callout light" style="margin-top:20px;">
+      <strong>설계 원칙</strong> — 4050세대는 2뎁스 이상 들어가는 순간 이탈 가능성이 크게 높아집니다.
+      기능을 더 넣기보다 <strong>이미 연결된 디바이스까지 도달하는 뎁스를 줄이는 것</strong>을 최우선으로 삼았습니다.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 06 최종 디자인 -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">최종 디자인</span>
+    <h2>자동 인식 · 홈 디바이스 목록 · 1뎁스 컨트롤</h2>
+
+    <div class="card-grid cols-3">
+      <div>
+        <div class="visual-frame"><span class="mark">화면 예정</span></div>
+        <p class="visual-caption">전원 인식 시 자동 노출되는 퀵연결 바텀시트</p>
+      </div>
+      <div>
+        <div class="visual-frame"><span class="mark">화면 예정</span></div>
+        <p class="visual-caption">홈 — 연결 가능 디바이스 전체 목록</p>
+      </div>
+      <div>
+        <div class="visual-frame"><span class="mark">화면 예정</span></div>
+        <p class="visual-caption">1뎁스 컨트롤 · LED 상태 표시</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 07 결과 -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">결과 · 남은 과제</span>
+    <h2>두 차례 개선, 연동은 눈에 띄게 쉬워졌다</h2>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num accent">+20%</div><div class="label">디바이스 등록자 중 연동 사용</div><div class="sub">Solution 1 적용 후</div></div>
+      <div class="stat"><div class="num accent">+16%p</div><div class="label">연동 비율</div><div class="sub">Solution 2 적용 후</div></div>
+      <div class="stat"><div class="num accent">-20%</div><div class="label">커뮤니티·CS 문의</div><div class="sub">Solution 2 적용 후</div></div>
+    </div>
+    <p style="font-size:12px; color:var(--t3);">해제 후 재등록 비율도 눈에 띄게 줄었습니다(정확한 수치는 별도 집계 필요).</p>
+
+    <div class="card" style="margin-top:24px;">
+      <h3 style="margin-bottom:8px;">남겨둔 과제</h3>
+      <p style="font-size:13px;">"LED가 메인 정보인데 화면에서 덜 강조돼 있다"는 1차 테스트 피드백(11건)은 2차 개선에서 명확히 해소됐는지 확인되지 않아, 다음 라운드에서 다시 짚어볼 부분으로 남겨뒀습니다.</p>
+    </div>
+
+    <div class="callout">
+      <strong>학습</strong> — 이 프로젝트는 처음부터 정답을 설계한 것이 아니라, <span class="hl">출시 → 문제 발견 → 개선</span>을 두 번 반복하며 나온 결과입니다.
+      "몰라서"가 아니라 "먼저 물어보지 않아서" 생긴 문제라는 것을 알고 나서야, 기능을 더하지 않고도 뎁스를 줄이는 방향으로 풀 수 있었습니다.
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">© 2026 최지원. Product Designer Portfolio.</footer>
+
+</body>
+</html>
