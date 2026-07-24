@@ -60,10 +60,7 @@ img { max-width: 100%; display: block; }
 .container-wide { width: 100%; max-width: var(--wide); margin: 0 auto; padding: 0 24px; }
 
 /* ── 섹션 구분선 ── */
-.glow-line {
-  width: 100%; max-width: var(--wide); margin: 0 auto;
-  padding: 0 24px; box-sizing: border-box;
-}
+.glow-line { width: 100%; }
 .glow-line::after { content: ''; display: block; height: 1px; background: var(--border); }
 
 /* ── 타이포그래피 ── */
