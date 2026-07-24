@@ -90,6 +90,18 @@ p.lead { font-size: 19px; color: var(--t2); line-height: 1.7; max-width: none; }
 strong { color: var(--t1); font-weight: 700; }
 .hl { color: var(--blue); }
 
+/* ── 기여도 게이지 ── */
+.contrib { display: flex; flex-wrap: wrap; gap: 10px 32px; margin: 4px 0 28px; }
+.contrib-row { display: flex; align-items: center; gap: 12px; }
+.contrib-label { font-size: 12px; font-weight: 700; color: var(--t3); width: 34px; flex-shrink: 0; }
+.contrib-track {
+  width: 120px; height: 6px; border-radius: 100px;
+  background: var(--surface-2); border: 1px solid var(--border-strong);
+  overflow: hidden; flex-shrink: 0;
+}
+.contrib-fill { height: 100%; border-radius: 100px; background: linear-gradient(90deg, var(--blue), var(--violet)); }
+.contrib-value { font-size: 13px; font-weight: 800; color: var(--t1); width: 38px; text-align: right; font-variant-numeric: tabular-nums; }
+
 /* ── 플로팅 Contact 버튼 ── */
 .floating-contact {
   position: fixed; right: 24px; bottom: 24px; z-index: 30;
@@ -102,6 +114,22 @@ strong { color: var(--t1); font-weight: 700; }
 }
 .floating-contact:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.08); }
 .floating-contact svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* ── 플로팅 프로젝트 내비게이션 ── */
+.floating-nav { position: fixed; right: 24px; bottom: 24px; z-index: 30; display: flex; gap: 10px; }
+.floating-nav a {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 14px 20px; border-radius: 100px;
+  font-size: 14px; font-weight: 700; text-decoration: none;
+  background: var(--surface-2); color: var(--t1);
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 12px 32px rgba(0,0,0,.4);
+  transition: transform .15s ease, border-color .15s ease, color .15s ease;
+}
+.floating-nav a:hover { transform: translateY(-2px); border-color: var(--blue); color: var(--blue); }
+.floating-nav a.next { background: var(--t1); color: var(--bg); border-color: transparent; }
+.floating-nav a.next:hover { color: var(--bg); opacity: .8; transform: translateY(-2px); }
+.floating-nav a .arrow-ico { color: currentColor; width: 12px; height: 12px; margin: 0; }
 
 /* ── 섹션 리듬 ── */
 section.block { padding: 72px 0; }
@@ -289,4 +317,6 @@ footer.site-footer {
   .stat + .stat { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 16px; }
   .callout { padding: 22px 20px; }
   .floating-contact { right: 16px; bottom: 16px; padding: 12px 18px; font-size: 13px; }
+  .floating-nav { right: 16px; bottom: 16px; gap: 8px; }
+  .floating-nav a { padding: 11px 14px; font-size: 12px; }
 }

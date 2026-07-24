@@ -123,20 +123,31 @@
       본 UT에 앞서 참여자의 의견과 인사이트를 가볍게 수집하는 용도로 사용했습니다.
     </p>
     <div class="card-grid">
-      <a class="card" href="https://jelincc.github.io/tier-maker/" target="_blank" rel="noopener" style="text-decoration:none; display:block;">
+      <div class="card">
         <h3 style="color:var(--t1);">기업 리뷰 카드 티어표</h3>
         <p style="font-size:12px; color:var(--t3); margin-top:10px;">목적</p>
         <p style="font-size:13px; margin-top:2px;">리뷰 카드에서 정보를 제한했을 때 사용자가 가장 답답해하는 항목 파악</p>
         <p style="font-size:12px; color:var(--t3); margin-top:10px;">결과</p>
-        <p style="font-size:13px; margin-top:2px; color:var(--t1);">정리 중이에요, 곧 업데이트됩니다</p>
-      </a>
-      <a class="card" href="https://jelincc.github.io/card-sorting/" target="_blank" rel="noopener" style="text-decoration:none; display:block;">
+        <p style="font-size:13px; margin-top:2px; color:var(--t1);">
+          전체 참여자 87명 기준 답답함 1위는 '단점'(5.0/5.0), 2위는 '기업명'(4.8)이었습니다. UT 참여자 12명에게 항목을 설명하며 다시 물었더니
+          '작성자의 정보'가 7위 → 3위로 뛰어올랐고, 레이블만으론 안 보이던 가치가 설명을 들으면 드러난다는 뜻이었습니다.
+          이 결과로 메인 영역은 기업명·장점·총점만 상시 노출하고, 나머지는 축약 후 상세에서 펼치는 구조로 설계했습니다.
+        </p>
+        <a href="https://jelincc.github.io/tier-maker/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; font-size:12px; color:var(--blue); margin-top:12px; text-decoration:none;">프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="card">
         <h3 style="color:var(--t1);">공고 카드 정보 나누기</h3>
         <p style="font-size:12px; color:var(--t3); margin-top:10px;">목적</p>
         <p style="font-size:13px; margin-top:2px;">채용 공고에서 어떤 정보를 필수로 인식하는지 파악</p>
         <p style="font-size:12px; color:var(--t3); margin-top:10px;">결과</p>
-        <p style="font-size:13px; margin-top:2px; color:var(--t1);">직무명 98%, 회사명 86%는 필수로 꼽혔지만 이미지는 3%뿐이었고, 이 결과가 텍스트 카드 전환의 근거가 됐습니다 (n=64)</p>
-      </a>
+        <p style="font-size:13px; margin-top:2px; color:var(--t1);">
+          '3대 필수'는 직무명·회사명·경력 조건으로 확인됐습니다(n=64 기준 인식률 100%·91%·89%). 반면 이미지·로고·학력 조건은
+          있으나 없으나 탐색에 지장이 없는 시각 노이즈였고, 지역 정보는 이직 의향이 높을수록 우선순위가 떨어졌습니다.
+          이 결과로 카드를 직무명·회사명·경력조건 중심 Primary 영역과 D-day·핵심 장점 태그로 만든 Secondary 클릭 트리거로
+          재구성했고, 지역·학력은 상세 화면으로 옮겼습니다.
+        </p>
+        <a href="https://jelincc.github.io/card-sorting/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; font-size:12px; color:var(--blue); margin-top:12px; text-decoration:none;">프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
