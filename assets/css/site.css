@@ -218,6 +218,106 @@ section.block.tight { padding: 44px 0; }
 }
 .quote.strong { border-left-color: var(--blue); color: var(--t1); }
 
+/* ── 바 차트(설문/데이터 시각화) ── */
+.barchart { display: flex; flex-direction: column; gap: 10px; margin: 18px 0 0; }
+.barchart-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+.barchart-meta h3 { margin-bottom: 0; }
+.barchart-meta .n { font-size: 11px; color: var(--t3); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+
+.bar-row.primary {
+  position: relative; height: 44px; border-radius: 12px; overflow: hidden;
+  background: rgba(255,255,255,.04); border: 1px solid var(--border);
+}
+.bar-row.primary .bar-fill {
+  height: 100%; min-width: fit-content;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 0 16px;
+  background: linear-gradient(90deg, rgba(91,147,255,.24), rgba(156,140,255,.34));
+  border-right: 1px solid rgba(156,140,255,.45);
+}
+.bar-row.primary.top .bar-fill {
+  background: linear-gradient(90deg, rgba(91,147,255,.42), rgba(156,140,255,.52));
+  border-right-color: rgba(91,147,255,.6);
+}
+.bar-row.primary .bar-label { font-size: 13px; font-weight: 700; color: var(--t1); white-space: nowrap; }
+.bar-row.primary .bar-pct   { font-size: 14px; font-weight: 800; color: var(--t1); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.bar-row.secondary {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 11px 16px; border-radius: 12px;
+  border: 1px solid var(--border); background: transparent;
+}
+.bar-row.secondary .bar-label { font-size: 12.5px; color: var(--t3); font-weight: 600; }
+.bar-row.secondary .bar-pct   { font-size: 12.5px; color: var(--t3); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ── 버블 비교(두 지표 크기 대비) ── */
+.bubble-compare {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 40px 24px 30px; text-align: center;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  margin: 24px 0;
+}
+.bubble-tag {
+  display: inline-flex; align-items: center; font-size: 12px; font-weight: 700;
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 26px;
+  background: rgba(91,147,255,.12); color: #A9C4FF; border: 1px solid rgba(91,147,255,.3);
+}
+.bubble-row { display: flex; align-items: center; justify-content: center; gap: 22px; }
+.bubble {
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  border-radius: 50%;
+  background: radial-gradient(120% 120% at 30% 25%, rgba(91,147,255,.26), rgba(156,140,255,.12));
+  border: 1px solid rgba(91,147,255,.32);
+}
+.bubble.small { width: 60px; height: 60px; }
+.bubble.large {
+  width: 176px; height: 176px;
+  background: radial-gradient(120% 120% at 30% 25%, rgba(91,147,255,.46), rgba(156,140,255,.22));
+  border-color: rgba(91,147,255,.55);
+}
+.bubble-num { font-weight: 800; color: var(--t1); font-variant-numeric: tabular-nums; }
+.bubble.small .bubble-num { font-size: 12px; }
+.bubble.large .bubble-num { font-size: 32px; }
+.bubble-arrow { width: 22px; height: 22px; color: var(--t3); flex-shrink: 0; }
+.bubble-labels { display: flex; justify-content: center; gap: 0; margin-top: 22px; width: 100%; max-width: 420px; }
+.bubble-labels span { flex: 1; font-size: 12px; color: var(--t3); font-weight: 600; }
+
+/* ── AS-IS / TO-BE 비교 카드 ── */
+.compare-card { border-radius: var(--radius-md); overflow: hidden; background: var(--surface); border: 1px solid var(--border); }
+.compare-card .cc-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 16px 20px; font-size: 14px; font-weight: 700; color: var(--t1);
+  background: linear-gradient(90deg, rgba(91,147,255,.16), rgba(156,140,255,.1));
+  border-bottom: 1px solid var(--border);
+}
+.compare-card .cc-head .cc-delta { font-size: 12px; font-weight: 800; color: var(--blue); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.compare-card .cc-row { display: flex; gap: 12px; padding: 16px 20px; align-items: flex-start; }
+.compare-card .cc-row + .cc-row { border-top: 1px solid var(--border); }
+.compare-card .cc-tag {
+  flex-shrink: 0; font-size: 11px; font-weight: 800; letter-spacing: .03em;
+  padding: 3px 9px; border-radius: 6px; margin-top: 1px; white-space: nowrap;
+}
+.compare-card .cc-row.is .cc-tag { background: rgba(255,255,255,.06); color: var(--t3); }
+.compare-card .cc-row.tobe .cc-tag { background: rgba(91,147,255,.16); color: #A9C4FF; }
+.compare-card .cc-row.is p { color: var(--t3); }
+.compare-card .cc-row.tobe p { color: var(--t1); }
+.compare-card p { font-size: 13px; margin: 0; line-height: 1.6; max-width: none; }
+
+/* ── 결정 · 트레이드오프 ── */
+.tradeoff-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 8px 24px; }
+.tradeoff-item { padding: 18px 0; }
+.tradeoff-item + .tradeoff-item { border-top: 1px solid var(--border); }
+.tradeoff-item .to-decision { display: flex; gap: 8px; align-items: baseline; font-size: 14px; font-weight: 700; color: var(--t1); margin-bottom: 10px; }
+.tradeoff-item .to-decision .to-num { color: var(--blue); font-weight: 800; flex-shrink: 0; }
+.tradeoff-item .to-row { display: flex; gap: 10px; font-size: 13px; line-height: 1.7; padding-left: 22px; margin-bottom: 6px; }
+.tradeoff-item .to-row:last-child { margin-bottom: 0; }
+.tradeoff-item .to-label { flex-shrink: 0; width: 60px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding-top: 2px; }
+.tradeoff-item .to-row.risk .to-label { color: var(--red); }
+.tradeoff-item .to-row.risk .to-text { color: var(--t2); }
+.tradeoff-item .to-row.response .to-label { color: #A9C4FF; }
+.tradeoff-item .to-row.response .to-text { color: var(--t3); }
+.tradeoff-item .to-text strong { color: var(--t1); }
+
 /* ── 카드(용도 제한: 근거 묶음, 비교 등) ── */
 .card {
   background: var(--surface); border: 1px solid var(--border);
@@ -311,4 +411,11 @@ footer.site-footer {
   .stat + .stat { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 16px; }
   .callout { padding: 22px 20px; }
   .site-header .brand span.full { display: none; }
+  .bubble-row { flex-direction: column; gap: 14px; }
+  .bubble-arrow { transform: rotate(90deg); }
+  .bubble-labels { flex-direction: column; gap: 6px; max-width: none; }
+  .compare-card .cc-row { flex-direction: column; gap: 6px; }
+  .bar-row.primary .bar-label { font-size: 12px; }
+  .tradeoff-item .to-row { flex-direction: column; gap: 2px; padding-left: 0; }
+  .tradeoff-item .to-label { width: auto; }
 }
