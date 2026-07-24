@@ -466,6 +466,77 @@
 </section>
 
 <!-- ═══════════════════════════════════ -->
+<!-- 부록 3: 모듈 정책 -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <span class="eyebrow" style="margin-bottom:0;">부록 3 · 모듈 정책</span>
+      <span class="chip" style="margin-left:auto;">기획·개발 공용 문서</span>
+    </div>
+    <h2>모듈 조합 기준을 정의하고, 개발팀과 같은 문서를 보게 만들다</h2>
+    <p>
+      홈이 모듈 단위로 쪼개지면서 "이 조합이 되는지 안 되는지" 기준이 없었습니다. 모듈을 동작 방식(캐러셀형·캐러셀&amp;띠배너형·
+      리스트형·띠배너형·AD배너형)과 구성 요소(공고·이미지·리뷰·인기글 카드)로 나눠 실제 쓰이는 조합만 매트릭스로 정리했습니다.
+      노출 건수 같은 변동값은 변수로 남기되, 코드명·API 주소·사용 여부는 클라이언트·서버 개발자가 직접 채우는 레지스트리 칸을
+      만들어 기획과 개발이 같은 문서 하나로 소통하게 했습니다.
+    </p>
+
+    <div class="card-grid cols-3" style="margin-top:20px;">
+      <div class="card"><h3>1차 분류 · 동작 방식</h3><p style="font-size:13px;">캐러셀형 · 캐러셀&amp;띠배너형 · 리스트형 · 띠배너형 · AD배너형, 5종</p></div>
+      <div class="card"><h3>2차 분류 · 구성 요소</h3><p style="font-size:13px;">공고 카드 · 이미지 카드 · 리뷰 카드 · 인기글 카드, 4종</p></div>
+      <div class="card"><h3>레지스트리</h3><p style="font-size:13px;">모듈명 · 코드명 · API 주소 · 사용 여부를 기획-개발이 같이 채우는 라이브 문서</p></div>
+    </div>
+
+    <div class="visual">
+      <div class="visual-frame"><span class="mark">1차&times;2차 조합 매트릭스 화면 예정</span></div>
+    </div>
+
+    <div class="callout light">
+      <strong>왜 필요했나</strong>: 모듈 이름이 팀마다 다르게 불리면, "이 모듈 지금 몇 개 살아있어요?" 같은 질문에 아무도 바로 답을 못 합니다.
+      서버 조회 조건·정렬·개수가 같고 플랫폼별 노출 방식이 같으면 같은 모듈, 배경색 같은 시각 요소만 다르면 variation — 이 기준
+      하나로 "같은 것을 같은 이름으로 부르는" 문제를 풀었습니다.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 부록 4: JDS 1.0 디자인 시스템 -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <span class="eyebrow" style="margin-bottom:0;">부록 4 · 디자인 시스템</span>
+      <span class="chip" style="margin-left:auto;">웹 · iOS · Android · 모웹 통합</span>
+    </div>
+    <h2>플랫폼마다 제각각이던 컴포넌트를 JDS 1.0으로 통합</h2>
+    <p>
+      홈 개편 전에는 버튼·카드·배지 같은 기본 컴포넌트가 웹·iOS·Android·모웹에서 각자 따로 정의돼 있었습니다. 같은 "카드"인데도
+      플랫폼마다 여백·컬러·상태 처리가 조금씩 달랐고, 하나를 고치려면 네 곳을 따로 손봐야 했습니다. 모듈화 작업을 하면서 이 문제를
+      더는 미룰 수 없다고 판단해, 플랫폼 공통 컴포넌트 체계인 <strong>JDS 1.0</strong>을 만들었습니다.
+    </p>
+
+    <div class="card-grid cols-3" style="margin-top:20px;">
+      <div class="visual-frame"><span class="mark">AS-IS: 플랫폼별 컴포넌트 비교 화면 예정</span></div>
+      <div class="visual-frame"><span class="mark">JDS 1.0 컴포넌트 라이브러리 화면 예정</span></div>
+      <div class="visual-frame"><span class="mark">실제 적용 화면 예정</span></div>
+    </div>
+
+    <div class="card-grid" style="margin-top:6px;">
+      <div class="card"><h3>공통 토큰</h3><p style="font-size:13px;">컬러·타이포·spacing을 플랫폼 무관 토큰으로 정의해 웹·iOS·Android·모웹이 같은 값을 참조하도록 함</p></div>
+      <div class="card"><h3>컴포넌트 스펙 통일</h3><p style="font-size:13px;">버튼·카드·배지·인풋 등 기본 컴포넌트를 플랫폼별 variation 없이 하나의 스펙으로 정리</p></div>
+      <div class="card"><h3>네이밍 · 문서화</h3><p style="font-size:13px;">모듈 정책서와 같은 방식으로 컴포넌트 이름·상태·사용 조건을 문서화해 기획·디자인·개발이 같은 용어를 쓰도록 함</p></div>
+    </div>
+
+    <div class="callout">
+      <strong>모듈 정책과 같은 문제의식</strong>: 홈을 모듈 단위로 쪼개는 순간, 컴포넌트가 플랫폼마다 다르면 모듈 정의 자체가 어긋난다는 게 보였습니다.
+      부록 3의 모듈 정책과 JDS 1.0은 결국 <span class="hl">"우리가 같은 것을 같은 이름으로 부르고 있는가"</span>를 각각 모듈 레벨과
+      컴포넌트 레벨에서 정리한 두 결과물입니다.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
 <!-- 11 후속 개편 이야기 -->
 <!-- ═══════════════════════════════════ -->
 <section class="block tint">
