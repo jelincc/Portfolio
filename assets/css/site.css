@@ -358,6 +358,52 @@ a.card:hover { border-color: rgba(91,147,255,.4); transform: translateY(-2px); }
 }
 .visual-caption { font-size: 12px; color: var(--t3); margin-top: 12px; text-align: center; }
 
+/* ── 폰 목업 + 라벨 주석(가설→검증) ── */
+.phone-annotate {
+  position: relative;
+  max-width: 900px;
+  margin: 36px auto;
+  min-height: 560px;
+}
+.pa-frame {
+  width: 260px; margin: 0 auto; position: relative; z-index: 2;
+}
+.pa-frame img {
+  width: 100%; height: auto; border-radius: 34px;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.04);
+}
+.pa-item {
+  position: absolute; width: 240px;
+  transform: translateY(-50%);
+  display: flex; align-items: center; gap: 0;
+}
+.pa-item.side-right { left: calc(50% + 158px); }
+.pa-item.side-left  { right: calc(50% + 158px); flex-direction: row-reverse; }
+.pa-line {
+  flex: 0 0 28px; height: 1px; background: var(--border-strong); position: relative;
+}
+.pa-line::before {
+  content: ''; position: absolute; top: 50%; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--blue); box-shadow: 0 0 0 4px rgba(91,147,255,.18); transform: translateY(-50%);
+}
+.pa-item.side-right .pa-line::before { left: -3.5px; }
+.pa-item.side-left  .pa-line::before { right: -3.5px; }
+.pa-card { min-width: 0; }
+.pa-item.side-right .pa-card { text-align: left; padding-left: 4px; }
+.pa-item.side-left  .pa-card { text-align: right; padding-right: 4px; }
+.pa-card h4 { font-size: 13.5px; font-weight: 700; color: var(--t1); margin: 0 0 5px; line-height: 1.45; }
+.pa-card p  { font-size: 12px; color: var(--t3); line-height: 1.6; margin: 0; max-width: none; }
+
+@media (max-width: 860px) {
+  .phone-annotate { min-height: 0; }
+  .pa-item { position: static; transform: none; width: auto; margin: 0 0 18px; }
+  .pa-item.side-left { flex-direction: row; }
+  .pa-item.side-right .pa-card, .pa-item.side-left .pa-card { text-align: left; padding: 0; }
+  .pa-line { display: none; }
+  .pa-frame { margin-bottom: 24px; }
+}
+
 /* ── 테이블 ── */
 .table-wrap { overflow-x: auto; margin: 20px 0; }
 table { width: 100%; border-collapse: collapse; font-size: 14px; }
