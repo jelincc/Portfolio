@@ -195,10 +195,21 @@ section.block.tight { padding: 44px 0; }
 }
 .chip.dark { background: var(--t1); color: var(--bg); border-color: transparent; font-weight: 800; }
 
-.res-badge { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+.res-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; font-weight: 700; padding: 4px 10px 4px 8px; border-radius: 20px;
+  white-space: nowrap; vertical-align: middle;
+}
+.res-badge svg { width: 11px; height: 11px; flex-shrink: 0; }
 .res-badge.ok   { background: rgba(52,211,153,.14); color: var(--green); }
 .res-badge.warn { background: rgba(251,191,87,.14); color: var(--amber); }
 .res-badge.ng   { background: rgba(255,107,107,.14); color: var(--red); }
+
+/* ── 검증 결과 목록(문장 나열 대신 줄바꿈) ── */
+.verdict-list { display: flex; flex-direction: column; gap: 10px; }
+.verdict-row { display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+.verdict-row .res-badge { margin-top: 1px; flex-shrink: 0; }
+.verdict-row span:last-child { font-size: 14px; color: var(--t2); line-height: 1.6; flex: 1 1 240px; }
 
 /* ── 지표: 서사형(문장 안에 녹임) ── */
 .stat-row {
