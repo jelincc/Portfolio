@@ -225,6 +225,25 @@ section.block.tight { padding: 44px 0; }
 .res-badge.warn { background: rgba(251,191,87,.14); color: var(--amber); }
 .res-badge.ng   { background: rgba(255,107,107,.14); color: var(--red); }
 
+/* ── 인사이트 번호 목록 ── */
+.insight-list { display: flex; flex-direction: column; gap: 12px; margin: 0; }
+.insight-item { display: flex; align-items: flex-start; gap: 12px; }
+.insight-item .n {
+  flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px; border-radius: 50%;
+  background: rgba(91,147,255,.14); color: var(--blue); font-size: 11px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.insight-item p { margin: 0; font-size: 13.5px; color: var(--t2); line-height: 1.7; padding-top: 2px; }
+
+/* ── 성공 기준: 체크리스트 칩 ── */
+.criteria-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.criteria-chip {
+  display: inline-flex; align-items: center; gap: 9px; padding: 11px 18px;
+  border-radius: 10px; background: var(--surface-2); border: 1px solid var(--border-strong);
+  font-size: 13.5px; color: var(--t1); font-weight: 600;
+}
+.criteria-chip svg { width: 15px; height: 15px; color: var(--green); flex-shrink: 0; }
+
 /* ── 검증 결과 목록(문장 나열 대신 줄바꿈) ── */
 .verdict-list { display: flex; flex-direction: column; gap: 10px; }
 .verdict-row { display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
