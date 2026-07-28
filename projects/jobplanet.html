@@ -86,27 +86,30 @@
       공고 조회와 지원으로 이어지는 흐름 자체가 구조적으로 막혀 있었습니다.
     </p>
 
-    <div class="bubble-compare">
-      <div class="bubble-tag">약 160배 차이</div>
-      <div class="bubble-row">
-        <div class="bubble small"><span class="bubble-num">0.4%</span></div>
-        <svg class="bubble-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div class="bubble large"><span class="bubble-num">64%</span></div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="eyebrow" style="color:#A9C4FF;">실 사용 데이터</div>
+        <p style="font-size:13px; margin-top:12px;">홈 클릭 후 탐색 진입률 <strong style="color:var(--t1);">0.41%</strong></p>
+        <p style="font-size:13px; margin-top:8px;">GNB 클릭의 <strong style="color:var(--t1);">64%</strong>는 기업 리뷰 조회로 고착 (약 160배 차이)</p>
+        <p style="font-size:13px; margin-top:8px;">홈의 콘텐츠는 거의 소비되지 않고, <strong style="color:var(--t1);">검색창 클릭에만 집중</strong>되고 있는 상태 (Clarity·Heatmap 기준)</p>
+        <div style="display:flex; gap:10px; margin-top:14px;">
+          <img src="../assets/images/jobplanet/heatmap-search.png" alt="홈 검색창 영역 히트맵" style="width:50%; border-radius:10px; border:1px solid var(--border); display:block;" loading="lazy" />
+          <img src="../assets/images/jobplanet/heatmap-content.png" alt="홈 콘텐츠 영역 히트맵" style="width:50%; border-radius:10px; border:1px solid var(--border); display:block;" loading="lazy" />
+        </div>
       </div>
-      <div class="bubble-labels">
-        <span>홈 탭 클릭</span>
-        <span>기업리뷰 탭 클릭</span>
+      <div class="card">
+        <div class="eyebrow" style="color:#A9C4FF;">사용자 인터뷰 + UT 결과</div>
+        <div class="quote" style="margin-top:12px;">"그냥 리뷰 보러 들어와요"</div>
+        <div class="quote">"바로 검색으로 넘어가는 편이에요"</div>
+        <div class="quote">"여기서 뭘 해야 하는지 모르겠어요"</div>
+        <p style="font-size:13px; margin-top:10px;">홈 자발적 탐색 없음 (<strong style="color:var(--t1);">12/12명</strong>)</p>
+        <p style="font-size:13px; margin-top:4px;">검색창 또는 타 탭 직행 (<strong style="color:var(--t1);">10/12명</strong>)</p>
+        <div class="callout light" style="margin-top:14px; padding:14px 16px;">
+          <strong>UT 대상</strong>: 최근 3개월 내 이직을 고민중이거나 기업 탐색 경험이 있는 직장인/구직자
+          (이직 긴급도 높음 7명 · 낮음 5명)
+        </div>
       </div>
-      <p style="font-size:11px; color:var(--t3); margin-top:16px;">GNB 클릭 비중 기준</p>
     </div>
-
-    <div class="hero-stat compact">
-      <span class="num">12/12명</span>
-      <span class="label">홈 진입 후 자발 탐색 없이 즉시 이탈</span>
-    </div>
-    <div class="quote">"검색하면 되지 홈을 왜 봐요?"</div>
-    <div class="quote">"그냥 리뷰 보러 왔어요"</div>
-    <div class="quote">"홈이 뭘 해야 하는 곳인지 모르겠어요"</div>
 
     <div class="card" style="margin-top:20px;">
       <div class="barchart-meta"><h3>행동 패턴</h3><span class="n">통합 UT 12명 기준</span></div>
@@ -118,9 +121,9 @@
           </div>
         </div>
         <div class="bar-row primary">
-          <div class="bar-fill" style="width:50%">
-            <span class="bar-label">검색창 또는 타 탭 직행 (긴급 유저)</span>
-            <span class="bar-pct">6/12</span>
+          <div class="bar-fill" style="width:83.3%">
+            <span class="bar-label">검색창 또는 타 탭 직행</span>
+            <span class="bar-pct">10/12</span>
           </div>
         </div>
         <div class="bar-row secondary">
@@ -256,7 +259,7 @@
 
     <div class="card-grid cols-3">
       <div class="card"><h3>규모</h3><p style="font-size:13px;">12명: 외부 9 + 내부 리허설 3<br>인당 약 70분 · Clarity 화면 녹화 연동</p></div>
-      <div class="card"><h3>참여자 구성</h3><p style="font-size:13px;">긴급 7 · 비긴급 2<br>신입 3 · 미들 4 · 시니어 2</p></div>
+      <div class="card"><h3>참여자 구성</h3><p style="font-size:13px;">이직 긴급도 높음 7명 · 낮음 5명</p></div>
       <div class="card" style="background:rgba(91,147,255,.08); border-color:rgba(91,147,255,.25);"><h3>담당 기여</h3><p style="font-size:13px;">홈·GNB 프로토타입 직접 제작(GitHub Pages)<br>UT 스크립트 설계 · 결과 분석 리딩</p><a href="https://jelincc.github.io/jobplanet-ut/" target="_blank" rel="noopener" class="proto-link">프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
 
