@@ -70,6 +70,25 @@
       <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">그러면:</p>
       <p style="color:var(--t1); font-weight:600; font-size:14px;">반복 훈련에 대한 거부감이 줄고, 어음 변별 능력이 자연스럽게 훈련될 것이다</p>
     </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h3 style="margin-bottom:6px;">Speech Banana 기준 단어 분류(Words Table)</h3>
+      <p style="font-size:12.5px; color:var(--t3); margin-bottom:12px;">주파수 대역(저주파~고주파)과 데시벨 구간별로 실제 게임에 쓰일 단어를 직접 분류했습니다. 저주파(250~1000Hz)는 A·B 영역, 고주파(1000~8000Hz)는 C·D·E 영역으로 나눠 각 영역에 맞는 단어 세트를 매핑했습니다.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>영역</th><th>주파수</th><th>dB 구간</th><th>예시 단어</th></tr></thead>
+          <tbody>
+            <tr><td style="color:var(--t1); font-weight:600;">A · 저주파</td><td>250-500Hz</td><td>30-60dB</td><td>Dog, Bear, Bird, Bell, Monkey, Boat, Duck, Bee, Egg, Leaf</td></tr>
+            <tr><td style="color:var(--t1); font-weight:600;">B · 저주파</td><td>500-1000Hz</td><td>40-60dB</td><td>Apple, Avocado, Rose, Rain, Rat, Round, Rub</td></tr>
+            <tr><td style="color:var(--t1); font-weight:600;">C · 고주파</td><td>1000-2000Hz</td><td>40-60dB</td><td>House, Cat, Peach, Potato, Pig, Ship, Car, Cow, Cake</td></tr>
+            <tr><td style="color:var(--t1); font-weight:600;">D · 고주파</td><td>2000-4000Hz</td><td>30-60dB</td><td>Key, King, Kiwi, Knife, Trip, Tear, Train, Tell</td></tr>
+            <tr><td style="color:var(--t1); font-weight:600;">E · 고주파</td><td>4000-8000Hz</td><td>30-50dB</td><td>Fly, Farm, Fool, Snake, Smart, Spinach, Ship, Chip</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:11px; color:var(--t3); margin-top:10px;">Speech Banana(음소 뱅크)는 오디오그램 상에서 일상 언어의 음소들이 분포하는 바나나 모양 영역을 뜻하며, 청각·언어재활 분야에서 난청 정도별로 들리는/들리지 않는 음소를 설명할 때 널리 쓰이는 참조 차트입니다.</p>
+    </div>
+
     <div class="card-grid cols-3" style="margin-top:16px;">
       <div class="card"><h3>Research</h3><p style="font-size:13px;">User research · Creative ideation</p></div>
       <div class="card"><h3>Design</h3><p style="font-size:13px;">Game strategy · Design strategy · Wireframing · Visual/UI design</p></div>
@@ -132,6 +151,17 @@
       <strong>현황</strong>: Bannie's Cup·Bannie's Room 두 미니게임 모두 실제 3D 에셋으로 제작을 마치고, 올리브유니온의 DTx 서비스 안에서
       <span class="hl">Olive Aid 등 다른 이명·청력 서비스와 함께 3개 언어로 정식 서비스</span>되고 있습니다. 정량적 성과 지표는 별도로 집계된 자료가
       없어 이 페이지에는 반영하지 않았습니다.
+    </div>
+
+    <div class="card-grid" style="margin-top:20px;">
+      <div class="card">
+        <h3 style="margin-bottom:10px;">Bannie's Cup · 실제 플레이 영상</h3>
+        <video src="../assets/videos/bannie/bannies-cup.mp4" controls playsinline preload="metadata" style="width:100%; border-radius:10px; display:block; background:#000;"></video>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:10px;">Bannie's Room · 실제 플레이 영상</h3>
+        <video src="../assets/videos/bannie/bannies-room.mp4" controls playsinline preload="metadata" style="width:100%; border-radius:10px; display:block; background:#000;"></video>
+      </div>
     </div>
   </div>
 </section>
