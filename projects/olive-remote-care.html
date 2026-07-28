@@ -57,10 +57,20 @@
 
 <section class="block">
   <div class="container">
-    <span class="eyebrow">Role</span>
+    <span class="eyebrow">목적 · 가설</span>
     <h2>기기 원격제어 서비스를 처음부터 설계</h2>
-    <p style="font-size:13px; color:var(--t3);">기기 원격제어 서비스에 관련된 자료를 수집하고, 전문가들에게 조언을 구해 Task별로 흐름을 기획하고 Wireframe을 작업했습니다.</p>
-    <div class="card-grid cols-3" style="margin-top:14px;">
+    <p>
+      보청기 설정을 조정하려면 환자가 매번 전문가를 직접 방문해야 했습니다. 원거리 거주자나 거동이 불편한 환자에게는
+      이 방문 자체가 큰 장벽이었고, 전문가 입장에서도 대면 상담만으로는 응대할 수 있는 환자 수가 제한적이었습니다.
+      기기 원격제어 서비스에 관련된 자료를 수집하고, 전문가들에게 조언을 구해 Task별로 흐름을 기획하고 Wireframe을 작업했습니다.
+    </p>
+    <div class="card">
+      <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">만약:</p>
+      <h3>화상 상담과 실시간 보청기 조정을 한 화면에서 처리할 수 있게 하면</h3>
+      <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">그러면:</p>
+      <p style="color:var(--t1); font-weight:600; font-size:14px;">방문 없이도 대면 상담과 동일한 수준의 조정 서비스를 제공할 수 있을 것이다</p>
+    </div>
+    <div class="card-grid cols-3" style="margin-top:16px;">
       <div class="card"><h3>Research</h3><p style="font-size:13px;">User research · Task flows</p></div>
       <div class="card"><h3>Design</h3><p style="font-size:13px;">Wireframing · Visual/UI design · Prototyping</p></div>
       <div class="card"><h3>Validation</h3><p style="font-size:13px;">Usability testing · Data visualization · Illustration/Iconography</p></div>
@@ -70,7 +80,7 @@
 
 <section class="block tint">
   <div class="container">
-    <span class="eyebrow">Output</span>
+    <span class="eyebrow">의사결정과 트레이드오프</span>
     <h2>청력 그래프, 실시간 조정, 화상 상담을 한 화면에</h2>
     <img src="../assets/images/appendix/olive-remote-care/screens-grid.png" alt="Olive Remote Care 실제 화면 6종" style="width:100%; border-radius:12px; display:block; margin-bottom:20px;" loading="lazy" />
 
@@ -93,6 +103,30 @@
     <div class="card" style="margin-top:14px;">
       <h3 style="margin-bottom:8px;">공용 디자인 시스템</h3>
       <p style="font-size:13px;">Graph·Preset·Status 등 반복적으로 쓰이는 컴포넌트를 상태(active/disabled)별로 정리해, 여러 화면에서 일관되게 재사용할 수 있도록 시스템화했습니다.</p>
+    </div>
+
+    <div class="tradeoff-card" style="margin-top:20px;">
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">01</span>그래프·조정·화상통화를 한 레이아웃에 배치</div>
+        <div class="to-row risk"><span class="to-label">위험</span><span class="to-text">세 영역을 한 화면에 다 넣으면 정보 밀도가 높아져 전문가가 조정에 집중하기 어려워질 수 있습니다.</span></div>
+        <div class="to-row response"><span class="to-label">대응</span><span class="to-text">화상 통화 화면은 작게 유지하고 그래프·조정 UI를 주 영역으로 배치해, 상담 흐름은 끊기지 않으면서 조정 작업이 화면 중심이 되도록 했습니다.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">02</span>컴포넌트를 처음부터 공용 디자인시스템으로 구축</div>
+        <div class="to-row risk"><span class="to-label">위험</span><span class="to-text">B2B/B2C 화면을 각각 개별 설계하면 초기 속도는 빠르지만 화면이 늘어날수록 일관성이 깨지기 쉽습니다.</span></div>
+        <div class="to-row response"><span class="to-label">대응</span><span class="to-text">Graph·Preset·Status 컴포넌트를 상태별로 먼저 정리해, 이후 화면이 늘어나도 동일한 규칙으로 확장할 수 있게 만들었습니다.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">결과</span>
+    <h2>B2B/B2C 통합 웹 서비스로 정식 운영</h2>
+    <div class="callout">
+      <strong>현황</strong>: 화상 상담과 실시간 원격 조정을 한 화면에서 처리하는 구조로 설계·개발을 마치고 <span class="hl">실제 원격 피팅 서비스로 운영</span>되고 있습니다.
+      정량적 성과 지표는 별도로 집계된 자료가 없어 이 페이지에는 반영하지 않았습니다.
     </div>
   </div>
 </section>

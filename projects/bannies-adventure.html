@@ -57,14 +57,20 @@
 
 <section class="block">
   <div class="container">
-    <span class="eyebrow">Game Strategy</span>
+    <span class="eyebrow">목적 · 가설</span>
     <h2>"Speech Banana" 논문에서 시작된 게임</h2>
     <p>
-      어음 변별 훈련 관련 논문·자료를 찾던 중 'Speech Banana'라는 주파수 대역별 단어·발음 그래프를 발견했고,
-      이 개념을 게임에 적용하면 효과적으로 어음 변별 훈련을 수행할 수 있을 것이라 판단했습니다.
-      영어·일본어·한국어 3개 언어로 서비스됩니다.
+      난청 환자는 어음(말소리) 변별 훈련이 필요하지만, 기존 훈련은 반복적인 청각 훈련 형태라 지속하기 어렵고
+      이탈이 잦았습니다. 어음 변별 훈련 관련 논문·자료를 찾던 중 'Speech Banana'라는 주파수 대역별 단어·발음
+      그래프를 발견했고, 이 개념을 게임에 적용하면 훈련을 지속 가능한 형태로 바꿀 수 있을 거라 판단했습니다.
     </p>
-    <div class="card-grid cols-3">
+    <div class="card">
+      <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">만약:</p>
+      <h3>Speech Banana 개념(주파수 대역별 단어·발음 매핑)을 게임 규칙으로 바꾸면</h3>
+      <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">그러면:</p>
+      <p style="color:var(--t1); font-weight:600; font-size:14px;">반복 훈련에 대한 거부감이 줄고, 어음 변별 능력이 자연스럽게 훈련될 것이다</p>
+    </div>
+    <div class="card-grid cols-3" style="margin-top:16px;">
       <div class="card"><h3>Research</h3><p style="font-size:13px;">User research · Creative ideation</p></div>
       <div class="card"><h3>Design</h3><p style="font-size:13px;">Game strategy · Design strategy · Wireframing · Visual/UI design</p></div>
       <div class="card"><h3>Build</h3><p style="font-size:13px;">Game Workflow · Prototyping</p></div>
@@ -74,7 +80,7 @@
 
 <section class="block tint">
   <div class="container">
-    <span class="eyebrow">Output</span>
+    <span class="eyebrow">의사결정과 트레이드오프</span>
     <h2>두 가지 미니게임으로 소리를 기억하고 찾는다</h2>
     <div class="card-grid">
       <div class="card">
@@ -87,6 +93,24 @@
       </div>
     </div>
     <div class="callout light" style="margin-top:14px;">게임 구성(시나리오·디자인), 난이도, 네트워크 통신, 데이터 관리 등을 체크하며 프로토타입용 게임을 제작했습니다.</div>
+
+    <div class="tradeoff-card" style="margin-top:20px;">
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">01</span>훈련형 UI 대신 게임형 UI로 설계</div>
+        <div class="to-row risk"><span class="to-label">위험</span><span class="to-text">순수 게임 재미를 우선하면 실제 어음 변별 훈련 효과가 희석될 위험이 있습니다.</span></div>
+        <div class="to-row response"><span class="to-label">대응</span><span class="to-text">Speech Banana의 주파수·발음 매핑을 게임 규칙(같은 단어를 말하는 캐릭터 찾기, 소리 나는 사물 찾기) 자체에 내장해, 재미와 훈련 목적이 분리되지 않도록 설계했습니다.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">02</span>영어·일본어·한국어 3개 언어 동시 지원</div>
+        <div class="to-row risk"><span class="to-label">위험</span><span class="to-text">언어별로 발음·단어 세트가 달라 콘텐츠·검증 리소스가 3배로 늘어납니다.</span></div>
+        <div class="to-row response"><span class="to-label">대응</span><span class="to-text">게임 구성(시나리오·난이도)과 데이터 관리 체계를 언어 독립적으로 설계해, 언어별 단어 세트만 교체하면 되는 구조로 만들었습니다.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">03</span>손그림 레퍼런스로 외주 게임 개발사와 커뮤니케이션</div>
+        <div class="to-row risk"><span class="to-label">위험</span><span class="to-text">텍스트 기획서만으로는 원하는 공간감·분위기가 개발사에 정확히 전달되지 않을 위험이 있습니다.</span></div>
+        <div class="to-row response"><span class="to-label">대응</span><span class="to-text">구조 배치 → 프랍·색상·분위기 → 사물 지정까지 단계별 손그림을 직접 그려, 실제 3D 에셋 제작 방향을 명확히 가이드했습니다.</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -97,6 +121,18 @@
     <p>게임 개발 업체에게 원하는 디자인 방향성을 전달하기 위해 손 그림 및 레퍼런스를 직접 제작했습니다. (예: Bannie's Room · 거실)</p>
     <img src="../assets/images/appendix/bannie/room-design.png" alt="Bannie's Room 거실 디자인 과정" style="width:100%; border-radius:12px; display:block; margin-top:14px;" loading="lazy" />
     <p style="font-size:12px; color:var(--t3); margin-top:10px;">구조 배치 → 전체 프랍 느낌·색상·분위기 → 들어가야 하는 사물 지정까지, 손그림으로 먼저 방향을 잡고 실제 3D 에셋으로 이어지도록 가이드했습니다.</p>
+  </div>
+</section>
+
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">결과</span>
+    <h2>영어·일본어·한국어 3개 언어로 정식 서비스 중</h2>
+    <div class="callout">
+      <strong>현황</strong>: Bannie's Cup·Bannie's Room 두 미니게임 모두 실제 3D 에셋으로 제작을 마치고, 올리브유니온의 DTx 서비스 안에서
+      <span class="hl">Olive Aid 등 다른 이명·청력 서비스와 함께 3개 언어로 정식 서비스</span>되고 있습니다. 정량적 성과 지표는 별도로 집계된 자료가
+      없어 이 페이지에는 반영하지 않았습니다.
+    </div>
   </div>
 </section>
 

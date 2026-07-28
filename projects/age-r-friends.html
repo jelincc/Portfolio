@@ -81,13 +81,19 @@
 
 <section class="block">
   <div class="container">
-    <span class="eyebrow">Overview</span>
+    <span class="eyebrow">목적 · 가설</span>
     <h2>디바이스를 쓰는 사람을, 앱을 매일 여는 사람으로</h2>
     <p>
-      자사 디바이스에 대한 가이드·컨트롤 기능을 쓰기 위해 앱에 유입된 사용자를 Active User로 전환하기 위한
-      장치로 Gamification 요소를 도입했습니다.
+      자사 디바이스에 대한 가이드·컨트롤 기능을 쓰기 위해 앱에 유입된 사용자는, 필요할 때만 앱을 열고 나갔습니다.
+      가이드·컨트롤 기능만으로는 방문 빈도를 늘릴 이유가 없다는 게 출발점이었고, 앱을 매일 여는 습관을 만들 장치가 필요했습니다.
     </p>
-    <div class="table-wrap">
+    <div class="card">
+      <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">만약:</p>
+      <h3>미션 수행으로 캐릭터를 키우고, 완성 시 자사 제품을 무료로 증정하면</h3>
+      <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">그러면:</p>
+      <p style="color:var(--t1); font-weight:600; font-size:14px;">방문 빈도와 체류 시간이 늘고, 앱 내 다른 기능(TV·커뮤니티) 사용도 함께 늘어날 것이다</p>
+    </div>
+    <div class="table-wrap" style="margin-top:16px;">
       <table>
         <thead><tr><th>전략</th><th>내용</th></tr></thead>
         <tbody>
@@ -103,7 +109,7 @@
 
 <section class="block tint">
   <div class="container">
-    <span class="eyebrow">Output</span>
+    <span class="eyebrow">의사결정과 트레이드오프</span>
     <h2>제품을 고르고, 미션을 수행하고, 캐릭터를 키운다</h2>
     <p style="font-size:13px; color:var(--t3);">쿠키와 우유 받기 미션을 통해 앱에서 제공하는 다양한 기능을 사용하고, 지속적인 방문으로 캐릭터를 키워 100% 무료 쿠폰을 받아갈 수 있는 게임 요소입니다.</p>
     <div class="card-grid cols-3" style="margin-top:14px;">
@@ -122,6 +128,24 @@
       <h3 style="margin-bottom:10px;">Lv0(알) → Lv6(만개) 성장 단계</h3>
       <img src="../assets/images/appendix/age-r-friends/level.png" alt="레벨별 캐릭터 성장 단계" style="width:100%; border-radius:10px; display:block;" loading="lazy" />
       <p style="font-size:12px; color:var(--t3); margin-top:10px;">쿠키·우유 지급, 캐릭터 터치, 3일 미방문 시 등 상황별 모션(파닥거림·눈 감기 등)까지 별도로 설계해 캐릭터에 생동감을 부여했습니다.</p>
+    </div>
+
+    <div class="tradeoff-card" style="margin-top:20px;">
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">01</span>보상을 "재미" 대신 "실제 제품 무료 증정"으로 설계</div>
+        <div class="to-row risk"><span class="to-label">위험</span><span class="to-text">무료로 제품을 지급하는 만큼 원가 부담이 발생하고, 보상만 노리고 이탈하는 사용자가 생길 수 있습니다.</span></div>
+        <div class="to-row response"><span class="to-label">대응</span><span class="to-text">최대 레벨까지 여러 미션을 반복 수행해야 하는 구조로 설계해, 그 과정에서 앱 내 다른 기능도 함께 소비되도록 했습니다.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">02</span>미션을 앱 내 여러 기능(출석·커뮤니티·TV)에 분산 배치</div>
+        <div class="to-row risk"><span class="to-label">위험</span><span class="to-text">미션 종류가 많아지면 사용자가 피로감을 느끼고 참여율이 떨어질 수 있습니다.</span></div>
+        <div class="to-row response"><span class="to-label">대응</span><span class="to-text">단순 반복 클릭이 아니라 출석·후기·TV시청·검색 등 실제 앱 기능 사용으로 미션을 구성해, 캐릭터를 키우는 과정 자체가 앱 전반을 익히는 과정이 되도록 했습니다.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">03</span>제품 라인 5종 × 성장 7단계로 캐릭터 다양화</div>
+        <div class="to-row risk"><span class="to-label">위험</span><span class="to-text">캐릭터·모션 하나하나를 3D로 제작해야 해 리소스 부담이 컸습니다.</span></div>
+        <div class="to-row response"><span class="to-label">대응</span><span class="to-text">라인별 캐릭터를 분리해 여러 제품 라인 사용자가 각자 다른 캐릭터로 참여하게 하고, 상황별 모션까지 설계해 반복 방문에도 캐릭터가 쉽게 질리지 않도록 했습니다.</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -149,7 +173,7 @@
 
 <section class="block tint">
   <div class="container">
-    <span class="eyebrow">Achievement</span>
+    <span class="eyebrow">결과</span>
     <h2>리텐션, 체류시간, 매출까지 함께 움직였다</h2>
     <div class="stat-row">
       <div class="stat"><div class="num accent">54,800건</div><div class="label">캐릭터 생성 수(24년 7~11월)</div></div>
