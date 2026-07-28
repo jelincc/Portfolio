@@ -697,9 +697,73 @@
       <div class="card"><h3>레지스트리</h3><p style="font-size:13px;">모듈명 · 코드명 · API 주소 · 사용 여부를 기획-개발이 같이 채우는 라이브 문서</p></div>
     </div>
 
-    <div class="visual">
-      <div class="visual-frame"><span class="mark">1차&times;2차 조합 매트릭스 화면 예정</span></div>
+    <h3 style="margin-top:32px; margin-bottom:6px;">PC 기준</h3>
+    <div class="table-wrap">
+      <table class="matrix">
+        <thead><tr><th></th><th>공고 카드</th><th>이미지 카드</th><th>리뷰 카드</th><th>인기글 카드</th><th>유형 없음</th></tr></thead>
+        <tbody>
+          <tr><td>캐러셀형</td><td class="o">O</td><td class="x">X</td><td class="x">X</td><td class="o">O</td><td class="na">–</td></tr>
+          <tr><td>캐러셀&amp;띠배너형</td><td class="o">O</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="na">–</td></tr>
+          <tr><td>리스트형</td><td class="x">X</td><td class="o">O</td><td class="o">O</td><td class="x">X</td><td class="na">–</td></tr>
+          <tr><td>띠배너형</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="na">–</td></tr>
+          <tr><td>AD배너형</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="o">O</td></tr>
+        </tbody>
+      </table>
     </div>
+    <div class="table-wrap" style="margin-top:6px;">
+      <table>
+        <thead><tr><th>조합</th><th>매칭 유즈케이스</th></tr></thead>
+        <tbody>
+          <tr><td style="color:var(--t1);">캐러셀형 + 공고카드</td><td>마감 임박한 공고</td></tr>
+          <tr><td style="color:var(--t1);">캐러셀&amp;띠배너형 + 공고카드</td><td>마감 임박한 공고</td></tr>
+          <tr><td style="color:var(--t1);">캐러셀형 + 인기글카드</td><td>인기글 캐러셀</td></tr>
+          <tr><td style="color:var(--t1);">리스트형 + 이미지카드</td><td>리뷰로 찾은 채용 공고</td></tr>
+          <tr><td style="color:var(--t1);">리스트형 + 리뷰카드</td><td>#키워드 언급 TOP 회사(A·B형)</td></tr>
+          <tr><td style="color:var(--t1);">AD배너형</td><td>구글 소재 기반 광고</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:28px; margin-bottom:6px;">Mobile / MoWeb 기준</h3>
+    <div class="table-wrap">
+      <table class="matrix">
+        <thead><tr><th></th><th>공고 카드</th><th>이미지 카드</th><th>리뷰 카드</th><th>인기글 카드</th></tr></thead>
+        <tbody>
+          <tr><td>캐러셀형</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="o">O</td></tr>
+          <tr><td>캐러셀&amp;띠배너형</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="x">X</td></tr>
+          <tr><td>리스트형</td><td class="x">X</td><td class="o">O</td><td class="o">O</td><td class="x">X</td></tr>
+          <tr><td>띠배너형</td><td class="o">O</td><td class="x">X</td><td class="x">X</td><td class="x">X</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrap" style="margin-top:6px;">
+      <table>
+        <thead><tr><th>조합</th><th>매칭 유즈케이스</th></tr></thead>
+        <tbody>
+          <tr><td style="color:var(--t1);">띠배너형</td><td>마감임박 공고</td></tr>
+          <tr><td style="color:var(--t1);">리스트형 + 리뷰카드</td><td>#키워드 언급 TOP 회사(A·B형)</td></tr>
+          <tr><td style="color:var(--t1);">리스트형 + 이미지카드</td><td>리뷰로 찾은 채용 공고</td></tr>
+          <tr><td style="color:var(--t1);">캐러셀형 + 인기글카드</td><td>실시간 인기글</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px; color:var(--t3); margin-top:6px;">O=사용중, X=미사용, –=해당 조합 자체가 없음</p>
+
+    <h3 style="margin-top:28px; margin-bottom:6px;">모듈 레지스트리 (기획·개발 공용, 발췌)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>모듈명</th><th>설명</th><th>사용 여부</th><th>유료 지면</th></tr></thead>
+        <tbody>
+          <tr><td style="color:var(--t1); font-weight:600;">CLOSING_SOON_JOB_POSTING_CARD_LIST</td><td>배경 없는 마감 임박 공고용 모듈. 공고 카드+띠배너 함께 노출(플로팅 배너는 향후 모듈 분리 예정)</td><td><span class="reg-badge live">사용중</span></td><td><span class="reg-badge pay-n">N</span></td></tr>
+          <tr><td style="color:var(--t1); font-weight:600;">COMPANY_CARD_LIST</td><td>특정 '#키워드 언급 TOP 회사'용 모듈. 리뷰 카드 3건 리스트 형태로 노출</td><td><span class="reg-badge live">사용중</span></td><td><span class="reg-badge pay-n">N</span></td></tr>
+          <tr><td style="color:var(--t1); font-weight:600;">THEME_IMAGE_CARD_LIST</td><td>리뷰 테마 기반 채용 공고용 모듈. 이미지 카드 4건 노출, 노출 건수 등 관리자 제어 가능</td><td><span class="reg-badge live">사용중</span></td><td><span class="reg-badge pay-n">N</span></td></tr>
+          <tr><td style="color:var(--t1); font-weight:600;">COMMUNITY_POPULAR_POST_CAROUSEL</td><td>커뮤니티 인기글 모듈. 한 화면에 3건씩 최대 12건 카드 노출</td><td><span class="reg-badge live">사용중</span></td><td><span class="reg-badge pay-n">N</span></td></tr>
+          <tr><td style="color:var(--t1); font-weight:600;">ADS_CENTER_BANNER</td><td>메인 홈(PC) 광고 배너. 각 광고 페이지로 랜딩</td><td><span class="reg-badge live">사용중</span></td><td><span class="reg-badge pay-y">Y</span></td></tr>
+          <tr><td style="color:var(--t1); font-weight:600;">AD_JOB_POST_TYPE_A</td><td>잡코리아 CPT 유료 공고용 모듈. PC는 리스트형, 모바일은 캐러셀형</td><td><span class="reg-badge wip">작업중(배포전)</span></td><td><span class="reg-badge pay-y">Y</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px; color:var(--t3); margin-top:6px;">코드명·API 주소·사용 여부는 기획·클라이언트·서버 개발자가 함께 채우는 라이브 문서라, 위 표는 특정 시점의 발췌본입니다.</p>
 
     <div class="callout light">
       <p><strong>왜 필요했나</strong>: 모듈 이름이 팀마다 다르게 불리면, "이 모듈 지금 몇 개 살아있어요?" 같은 질문에 아무도 바로 답을 못 합니다.</p>
@@ -719,21 +783,44 @@
     </div>
     <h2>플랫폼마다 제각각이던 컴포넌트를 JDS 1.0으로 통합</h2>
     <p>
-      홈 개편 전에는 버튼·카드·배지 같은 기본 컴포넌트가 웹·iOS·Android·모웹에서 각자 따로 정의돼 있었습니다. 같은 "카드"인데도
-      플랫폼마다 여백·컬러·상태 처리가 조금씩 달랐고, 하나를 고치려면 네 곳을 따로 손봐야 했습니다. 모듈화 작업을 하면서 이 문제를
-      더는 미룰 수 없다고 판단해, 플랫폼 공통 컴포넌트 체계인 <strong>JDS 1.0</strong>을 만들었습니다.
+      홈 개편 전에는 버튼·카드·배지 같은 기본 컴포넌트가 웹·iOS·Android·모웹에서 각자 따로 정의돼 있었습니다. 모듈화 작업을 하면서
+      이 문제를 더는 미룰 수 없다고 판단해, 플랫폼 공통 컴포넌트 체계인 <strong>JDS 1.0</strong>을 만들었습니다.
     </p>
+
+    <div class="compare-card" style="margin-top:20px;">
+      <div class="cc-head">핵심 전환</div>
+      <div class="cc-row is">
+        <span class="cc-tag">AS-IS</span>
+        <p>같은 "카드"인데도 웹·iOS·Android·모웹이 여백·컬러·상태를 각자 정의. 하나 고치려면 네 곳을 따로 손봐야 함.</p>
+      </div>
+      <div class="cc-row tobe">
+        <span class="cc-tag">TO-BE</span>
+        <p>컬러·타이포·spacing·컴포넌트 스펙을 플랫폼 무관 토큰 하나로 정의. 웹·iOS·Android·모웹이 같은 값을 참조.</p>
+      </div>
+    </div>
+
+    <div class="tradeoff-card" style="margin-top:20px;">
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">01</span>플랫폼마다 다른 여백·컬러·상태 처리</div>
+        <div class="to-row risk"><span class="to-label">문제</span><span class="to-text">같은 "카드" 컴포넌트인데도 웹·iOS·Android·모웹에서 값이 조금씩 달라, 어디가 맞는 기준인지 아무도 확신하지 못함.</span></div>
+        <div class="to-row response"><span class="to-label">해결</span><span class="to-text">컬러·타이포·spacing을 플랫폼 무관 토큰으로 정의해 4개 플랫폼이 같은 값을 참조하도록 함.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">02</span>수정 하나에 네 플랫폼을 따로 손봄</div>
+        <div class="to-row risk"><span class="to-label">문제</span><span class="to-text">버튼 하나 고치려 해도 웹·iOS·Android·모웹 네 곳을 각각 수정해야 해, 반영 속도와 일관성 둘 다 떨어짐.</span></div>
+        <div class="to-row response"><span class="to-label">해결</span><span class="to-text">버튼·카드·배지·인풋 등 기본 컴포넌트를 플랫폼별 variation 없이 하나의 스펙으로 정리.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">03</span>팀마다 컴포넌트를 다르게 부름</div>
+        <div class="to-row risk"><span class="to-label">문제</span><span class="to-text">기획·디자인·개발이 같은 요소를 다른 이름으로 불러, 논의할 때마다 서로 다른 걸 떠올림.</span></div>
+        <div class="to-row response"><span class="to-label">해결</span><span class="to-text">모듈 정책서와 같은 방식으로 컴포넌트 이름·상태·사용 조건을 문서화.</span></div>
+      </div>
+    </div>
 
     <div class="card-grid cols-3" style="margin-top:20px;">
       <div class="visual-frame"><span class="mark">AS-IS: 플랫폼별 컴포넌트 비교 화면 예정</span></div>
       <div class="visual-frame"><span class="mark">JDS 1.0 컴포넌트 라이브러리 화면 예정</span></div>
       <div class="visual-frame"><span class="mark">실제 적용 화면 예정</span></div>
-    </div>
-
-    <div class="card-grid" style="margin-top:6px;">
-      <div class="card"><h3>공통 토큰</h3><p style="font-size:13px;">컬러·타이포·spacing을 플랫폼 무관 토큰으로 정의해 웹·iOS·Android·모웹이 같은 값을 참조하도록 함</p></div>
-      <div class="card"><h3>컴포넌트 스펙 통일</h3><p style="font-size:13px;">버튼·카드·배지·인풋 등 기본 컴포넌트를 플랫폼별 variation 없이 하나의 스펙으로 정리</p></div>
-      <div class="card"><h3>네이밍 · 문서화</h3><p style="font-size:13px;">모듈 정책서와 같은 방식으로 컴포넌트 이름·상태·사용 조건을 문서화해 기획·디자인·개발이 같은 용어를 쓰도록 함</p></div>
     </div>
 
     <div class="callout">

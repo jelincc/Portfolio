@@ -488,6 +488,21 @@ table { width: 100%; border-collapse: collapse; font-size: 14px; }
 th { padding: 8px 10px; font-weight: 600; color: var(--t3); text-align: left; font-size: 12px; }
 td { padding: 10px 10px; border-top: 1px solid var(--border); color: var(--t2); }
 td.strong-cell { color: var(--blue); font-weight: 700; }
+
+/* ── O/X 매트릭스 표 ── */
+table.matrix th, table.matrix td { text-align: center; }
+table.matrix th:first-child, table.matrix td:first-child { text-align: left; color: var(--t1); font-weight: 600; }
+table.matrix td.o   { background: rgba(52,211,153,.12); color: var(--green); font-weight: 800; }
+table.matrix td.x   { background: rgba(255,107,107,.08); color: var(--red); font-weight: 800; }
+table.matrix td.na  { background: rgba(255,255,255,.02); color: var(--t3); }
+
+/* ── 모듈 레지스트리 상태 배지 ── */
+.reg-badge { display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 6px; white-space: nowrap; }
+.reg-badge.live  { background: rgba(52,211,153,.14); color: var(--green); }
+.reg-badge.wip   { background: rgba(156,140,255,.16); color: #C9BFFF; }
+.reg-badge.draft { background: rgba(251,191,87,.16); color: var(--amber); }
+.reg-badge.pay-y { background: rgba(52,211,153,.14); color: var(--green); }
+.reg-badge.pay-n { background: rgba(255,255,255,.06); color: var(--t3); }
 tr th:first-child, tr td:first-child { padding-left: 0; }
 
 /* ── 프로젝트 목록(랜딩) ── */
