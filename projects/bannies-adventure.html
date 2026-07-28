@@ -72,21 +72,15 @@
     </div>
 
     <div class="card" style="margin-top:16px;">
+      <h3 style="margin-bottom:6px;">Speech Banana(음소 뱅크)</h3>
+      <p style="font-size:12.5px; color:var(--t3); margin-bottom:12px;">오디오그램 상에서 일상 언어의 음소들이 분포하는 바나나 모양 영역을 뜻하며, 청각·언어재활 분야에서 난청 정도별로 들리는/들리지 않는 음소를 설명할 때 쓰이는 참조 차트입니다. 이 차트를 기준으로 게임에 쓸 단어를 직접 분류했습니다.</p>
+      <img src="../assets/images/appendix/bannie/speech-banana-chart.png" alt="Speech Banana 오디오그램 차트" style="width:100%; max-width:640px; border-radius:10px; display:block; margin:0 auto; background:#fff; padding:4px;" loading="lazy" />
+    </div>
+
+    <div class="card" style="margin-top:16px;">
       <h3 style="margin-bottom:6px;">Speech Banana 기준 단어 분류(Words Table)</h3>
       <p style="font-size:12.5px; color:var(--t3); margin-bottom:12px;">주파수 대역(저주파~고주파)과 데시벨 구간별로 실제 게임에 쓰일 단어를 직접 분류했습니다. 저주파(250~1000Hz)는 A·B 영역, 고주파(1000~8000Hz)는 C·D·E 영역으로 나눠 각 영역에 맞는 단어 세트를 매핑했습니다.</p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>영역</th><th>주파수</th><th>dB 구간</th><th>예시 단어</th></tr></thead>
-          <tbody>
-            <tr><td style="color:var(--t1); font-weight:600;">A · 저주파</td><td>250-500Hz</td><td>30-60dB</td><td>Dog, Bear, Bird, Bell, Monkey, Boat, Duck, Bee, Egg, Leaf</td></tr>
-            <tr><td style="color:var(--t1); font-weight:600;">B · 저주파</td><td>500-1000Hz</td><td>40-60dB</td><td>Apple, Avocado, Rose, Rain, Rat, Round, Rub</td></tr>
-            <tr><td style="color:var(--t1); font-weight:600;">C · 고주파</td><td>1000-2000Hz</td><td>40-60dB</td><td>House, Cat, Peach, Potato, Pig, Ship, Car, Cow, Cake</td></tr>
-            <tr><td style="color:var(--t1); font-weight:600;">D · 고주파</td><td>2000-4000Hz</td><td>30-60dB</td><td>Key, King, Kiwi, Knife, Trip, Tear, Train, Tell</td></tr>
-            <tr><td style="color:var(--t1); font-weight:600;">E · 고주파</td><td>4000-8000Hz</td><td>30-50dB</td><td>Fly, Farm, Fool, Snake, Smart, Spinach, Ship, Chip</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="font-size:11px; color:var(--t3); margin-top:10px;">Speech Banana(음소 뱅크)는 오디오그램 상에서 일상 언어의 음소들이 분포하는 바나나 모양 영역을 뜻하며, 청각·언어재활 분야에서 난청 정도별로 들리는/들리지 않는 음소를 설명할 때 널리 쓰이는 참조 차트입니다.</p>
+      <img src="../assets/images/appendix/bannie/words-table.png" alt="Speech Banana 기준 Words Table 단어 분류" style="width:100%; border-radius:10px; display:block; background:#fff; padding:4px;" loading="lazy" />
     </div>
 
     <div class="card-grid cols-3" style="margin-top:16px;">
@@ -112,6 +106,12 @@
       </div>
     </div>
     <div class="callout light" style="margin-top:14px;">게임 구성(시나리오·디자인), 난이도, 네트워크 통신, 데이터 관리 등을 체크하며 프로토타입용 게임을 제작했습니다.</div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:6px;">스테이지·문제 유형별 점수 설계</h3>
+      <p style="font-size:12.5px; color:var(--t3); margin-bottom:12px;">스테이지마다 저주파/고주파 영역(Words Table 기준)에서 단일·복합 문제를 랜덤 출제하고, 맞춘 개수·연속 정답 여부에 따라 점수가 배수로 누적되도록 설계했습니다. 게임 시작/종료 시간, 시도 횟수 대비 정답 수, 연령대별 위치(%) 등도 함께 수집합니다.</p>
+      <img src="../assets/images/appendix/bannie/scoring-table.png" alt="Bannie's Cup 스테이지별 문제 유형·점수 기준·수집 정보 설계표" style="width:100%; border-radius:10px; display:block; background:#fff; padding:4px;" loading="lazy" />
+    </div>
 
     <div class="tradeoff-card" style="margin-top:20px;">
       <div class="tradeoff-item">
@@ -140,6 +140,12 @@
     <p>게임 개발 업체에게 원하는 디자인 방향성을 전달하기 위해 손 그림 및 레퍼런스를 직접 제작했습니다. (예: Bannie's Room · 거실)</p>
     <img src="../assets/images/appendix/bannie/room-design.png" alt="Bannie's Room 거실 디자인 과정" style="width:100%; border-radius:12px; display:block; margin-top:14px;" loading="lazy" />
     <p style="font-size:12px; color:var(--t3); margin-top:10px;">구조 배치 → 전체 프랍 느낌·색상·분위기 → 들어가야 하는 사물 지정까지, 손그림으로 먼저 방향을 잡고 실제 3D 에셋으로 이어지도록 가이드했습니다.</p>
+
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:10px;">스토리보드 · The Banana in the Cup</h3>
+      <img src="../assets/images/appendix/bannie/storyboard.png" alt="Bannie's Cup 스토리보드, 화면·상황·오디오·타이밍 정리" style="width:100%; border-radius:10px; display:block; background:#fff; padding:4px;" loading="lazy" />
+      <p style="font-size:12px; color:var(--t3); margin-top:10px;">스테이지 진입부터 캐릭터 등장, 문제 제시, 정답 반응까지 화면(Screen)·상황(Context)·오디오(Audio)·타이밍(Time)을 컷 단위로 직접 정리해 개발사에 전달했습니다.</p>
+    </div>
   </div>
 </section>
 
@@ -153,7 +159,18 @@
       없어 이 페이지에는 반영하지 않았습니다.
     </div>
 
-    <div class="card-grid" style="margin-top:20px;">
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:10px;">타이틀 화면</h3>
+      <img src="../assets/images/appendix/bannie/title-screens.png" alt="Bannie's Cup, Bannie's Room 잠금 상태 타이틀 화면" style="width:100%; max-width:640px; border-radius:10px; display:block; margin:0 auto;" loading="lazy" />
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3 style="margin-bottom:10px;">테마 변형 · 결과/리더보드 화면</h3>
+      <img src="../assets/images/appendix/bannie/result-grid.png" alt="Bannie's Cup·Room 테마별 타이틀 화면과 결과/리더보드 화면" style="width:100%; border-radius:10px; display:block;" loading="lazy" />
+      <p style="font-size:12px; color:var(--t3); margin-top:10px;">스테이지별 테마 색상 변형과, 게임 종료 후 노출되는 순위·기록 리더보드 화면입니다.</p>
+    </div>
+
+    <div class="card-grid" style="margin-top:14px;">
       <div class="card">
         <h3 style="margin-bottom:10px;">Bannie's Cup · 실제 플레이 영상</h3>
         <video src="../assets/videos/bannie/bannies-cup.mp4" controls playsinline preload="metadata" style="width:100%; border-radius:10px; display:block; background:#000;"></video>
