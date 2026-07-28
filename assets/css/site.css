@@ -412,6 +412,38 @@ a.card:hover { border-color: rgba(91,147,255,.4); transform: translateY(-2px); }
 .card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .card-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
 
+/* ── 프로세스 플로우 다이어그램 ── */
+.flow-track { display: flex; align-items: stretch; gap: 0; overflow-x: auto; margin: 18px 0; padding-bottom: 4px; }
+.flow-stage {
+  flex: 1 1 0; min-width: 148px; background: var(--surface-2);
+  border: 1px solid var(--border-strong); border-radius: 12px; padding: 16px 14px;
+  border-top: 3px solid var(--blue);
+}
+.flow-stage h4 { font-size: 12.5px; font-weight: 800; color: var(--t1); margin: 0 0 10px; }
+.flow-stage ul { margin: 0; padding-left: 15px; font-size: 11px; color: var(--t2); line-height: 1.7; }
+.flow-stage ul li + li { margin-top: 1px; }
+.flow-stage .flow-tool { display: block; margin-top: 10px; font-size: 10px; font-weight: 700; color: var(--blue); }
+.flow-stage .flow-team { display: block; margin-top: 4px; font-size: 10px; color: var(--t3); }
+.flow-arrow-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 20px 6px 0; flex-shrink: 0; width: 64px; }
+.flow-arrow-wrap svg { width: 18px; height: 18px; color: var(--t3); flex-shrink: 0; }
+.flow-arrow-wrap span { font-size: 9px; color: var(--t3); text-align: center; margin-top: 4px; line-height: 1.4; }
+.pp-badge, .sol-badge {
+  display: inline-flex; align-items: center; gap: 8px; border-radius: 100px;
+  padding: 7px 16px 7px 8px; font-size: 12.5px; margin: 4px 8px 4px 0;
+}
+.pp-badge .tag, .sol-badge .tag { font-size: 10.5px; font-weight: 800; padding: 3px 9px; border-radius: 100px; }
+.pp-badge { background: rgba(255,107,107,.08); border: 1px solid rgba(255,107,107,.25); color: var(--t2); }
+.pp-badge .tag { background: #e8735a; color: #fff; }
+.sol-badge { background: rgba(91,147,255,.08); border: 1px solid rgba(91,147,255,.25); color: var(--t2); }
+.sol-badge .tag { background: var(--blue); color: #fff; }
+.pp-badge strong, .sol-badge strong { color: var(--t1); }
+@media (max-width: 720px) {
+  .flow-track { flex-direction: column; }
+  .flow-arrow-wrap { flex-direction: row; width: auto; padding: 8px 0; justify-content: flex-start; }
+  .flow-arrow-wrap svg { transform: rotate(90deg); }
+  .flow-arrow-wrap span { margin-top: 0; margin-left: 8px; text-align: left; }
+}
+
 /* ── 비주얼 슬롯(실제 이미지 없을 때 자리만) ── */
 .visual-frame {
   border-radius: var(--radius-lg);

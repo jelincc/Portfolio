@@ -91,35 +91,122 @@
     <span class="eyebrow">의사결정과 트레이드오프 · 협업 부서 인터뷰 기반</span>
     <h2>기존 프로세스의 문제점과 해결 방안</h2>
 
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>기존 프로세스</th><th>담당</th></tr></thead>
-        <tbody>
-          <tr><td style="color:var(--t1); font-weight:600;">기안 요청</td><td>마케팅팀</td></tr>
-          <tr><td style="color:var(--t1); font-weight:600;">프레임 디자인 진행</td><td rowspan="2">UXUI파트</td></tr>
-          <tr><td style="color:var(--t1); font-weight:600;">부스 디자인 진행</td></tr>
-          <tr><td style="color:var(--t1); font-weight:600;">부스 테스트</td><td>마케팅팀 · UXUI파트 · 개발팀</td></tr>
-          <tr><td style="color:var(--t1); font-weight:600;">배포 완료</td><td>관련 데이터 모니터링</td></tr>
-        </tbody>
-      </table>
+    <h3 style="font-size:14px; margin-bottom:4px;">AS-IS · 기존 프로세스의 문제점</h3>
+    <p style="font-size:12px; color:var(--t3); margin-bottom:4px;">협업 부서 인터뷰 진행 내용을 토대로 문제 정의</p>
+
+    <div class="flow-track">
+      <div class="flow-stage" style="border-top-color:#e8b25a;">
+        <h4>기안 요청</h4>
+        <ul>
+          <li>부스 유형(전국/외부)</li>
+          <li>라이브 목표·제작 수량</li>
+          <li>프레임만 출력 기능 사용 여부</li>
+          <li>메인 화면 내 버튼 위치</li>
+          <li>라이브 목표·종료일자</li>
+          <li>디자인 에셋</li>
+        </ul>
+        <span class="flow-tool">그룹웨어 · 팀즈</span>
+        <span class="flow-team">담당: 마케팅팀</span>
+      </div>
+      <div class="flow-arrow-wrap"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>기안 승인</span></div>
+      <div class="flow-stage" style="border-top-color:#7fb3e8;">
+        <h4>프레임 디자인 진행</h4>
+        <ul>
+          <li>컨셉별 프레임 디자인</li>
+          <li>디자인 감수양식서 작성</li>
+        </ul>
+        <span class="flow-tool">피그마</span>
+        <span class="flow-team">담당: UXUI파트</span>
+      </div>
+      <div class="flow-arrow-wrap"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>프레임 시안 컨펌</span></div>
+      <div class="flow-stage" style="border-top-color:#b28ae0;">
+        <h4>부스 디자인 진행</h4>
+        <ul>
+          <li>외부/전국 부스 디자인</li>
+          <li>버튼 이미지 디자인</li>
+          <li>(선택) 라이브필터 디자인</li>
+          <li>(선택) QR 다운로드 디자인</li>
+        </ul>
+        <span class="flow-tool">피그마</span>
+        <span class="flow-team">담당: UXUI파트</span>
+      </div>
+      <div class="flow-arrow-wrap"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>부스 시안 컨펌</span></div>
+      <div class="flow-stage" style="border-top-color:#9aa0a8;">
+        <h4>부스 테스트</h4>
+        <ul>
+          <li>부스/프레임 최종 테스트</li>
+          <li>촬영 횟수·필터 옵션 설정</li>
+          <li>date/QR 설정</li>
+          <li>(선택) 인쇄 시 영상/음원</li>
+          <li>(선택) QR 다운로드 화면</li>
+        </ul>
+        <span class="flow-tool">그룹웨어 · 콜라보엑셀 · 팀즈</span>
+        <span class="flow-team">담당: 마케팅팀 · UXUI파트 · 개발팀</span>
+      </div>
+      <div class="flow-arrow-wrap"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>옵션 설정·수정 다수 진행</span></div>
+      <div class="flow-stage" style="border-top-color:#6fc48a;">
+        <h4>배포 완료</h4>
+        <ul><li>관련 데이터 모니터링</li></ul>
+      </div>
     </div>
 
-    <div class="tradeoff-card" style="margin-top:20px;">
-      <div class="tradeoff-item">
-        <div class="to-decision"><span class="to-num">01</span>부스 관련 정보 분산</div>
-        <div class="to-row risk"><span class="to-label">Painpoint</span><span class="to-text">기안·프레임·부스 시안이 그룹웨어·피그마·팀즈 등 여러 툴에 흩어져, 담당자가 전체 진행 상황을 파악하기 어려움.</span></div>
-        <div class="to-row response"><span class="to-label">Solution</span><span class="to-text">어드민에서 전 업무 프로세스를 통합해 정보를 일원화. 업무 혼선 감소와 인력 효율 향상으로 이어짐.</span></div>
+    <div style="margin-top:8px;">
+      <div class="pp-badge"><span class="tag">Painpoint 1</span>부스 관련 정보 분산으로 인해 <strong>담당자가 전체 파악이 어려움</strong></div><br>
+      <div class="pp-badge"><span class="tag">Painpoint 2</span>테스트 시 잦은 옵션 변경으로 <strong>과다한 커뮤니케이션 발생</strong></div><br>
+      <div class="pp-badge"><span class="tag">Painpoint 3</span>개발 의존 테스트로 인해 <strong>높은 인적 리소스 발생 및 일정 지연 위험</strong></div>
+    </div>
+
+    <h3 style="font-size:14px; margin:32px 0 4px;">TO-BE · 해결방안</h3>
+    <p style="font-size:12px; color:var(--t3); margin-bottom:4px;">어드민에서 전 업무 프로세스 통합</p>
+
+    <div class="flow-track">
+      <div class="flow-stage" style="border-top-color:#e8b25a;">
+        <h4>기안 요청</h4>
+        <ul>
+          <li>부스 유형(전국/외부)</li>
+          <li>라이브 목표·제작 수량</li>
+          <li>프레임만 출력 기능 사용 여부</li>
+          <li>메인 화면 내 버튼 위치</li>
+          <li>라이브 목표·종료일자</li>
+          <li>촬영 횟수·필터 옵션 설정</li>
+          <li>date/QR 설정</li>
+        </ul>
+        <span class="flow-tool">어드민</span>
+        <span class="flow-team">담당: 마케팅팀</span>
       </div>
-      <div class="tradeoff-item">
-        <div class="to-decision"><span class="to-num">02</span>테스트 시 잦은 옵션 변경</div>
-        <div class="to-row risk"><span class="to-label">Painpoint</span><span class="to-text">부스 옵션값 설정·수정이 다수 발생할 때마다 담당자 간 커뮤니케이션 비용이 과다하게 들어감.</span></div>
-        <div class="to-row response"><span class="to-label">Solution</span><span class="to-text">담당자가 어드민에서 수정사항을 직접 반영할 수 있게 해, 테스트 효율을 높임.</span></div>
+      <div class="flow-arrow-wrap"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>기안 승인</span></div>
+      <div class="flow-stage" style="border-top-color:#7fb3e8;">
+        <h4>프레임 디자인 진행</h4>
+        <ul>
+          <li>컨셉별 프레임 디자인</li>
+          <li>디자인 감수양식서 작성</li>
+        </ul>
+        <span class="flow-tool">어드민</span>
+        <span class="flow-team">담당: UXUI파트</span>
       </div>
-      <div class="tradeoff-item">
-        <div class="to-decision"><span class="to-num">03</span>개발 의존 테스트</div>
-        <div class="to-row risk"><span class="to-label">Painpoint</span><span class="to-text">부스·프레임 최종 테스트마다 개발팀 리소스가 필요해, 인적 리소스 소모와 일정 지연 위험이 컸음.</span></div>
-        <div class="to-row response"><span class="to-label">Solution</span><span class="to-text">개발자에 의존하지 않고도 테스트를 진행할 수 있는 구조로 바꿔 일정 지연을 방지.</span></div>
+      <div class="flow-arrow-wrap"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>프레임 시안 컨펌</span></div>
+      <div class="flow-stage" style="border-top-color:#b28ae0;">
+        <h4>부스 디자인 진행</h4>
+        <ul>
+          <li>외부/전국 부스 디자인</li>
+          <li>버튼 이미지 디자인</li>
+          <li>(선택) 라이브필터·QR 다운로드 디자인</li>
+        </ul>
+        <span class="flow-tool">어드민</span>
+        <span class="flow-team">담당: 마케팅팀 · UXUI파트</span>
       </div>
+      <div class="flow-arrow-wrap"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>부스 시안 컨펌</span></div>
+      <div class="flow-stage" style="border-top-color:#6fc48a;">
+        <h4>배포 완료</h4>
+        <ul><li>관련 데이터 모니터링</li></ul>
+      </div>
+    </div>
+    <p style="font-size:12px; color:var(--t3); margin-top:4px;">개발 의존 없이 담당자가 직접 부스/프레임 테스트와 옵션 수정을 진행할 수 있어, AS-IS의 "부스 테스트" 단계가 별도 병목 없이 프로세스 안으로 흡수됐습니다.</p>
+
+    <div style="margin-top:16px;">
+      <div class="sol-badge"><span class="tag">Solution 1</span>정보 일원화로 <strong>업무 혼선 감소 및 인력 효율 향상</strong></div><br>
+      <div class="sol-badge"><span class="tag">Solution 2</span>담당자가 수정사항 직접 수정하여 <strong>테스트 효율 향상</strong></div><br>
+      <div class="sol-badge"><span class="tag">Solution 3</span>개발자 비의존 테스트 진행으로 <strong>일정 지연 방지</strong></div>
     </div>
   </div>
 </section>
