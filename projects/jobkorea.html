@@ -282,6 +282,42 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════ -->
+<!-- 09 후속 작업: AI Insight 노출 A/B 테스트 -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <span class="eyebrow" style="margin-bottom:0;">후속 작업 · 2차 A/B 테스트</span>
+      <span class="chip" style="margin-left:auto;">다음 과제 01 연계</span>
+    </div>
+    <h2>"AI 추천 근거 노출"이 정말 필요한가: 문구 자체의 순효과 검증</h2>
+    <p>
+      UT에서 "AI Insight 신뢰도 부족"이 발견돼 다음 과제로 "추천 근거 노출 개선"을 남겼었습니다. 그런데 근거를
+      어떻게 보여줄지 고도화하기 전에, 더 근본적인 질문을 먼저 검증했습니다: <strong>AI 인사이트라는 문구·설명 영역 자체가
+      없어도 되는 게 아닐까?</strong> 메인 페이지 '오늘의 AI 추천' 영역에서 상단 Insight 문구 노출 여부를 A/B로 나눠
+      순효과(Incrementality)를 측정했습니다.
+    </p>
+
+    <div class="card-grid cols-3" style="margin-top:20px;">
+      <div class="card"><h3>실험 설계</h3><p style="font-size:13px;">User-level 랜덤 배정 · 트래픽 50:50<br>2026.03.04~03.11(1주, 주중/주말 포함)</p></div>
+      <div class="card"><h3>비교 대상</h3><p style="font-size:13px;">A안: AI Insight 문구 + 추천 리스트<br>B안: 추천 리스트만(Insight 미노출)</p></div>
+      <div class="card"><h3>판단 지표</h3><p style="font-size:13px;">회원당 공고 클릭 수·지원 수(핵심)<br>메인 CTR·CVR(보조)</p></div>
+    </div>
+
+    <div class="callout" style="margin-top:20px;">
+      <strong>결과</strong>: 클릭 수·지원 수 자체는 두 안이 유사했고, 클릭률·전환율은 오히려 <span class="hl">Insight 문구가 없는 B안이 소폭 더 높게</span> 나왔습니다.
+      "추천 근거를 어떻게 잘 보여줄까"가 아니라 <strong>"이 문구 자체가 불필요했다"</strong>는 결론이었습니다.
+    </div>
+
+    <div class="card" style="margin-top:6px;">
+      <h3 style="margin-bottom:8px;">최종 결정</h3>
+      <p style="font-size:13px;">AI Insight 문구 영역을 <strong style="color:var(--t1);">제거</strong>하고 추천 리스트(AgentRec)만 노출하는 것으로 확정했습니다.
+      다음 과제였던 "추천 근거 노출 개선"은 문구를 다듬는 대신, <span class="hl">애초에 없어도 되는 설명을 걷어내는 것</span>으로 결론이 났습니다 — 신뢰도 문제의 해법이 항상 "더 설명하기"는 아니라는 걸 확인한 케이스입니다.</p>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">© 2026 최지원. Product Designer Portfolio.</footer>
 
 <div class="floating-nav">

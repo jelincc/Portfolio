@@ -136,9 +136,22 @@
         <h3 style="color:var(--t1);">기업 리뷰 카드 티어표</h3>
         <p style="font-size:12px; color:var(--t3); margin-top:10px;">목적</p>
         <p style="font-size:13px; margin-top:2px;">리뷰 카드에서 정보를 제한했을 때 사용자가 가장 답답해하는 항목 파악</p>
-        <p style="font-size:12px; color:var(--t3); margin-top:10px;">결과</p>
-        <p style="font-size:13px; margin-top:4px; color:var(--t1); font-weight:600;">답답함 1위 '단점'(5.0) · 2위 '기업명'(4.8) (n=87)</p>
-        <p style="font-size:13px; margin-top:6px;">항목을 설명하며 다시 물으니 '작성자의 정보'가 7위 → 3위로 급상승 — 레이블만으론 안 보이던 가치가 설명을 들으면 드러남 (UT 12명)</p>
+        <div class="barchart-meta" style="margin-top:14px;"><h3 style="margin:0; font-size:13px; color:var(--t3); font-weight:600;">답답함 순위 (5점 만점)</h3><span class="n">n=87</span></div>
+        <div class="barchart">
+          <div class="bar-row primary top">
+            <div class="bar-fill" style="width:100%">
+              <span class="bar-label">단점</span>
+              <span class="bar-pct">5.0</span>
+            </div>
+          </div>
+          <div class="bar-row primary">
+            <div class="bar-fill" style="width:96%">
+              <span class="bar-label">기업명</span>
+              <span class="bar-pct">4.8</span>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:13px; margin-top:10px;">항목을 설명하며 다시 물으니 '작성자의 정보'가 <strong style="color:var(--t1);">7위 → 3위</strong>로 급상승 — 레이블만으론 안 보이던 가치가 설명을 들으면 드러남 (UT 12명)</p>
         <p style="font-size:13px; margin-top:6px; color:var(--t1);">→ 메인엔 기업명·장점·총점만 상시 노출, 나머지는 축약 후 상세에서 펼치는 구조로 설계</p>
         <a href="https://jelincc.github.io/tier-maker/" target="_blank" rel="noopener" class="proto-link">프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
@@ -146,9 +159,26 @@
         <h3 style="color:var(--t1);">공고 카드 정보 나누기</h3>
         <p style="font-size:12px; color:var(--t3); margin-top:10px;">목적</p>
         <p style="font-size:13px; margin-top:2px;">채용 공고에서 어떤 정보를 필수로 인식하는지 파악</p>
-        <p style="font-size:12px; color:var(--t3); margin-top:10px;">결과</p>
-        <p style="font-size:13px; margin-top:4px; color:var(--t1); font-weight:600;">3대 필수: 직무명 98% · 회사명 86% · 경력조건 45% (n=64)</p>
-        <p style="font-size:13px; margin-top:6px;">이미지·로고·학력은 있으나 없으나 탐색에 지장 없는 시각 노이즈, 지역 정보는 이직 의향 높을수록 우선순위 하락</p>
+        <div class="barchart-meta" style="margin-top:14px;"><h3 style="margin:0; font-size:13px; color:var(--t3); font-weight:600;">필수 정보 선택률</h3><span class="n">n=64</span></div>
+        <div class="barchart">
+          <div class="bar-row primary top">
+            <div class="bar-fill" style="width:98%">
+              <span class="bar-label">직무명</span>
+              <span class="bar-pct">98%</span>
+            </div>
+          </div>
+          <div class="bar-row primary">
+            <div class="bar-fill" style="width:86%">
+              <span class="bar-label">회사명</span>
+              <span class="bar-pct">86%</span>
+            </div>
+          </div>
+          <div class="bar-row secondary">
+            <span class="bar-label">경력조건</span>
+            <span class="bar-pct">45%</span>
+          </div>
+        </div>
+        <p style="font-size:13px; margin-top:10px;">이미지·로고·학력은 있으나 없으나 탐색에 지장 없는 시각 노이즈, 지역 정보는 이직 의향 높을수록 우선순위 하락</p>
         <p style="font-size:13px; margin-top:6px; color:var(--t1);">→ 직무명·회사명·경력조건 중심 Primary + D-day·장점태그 Secondary로 재구성, 지역·학력은 상세로 이동</p>
         <a href="https://jelincc.github.io/card-sorting/" target="_blank" rel="noopener" class="proto-link">프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>

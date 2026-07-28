@@ -30,7 +30,7 @@
     <h1>홈을 검색창 앞 화면에서<br>탐색 허브로 재정의하다</h1>
     <p class="lead">
       두 스쿼드(Review&amp;Core + Hiring&amp;Member) 리드 PD로, 잡플래닛 홈 구조를 검색 중심 + 모듈화 방식으로 개편.
-      통합 UT를 직접 설계·리딩해 4개 영역을 동시 검증하고 가설 보류 결정까지 이끌었습니다.
+      통합 UT를 직접 설계·리딩해 4개 영역을 동시 검증하고 데이터 기반으로 개편 방향을 이끌었습니다.
     </p>
 
     <div class="contrib">
@@ -290,7 +290,7 @@
 
     <div class="card-grid">
       <div class="card"><p style="font-size:13px; margin:0;"><strong style="color:var(--t1);">검색바(고정)</strong>: 홈 상단 1순위. 탐색 시작점 명시.</p></div>
-      <div class="card"><p style="font-size:13px; margin:0;"><strong style="color:var(--t1);">팔로우 기업 마감 임박(모듈 A)</strong>: 팔로우 기업 있을 때 노출. 재방문 트리거.</p></div>
+      <div class="card"><p style="font-size:13px; margin:0;"><strong style="color:var(--t1);">팔로우 기업 마감 임박(모듈 A)</strong>: 팔로우 기업 있을 때 노출. 재방문 트리거. PC는 캐러셀형, 모바일은 스크롤 깊이를 고려해 배너형으로 축약.</p></div>
       <div class="card"><p style="font-size:13px; margin:0;"><strong style="color:var(--t1);">전/현직장 리뷰 피드(모듈 B)</strong>: 리뷰 소비를 늘리기 위한 모듈.</p></div>
       <div class="card"><p style="font-size:13px; margin:0;"><strong style="color:var(--t1);">리뷰 워딩 테마 공고(모듈 C)</strong>: "칼퇴 가능", "예산 넉넉" 등 리뷰 기반 큐레이션.</p></div>
     </div>
@@ -336,8 +336,8 @@
     <span class="eyebrow">최종 디자인</span>
     <h2>UT 가설이 실제 화면이 되기까지</h2>
     <p>
-      배포된 홈 화면을 위에서 아래 순서대로 뜯어보면, 각 모듈은 통합 UT에서 세운 가설 하나씩과 짝지어져 있습니다.
-      가설이 그대로 검증된 모듈도, 절반만 맞은 모듈도, 여전히 판단이 보류된 모듈도 함께 남겨뒀습니다.
+      배포된 홈 화면을 위에서 아래 순서대로 뜯어보면, 각 모듈은 리뷰 조회와 공고 조회를 높이기 위한 핵심 기능 위주로 구성돼 있습니다.
+      관리자가 노출 여부와 순서를 직접 제어할 수 있도록 모듈 형태로 개발했습니다.
     </p>
 
     <div class="phone-annotate">
@@ -349,7 +349,7 @@
         <div class="pa-line"></div>
         <div class="pa-card">
           <h4>탐색 시작점이 아니라 검색 시작점</h4>
-          <p>검색바를 홈의 뼈대로. 검색 시도율 76.0%.</p>
+          <p>유저 대부분이 홈 콘텐츠는 안 보고 검색부터 했기에, 검색바를 최상단 고정 요소로 설계했어요. 시도율 76.0%.</p>
         </div>
       </div>
 
@@ -357,7 +357,7 @@
         <div class="pa-line"></div>
         <div class="pa-card">
           <h4>흩어진 메뉴를 한 줄로</h4>
-          <p>퀵메뉴로 모아 접근성을 높였어요.</p>
+          <p>여러 화면에 흩어져 있던 메뉴를 검색바 바로 아래 퀵메뉴 한 줄로 모아 접근성을 높였어요.</p>
         </div>
       </div>
 
@@ -365,7 +365,7 @@
         <div class="pa-line"></div>
         <div class="pa-card">
           <h4>마감일 정보, 유일하게 통한 트리거</h4>
-          <p>팔로우 기업 마감임박 공고, 유일한 자발적 재방문 트리거였어요.</p>
+          <p>UT에서 유일하게 자발적 재방문을 이끈 신호라 이 모듈만 남기고, 다른 개인화 시도는 걷어냈어요.</p>
         </div>
       </div>
 
@@ -373,7 +373,7 @@
         <div class="pa-line"></div>
         <div class="pa-card">
           <h4>리뷰가 홈의 주인공</h4>
-          <p>리뷰 기반 워딩이 전 디바이스 클릭률 1위를 기록했어요.</p>
+          <p>홈의 역할을 '발견'이 아닌 '추적'으로 재정의하며 리뷰를 콘텐츠 중심에 뒀어요. 전 디바이스 클릭률 1위.</p>
         </div>
       </div>
 
@@ -381,7 +381,7 @@
         <div class="pa-line"></div>
         <div class="pa-card">
           <h4>리뷰에서 공고로 이어지는 길</h4>
-          <p>개별 카드가 클릭의 66~78%를 만든 주 경로예요.</p>
+          <p>리뷰를 보다가 자연스럽게 넘어가도록 공고 카드를 바로 아래 배치, 클릭의 66~78%를 만든 주 경로가 됐어요.</p>
         </div>
       </div>
     </div>
@@ -500,9 +500,12 @@
     </div>
 
     <div class="card" style="margin-top:6px;">
-      <h3 style="margin-bottom:8px;">리뷰피드(신설) 첫 성과: 인과관계까지 검증</h3>
-      <p style="font-size:13px; margin-bottom:6px;">리뷰피드를 본 사람은 하루 리뷰 조회가 <strong style="color:var(--t1);">+2.5~3.1회</strong> 늘었습니다. 위약 검정(배포 없던 구간에 같은 계산을 적용해 0에 가까운지 확인)을 통과한 결과로,
-      기존 리뷰 조회를 잠식한 게 아니라 그 위에 얹힌 증가였습니다. 홈 경유 리뷰 도달률(Web)도 82.94% → 84.09%(<strong style="color:var(--t1);">+1.15%p</strong>)로 순증했습니다.</p>
+      <h3 style="margin-bottom:10px;">리뷰피드(신설) 첫 성과: 인과관계까지 검증</h3>
+      <div style="display:flex; gap:28px; flex-wrap:wrap; margin-bottom:12px;">
+        <div><div style="font-size:22px; font-weight:800; color:var(--blue);">+2.5~3.1회</div><div style="font-size:11px; color:var(--t3); margin-top:2px;">1인당 하루 리뷰 조회 순증</div></div>
+        <div><div style="font-size:22px; font-weight:800; color:var(--blue);">82.94% <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 84.09%</div><div style="font-size:11px; color:var(--t3); margin-top:2px;">홈 경유 리뷰 도달률(Web), +1.15%p</div></div>
+      </div>
+      <p style="font-size:12px; margin-bottom:8px;"><span class="res-badge ok"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>위약검정 통과</span> 배포 없던 구간에 같은 계산을 적용해 0에 가까운지 확인 — 기존 리뷰 조회를 잠식한 게 아니라 그 위에 얹힌 증가</p>
       <p style="font-size:12px; color:var(--t3);">다만 리뷰피드에 닿은 인원이 활성 유저 중 일부라 서비스 전체 리뷰량은 아직 그대로이고, 공고 조회·지원은 배포 전부터 있던 상승 추세의 연장선이라 개편만의 효과로 보기는 이릅니다. "효과가 없다"가 아니라 "도달이 작다"는 뜻이라, 다음 과제는 리뷰피드 도달 확대입니다.</p>
     </div>
 
@@ -557,8 +560,9 @@
       <span class="chip" style="margin-left:auto;">통합 UT 내 부수 활동</span>
     </div>
     <h2>공고 카드에서 "필수"인 정보는 무엇인가</h2>
+    <a href="https://jelincc.github.io/card-sorting/" target="_blank" rel="noopener" class="proto-link">실제 사용한 프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 
-    <div class="card-grid">
+    <div class="card-grid" style="margin-top:20px;">
       <div class="card">
         <h3 style="margin-bottom:10px;">공고 카드 정보 필수 선택률 (n=64)</h3>
         <div class="barchart">
@@ -598,9 +602,7 @@
         <div class="quote">"이미지가 회사랑 실제로 1:1 매칭되는 것도 아니라서 오히려 시각적 노이즈처럼 느껴진다"</div>
       </div>
     </div>
-    <p style="font-size:11px; color:var(--t3); margin-top:10px;">공고 카드 개편 방향(텍스트 카드, D-day, 태그)은 통합 UT 안에서 카드 분류 게임으로 부수 검증. 배포 후 결과는 다음 섹션 참조.
-      <a href="https://jelincc.github.io/card-sorting/" target="_blank" rel="noopener" class="proto-link">실제 사용한 프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </p>
+    <p style="font-size:11px; color:var(--t3); margin-top:10px;">공고 카드 개편 방향(텍스트 카드, D-day, 태그)은 통합 UT 안에서 카드 분류 게임으로 부수 검증. 배포 후 결과는 다음 섹션 참조.</p>
   </div>
 </section>
 
