@@ -80,18 +80,44 @@
     <span class="eyebrow">문제 정의</span>
     <h2>메인이 게이트 역할을 못 하고 있었다</h2>
     <p>
-      잡코리아 메인은 월 세션 1,200만, 페이지뷰 6,300만 규모지만, 광고 티어(VVIP~First)가 고정 노출되는 구조였습니다.
-      신입·비로그인 구직자가 첫 방문 시 개인화 데이터(Cold Start) 없이 광고 티어 공고만 마주치고,
-      자신과 관련 없는 콘텐츠 때문에 <strong>모바일 이탈률 23.6%</strong>를 기록하며 지원으로 이어지지 못했습니다.
+      잡코리아 메인은 전체 방문자의 <strong>74.2%가 비로그인</strong> 상태로 유입되는 구조였고, 광고 티어(VVIP~First)가
+      고정 노출되는 화면이라 신입·비로그인 구직자가 첫 방문 시 개인화 데이터(Cold Start) 없이 자신과 관련 없는
+      공고만 마주쳤습니다. 그 결과 <strong>모바일 이탈률 23.6%</strong>로 PC(9.8%)의 2.4배를 기록하며 지원으로 이어지지 못했습니다.
     </p>
 
     <div class="card-grid cols-3">
       <div class="card"><h3>대상</h3><p style="font-size:13px;">신입·비로그인 구직자 (Cold Start 상태)</p></div>
       <div class="card"><h3>상황</h3><p style="font-size:13px;">잡코리아 메인 첫 방문</p></div>
-      <div class="card"><h3>고통</h3><p style="font-size:13px;">내 공고가 없어 무엇을 해야 할지 모름</p></div>
+      <div class="card"><h3>페인포인트</h3><p style="font-size:13px;">내 공고가 없어 무엇을 해야 할지 모름</p></div>
     </div>
 
-    <div class="callout light">
+    <p style="font-size:12px; color:var(--t3); margin-top:20px;">실사용 데이터(GA, 2025.01.01~08.18) 기준</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3 style="margin-bottom:10px;">기기별 비교</h3>
+        <table>
+          <tr><td style="width:46%;">이탈률</td><td>PC 9.8% · <span class="strong-cell">모바일 23.6%</span></td></tr>
+          <tr><td>재방문율</td><td>PC 45.8% · <span class="strong-cell">모바일 29.7%</span></td></tr>
+          <tr><td>세션당 페이지뷰</td><td>PC 1.65 · 모바일 1.53</td></tr>
+          <tr><td>평균 세션 시간</td><td>PC 2분28초 · 모바일 1분18초</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:10px;">로그인 여부별 비교</h3>
+        <table>
+          <tr><td style="width:46%;">사용자 비중</td><td>비로그인 74.2% · 로그인 25.8%</td></tr>
+          <tr><td>이탈률</td><td><span class="strong-cell">비로그인 28.9%</span> · 로그인 2.7%</td></tr>
+          <tr><td>재방문율</td><td>비로그인 29.13% · 로그인 50.30%</td></tr>
+          <tr><td>평균 세션 시간</td><td>비로그인 1분09초 · 로그인 1분34초</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="callout light" style="margin-top:14px;">
+      <strong>인사이트</strong>: 비로그인 사용자의 모든 지표가 로그인 사용자보다 크게 떨어졌고, 모바일은 PC 대비 이탈률이 높고
+      재방문율은 낮아 <span class="hl">비로그인 · 모바일 두 축 모두에서 개인화 유도가 필요</span>했습니다.
+    </div>
+
+    <div class="callout" style="margin-top:14px;">
       <strong>성공 기준</strong>: 공고 CTR·CVR 상승, 이탈률 감소
     </div>
   </div>
@@ -142,28 +168,29 @@
     <span class="eyebrow">근거 기반 설득</span>
     <h2>GA 분석 · 행동 데이터 · 인터뷰</h2>
     <p>
-      비로그인 방문자는 모바일 <strong>70%</strong>, PC <strong>54%</strong>로 대부분 개인화 데이터가 없는 상태였고,
+      비로그인 사용자 비중이 74.2%로 대부분 개인화 데이터가 없는 상태였고,
       모바일 이탈률(<strong>23.6%</strong>)은 PC(9.8%)의 2.4배, 체류시간은 모바일 1:18로 PC 2:28보다 크게 짧았습니다.
       첫 화면에서 방향이 결정된다는 뜻이었습니다.
     </p>
 
     <div class="card" style="margin:24px 0;">
-      <h3 style="margin-bottom:10px;">섹션별 클릭 분포 (GA)</h3>
+      <h3 style="margin-bottom:10px;">메인 페이지 영역별 클릭률 (GA, 경력 여부별)</h3>
       <table>
-        <tr><td style="width:60%;">공고 클릭: 1위</td><td class="strong-cell">51%</td></tr>
-        <tr><td>AI 추천: 2위</td><td class="strong-cell">35%</td></tr>
-        <tr><td>기타 섹션</td><td>14%</td></tr>
+        <tr><td style="width:60%;">통합검색: 1위</td><td class="strong-cell">신입 52.8% · 경력 51.4%</td></tr>
+        <tr><td>AI 추천: 2위</td><td class="strong-cell">신입 34.4% · 경력 36.0%</td></tr>
+        <tr><td>퀵메뉴·상단 배너·기타</td><td>나머지 약 12~14%</td></tr>
       </table>
-      <p style="font-size:12px; margin-top:10px;">AI 추천 수요가 이미 2위: 노출 방식이 문제였습니다.</p>
+      <p style="font-size:12px; margin-top:10px;">신입·경력 모두 검색을 최우선으로 쓰고, AI 추천 수요는 이미 2위. 노출 방식이 문제였습니다.</p>
     </div>
 
     <div class="quote">"메인이 광고판 같다"</div>
     <div class="quote">"나랑 상관없는 공고만 보인다"</div>
     <div class="quote">"맨 하단까지 내려본 적이 없다"</div>
+    <div class="quote">"앞에 AD가 붙어있어 직무가 맞아도 안 보고 넘겼다"</div>
 
     <div class="callout">
-      <strong>핵심 인사이트</strong>: 사용자는 공고를 보려는 의도가 명확하고(51%), AI 추천 수요도 이미 있다(35%).
-      문제는 비로그인 70%에게 개인화 정보 없이 <span class="hl">광고 티어만 노출</span>된다는 것.
+      <strong>핵심 인사이트</strong>: 사용자는 검색으로 공고를 찾으려는 의도가 명확하고(51~53%), AI 추천 수요도 이미 있다(34~36%).
+      문제는 비로그인 74.2%에게 개인화 정보 없이 <span class="hl">광고 티어만 노출</span>된다는 것.
       콘텐츠 의도와 노출 구조의 불일치가 이탈의 원인이었습니다.
     </div>
   </div>
@@ -188,8 +215,13 @@
 
     <div class="callout light" style="margin-top:20px;">
       <strong>핵심 Trade-off</strong>: 순수 AI 추천(광고주 수익 리스크) vs 광고 티어만 유지(사용자 이탈 지속).
-      광고 티어(VVIP~First) 구조는 유지하되, 각 티어 내에서 <strong>AI 매칭 점수</strong>로 우선 노출해
+      광고 티어(First VVIP~Excellent) 구조는 유지하되, 각 티어 내에서 <strong>AI 매칭 점수</strong>로 우선 노출해
       비즈니스 제약 안에서 개인화를 레이어로 추가했습니다.
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3 style="margin-bottom:10px;">광고 티어 구조: First VVIP · VIP · Excellent</h3>
+      <img src="../assets/images/jobkorea/ad-tiers-real.png" alt="잡코리아 메인 광고 티어별 구성(First VVIP·VIP·Excellent)" style="width:100%; border-radius:10px; display:block;" loading="lazy" />
     </div>
   </div>
 </section>
@@ -203,23 +235,46 @@
     <h2>Hybrid UT · 20명 · As-is vs To-be 비교</h2>
 
     <div class="card-grid cols-3">
-      <div class="card"><h3>방법론</h3><p style="font-size:13px;">대면 9명 + 비대면 11명<br>Task 1: 메인 탐색(5분)<br>Task 2: 공고 찾기(5분)</p></div>
-      <div class="card"><h3>참여자</h3><p style="font-size:13px;">신입·경력·구직중·재직중<br>20~40대 총 20명</p></div>
-      <div class="card" style="background:rgba(91,147,255,.08); border-color:rgba(91,147,255,.25);"><h3>To-be 선호</h3><p style="font-size:13px;">18 / 20명: "내 공고를 보여주는 느낌", "AI 추천이 편하다"</p></div>
+      <div class="card"><h3>방법론</h3><p style="font-size:13px;">화면별 사용성 테스트 + 대면 인터뷰<br>Task 1: 가벼운 둘러보기(5분)<br>Task 2: 마음에 드는 공고 찾기(5분)</p></div>
+      <div class="card"><h3>참여자</h3><p style="font-size:13px;">잡코리아 20~40대 사용자 총 20명<br>라이트 유저 11명 · 헤비 유저 9명<br>2025.11.24~11.28(5일)</p></div>
+      <div class="card" style="background:rgba(91,147,255,.08); border-color:rgba(91,147,255,.25);"><h3>To-be 선호</h3><p style="font-size:13px;">18 / 20명: "화면이 더 깔끔하고 한눈에 들어온다", "AI 인사이트가 내 직군·조건에 맞게 잘 추천해준다"</p></div>
     </div>
 
-    <div class="stat-row">
-      <div class="stat"><div class="num">3.1 <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 4.3</div><div class="label">전체 만족도 (5점 기준)</div></div>
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:10px;">유저 사용성 척도 (20명 평균, 5점 척도)</h3>
+      <table>
+        <thead><tr><th>질문</th><th>AS-IS</th><th>TO-BE</th></tr></thead>
+        <tbody>
+          <tr><td>해당 화면에 대한 만족도</td><td>3.1</td><td class="strong-cell">4.3</td></tr>
+          <tr><td>광고 공고와 일반 공고를 구분할 수 있었다</td><td>3.5</td><td class="strong-cell">3.9</td></tr>
+          <tr><td>필요한 정보를 빠르고 쉽게 찾을 수 있었다</td><td>2.6</td><td class="strong-cell">4.3</td></tr>
+          <tr><td>공고 탐색 과정이 편안하고 피로감이 적었다</td><td>2.6</td><td class="strong-cell">4.1</td></tr>
+          <tr><td>공고 카드 내 정보량이 적당했다</td><td>2.8</td><td class="strong-cell">4.1</td></tr>
+        </tbody>
+      </table>
     </div>
+
     <div class="quote">"이전보다 훨씬 찾기 쉬웠다"</div>
     <div class="quote">"내 공고를 찾아주는 것 같다"</div>
 
     <div class="card" style="margin-top:20px;">
-      <h3 style="margin-bottom:10px;">발견된 이슈와 개선 방향</h3>
-      <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">01</strong> AI Insight 신뢰도 부족: 추천 근거 노출 개선</p>
-      <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">02</strong> AD 표시·아이콘 의미 불명확: 라벨 정비</p>
-      <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">03</strong> 섹션명 혼재: "추천 JOB" 통일</p>
-      <p style="font-size:13px;"><strong class="hl">04</strong> PC 레이아웃 밀도 이슈: A/B 테스트 예정</p>
+      <h3 style="margin-bottom:10px;">라이트 vs 헤비 유저, 공통점과 차이</h3>
+      <p style="font-size:13px; margin-bottom:6px;"><strong style="color:var(--t1);">공통</strong>: 취업/이직은 "해야 하는 일"이라 효율·시간절약 중시. AI 추천은 좋아하지만 근거·설명이 없으면 신뢰도가 떨어짐.</p>
+      <p style="font-size:13px; margin-bottom:6px;"><strong style="color:var(--t1);">라이트 유저</strong>: 당장 필요한 공고만 빠르게 보고 끝냄. "광고 같으면" 바로 스킵, 스크롤 짧고 상세 화면도 깊게 안 봄.</p>
+      <p style="font-size:13px;"><strong style="color:var(--t1);">헤비 유저</strong>: 이왕 켰으면 정보를 최대한 뽑아보려는 성향. 여러 섹션을 두루 거치며 상대적으로 오래 머무름.</p>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3 style="margin-bottom:10px;">바로 적용 가능한 To-be 개선안 5가지</h3>
+      <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">01</strong> 섹션별 타이틀 변경: "놓치면 아쉬운 JOB" 등 추상적 문구 → 지원자 기반·마감 임박·업로드 시점 등 기준이 보이는 문구로</p>
+      <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">02</strong> AD 라벨 톤 조정: 라벨이 BG·텍스트 대비 과도하게 눈에 띄어 "직무가 맞아도 안 보고 넘겼다"는 반응 → 색상 톤을 낮춤</p>
+      <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">03</strong> 온보딩 배너 타이틀·UI 변경: "밸런스 게임" 표현이 "시간 잡아먹을 게임"처럼 보여 바로 닫아버리는 이탈 발생 → "맞춤 공고 추천받기"로 A/B 테스트, 클릭 의도·호감도 상승 확인</p>
+      <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">04</strong> AI Insight 추천 근거 노출: "이게 왜 뜬 거지?" 의문 해소를 위해 섹션·카드 단위로 추천 기준 텍스트 추가</p>
+      <p style="font-size:13px;"><strong class="hl">05</strong> 맞춤 서비스 구성·명칭 변경: '취업TOOL'처럼 기능이 불분명한 이름을 관심도 높은 명칭으로 재정비</p>
+    </div>
+
+    <div class="callout light" style="margin-top:14px;">
+      <strong>배포 전 즉시 반영</strong>: 이 중 <span class="hl">AD 라벨 톤 조정</span>과 <span class="hl">온보딩 배너 UI 변경(닫기 유도 요소 제거)</span>은 정식 출시 전에 바로 반영했습니다.
     </div>
   </div>
 </section>
@@ -234,15 +289,15 @@
 
     <div class="card-grid cols-3">
       <div>
-        <div class="visual-frame"><span class="mark">화면 예정</span></div>
+        <img src="../assets/images/jobkorea/onboarding-real.png" alt="온보딩: 지역 선택 등 직군·경력 정보 수집 화면" style="width:100%; border-radius:12px; display:block;" loading="lazy" />
         <p class="visual-caption">온보딩: 직군·경력 수집 · Cold Start 해소</p>
       </div>
       <div>
-        <div class="visual-frame"><span class="mark">화면 예정</span></div>
+        <img src="../assets/images/jobkorea/ai-recommend-real.png" alt="메인: 오늘의 AI Insight 및 큐레이션 JOB 카드" style="width:100%; border-radius:12px; display:block;" loading="lazy" />
         <p class="visual-caption">메인: AI 추천 카드 · 광고 티어 내 개인화 레이어</p>
       </div>
       <div>
-        <div class="visual-frame"><span class="mark">화면 예정</span></div>
+        <img src="../assets/images/jobkorea/login-banner-real.png" alt="로그인하고 맞춤 정보 받기 유도 배너" style="width:100%; border-radius:12px; display:block;" loading="lazy" />
         <p class="visual-caption">로그인 유도 배너 · 정밀 추천 전환</p>
       </div>
     </div>
