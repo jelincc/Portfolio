@@ -84,7 +84,7 @@ h2 {
 h3 {
   font-size: 16px; font-weight: 700; color: var(--t1); line-height: 1.5; margin: 0 0 6px;
 }
-p { font-size: 16px; font-weight: 400; color: var(--t2); line-height: 1.8; margin: 0 0 16px; max-width: 720px; }
+p { font-size: 16px; font-weight: 400; color: var(--t2); line-height: 1.8; margin: 0 0 16px; max-width: none; }
 p:last-child { margin-bottom: 0; }
 p.lead { font-size: 19px; color: var(--t2); line-height: 1.7; max-width: none; }
 strong { color: var(--t1); font-weight: 700; }
@@ -239,6 +239,7 @@ section.block.tight { padding: 44px 0; }
   font-variant-numeric: tabular-nums;
 }
 .hero-stat .label { font-size: 15px; font-weight: 600; color: var(--t2); }
+.hero-stat .num.accent { color: var(--blue); }
 .hero-stat.compact { margin-top: 40px; }
 .hero-stat.compact .num { font-size: clamp(28px, 4.5vw, 44px); }
 
@@ -487,7 +488,7 @@ tr th:first-child, tr td:first-child { padding-left: 0; }
 .pc-arrow { font-size: 20px; color: var(--t3); flex-shrink: 0; transition: transform .18s ease, color .18s ease; }
 .project-card:hover .pc-arrow { color: var(--blue); transform: translateX(3px); }
 .pc-title { font-size: clamp(20px, 3vw, 27px); font-weight: 800; line-height: 1.32; letter-spacing: -0.02em; color: var(--t1); }
-.pc-desc { font-size: 14px; color: var(--t2); line-height: 1.7; }
+.pc-desc { font-size: 14px; color: var(--t2); line-height: 1.7; max-width: none; }
 .pc-stats { display: flex; gap: 0; border-top: 1px solid var(--border); margin-top: 4px; }
 .pc-stat { flex: 1; padding: 14px 16px 0 0; }
 .pc-stat + .pc-stat { border-left: 1px solid var(--border); padding-left: 16px; }
