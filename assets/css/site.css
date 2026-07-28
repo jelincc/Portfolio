@@ -239,6 +239,8 @@ section.block.tight { padding: 44px 0; }
   font-variant-numeric: tabular-nums;
 }
 .hero-stat .label { font-size: 15px; font-weight: 600; color: var(--t2); }
+.hero-stat.compact { margin-top: 40px; }
+.hero-stat.compact .num { font-size: clamp(28px, 4.5vw, 44px); }
 
 /* ── 콜아웃 ── */
 .callout {
