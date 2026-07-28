@@ -824,11 +824,25 @@
         <div class="to-row risk"><span class="to-label">문제</span><span class="to-text">기획·디자인·개발이 같은 요소를 다른 이름으로 불러, 논의할 때마다 서로 다른 걸 떠올림.</span></div>
         <div class="to-row response"><span class="to-label">해결</span><span class="to-text">모듈 정책서와 같은 방식으로 컴포넌트 이름·상태·사용 조건을 문서화.</span></div>
       </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">04</span>아이콘을 텍스트로 박아 씀</div>
+        <div class="to-row risk"><span class="to-label">문제</span><span class="to-text">아이콘이 컴포넌트가 아니라 텍스트(특수문자·이모지)로 하드코딩돼 있어, 플랫폼·폰트에 따라 다르게 보이고 크기·컬러 제어가 안 됨.</span></div>
+        <div class="to-row response"><span class="to-label">해결</span><span class="to-text">전체 아이콘·이모지 세트를 SVG 컴포넌트로 전환해 사이즈·컬러를 토큰으로 제어하도록 함.</span></div>
+      </div>
     </div>
 
-    <div class="card-grid cols-3" style="margin-top:20px;">
+    <div class="card-grid cols-2" style="margin-top:20px;">
+      <div>
+        <img src="../assets/images/jobplanet/jds-icons-sample.png" alt="JDS 1.0 아이콘 컴포넌트 예시" style="width:100%; border-radius:12px; border:1px solid var(--border); background:#fff; display:block;" loading="lazy" />
+        <p class="visual-caption">아이콘 컴포넌트 (발췌)</p>
+      </div>
+      <div>
+        <img src="../assets/images/jobplanet/jds-emoji-sample.png" alt="JDS 1.0 이모지 컴포넌트 예시" style="width:100%; border-radius:12px; border:1px solid var(--border); background:#fff; display:block;" loading="lazy" />
+        <p class="visual-caption">이모지 컴포넌트 (발췌)</p>
+      </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top:6px;">
       <div class="visual-frame"><span class="mark">AS-IS: 플랫폼별 컴포넌트 비교 화면 예정</span></div>
-      <div class="visual-frame"><span class="mark">JDS 1.0 컴포넌트 라이브러리 화면 예정</span></div>
       <div class="visual-frame"><span class="mark">실제 적용 화면 예정</span></div>
     </div>
 
