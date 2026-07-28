@@ -470,13 +470,16 @@ a.card:hover { border-color: rgba(91,147,255,.4); transform: translateY(-2px); }
 .pa-card { min-width: 0; text-align: left; }
 .pa-item.side-right .pa-card { padding-left: 12px; }
 .pa-item.side-left  .pa-card { padding-right: 12px; }
-.pa-card h4 { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: var(--t1); margin: 0 0 6px; line-height: 1.4; }
+.pa-card h4 { display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 700; color: var(--t1); margin: 0 0 6px; line-height: 1.4; }
 .pa-item.side-left .pa-card h4 { flex-direction: row; }
 .pa-card h4 .pa-icon { width: 20px; height: 20px; flex-shrink: 0; }
 .pa-card p  { font-size: 12.5px; color: var(--t3); line-height: 1.65; margin: 0; max-width: none; }
-.pa-card .pa-visual { display: block; margin-top: 10px; border-radius: 8px; max-width: 100%; height: auto; object-fit: contain; }
-.pa-card .pa-visual-row { display: flex; gap: 8px; margin-top: 10px; align-items: flex-start; }
-.pa-card .pa-visual-row img { width: auto; max-width: 48%; height: auto; object-fit: contain; border-radius: 8px; }
+.pa-card .pa-visual { display: block; margin-top: 16px; border-radius: 8px; max-width: 100%; height: auto; object-fit: contain; }
+.pa-card .pa-visual-row { display: flex; gap: 10px; margin-top: 14px; align-items: flex-start; }
+.pa-card .pa-visual-row img { width: auto; height: 68px; max-width: none; object-fit: contain; border-radius: 8px; }
+.pa-card .pa-visual-wide-wrap { position: relative; width: 420px; max-width: none; margin-top: 16px; overflow: hidden; border-radius: 8px; }
+.pa-card .pa-visual-wide-wrap img { width: 420px; height: auto; display: block; }
+.pa-card .pa-visual-wide-wrap::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 48px; background: linear-gradient(90deg, transparent, var(--surface)); }
 .pa-card .pa-note { font-size: 11px; color: var(--t3); margin-top: 8px; line-height: 1.6; }
 
 @media (max-width: 860px) {
