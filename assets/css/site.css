@@ -91,16 +91,17 @@ strong { color: var(--t1); font-weight: 700; }
 .hl { color: var(--blue); }
 
 /* ── 기여도 게이지 ── */
-.contrib { display: flex; flex-wrap: wrap; gap: 10px 32px; margin: 4px 0 28px; }
-.contrib-row { display: flex; align-items: center; gap: 12px; }
-.contrib-label { font-size: 12px; font-weight: 700; color: var(--t3); width: 34px; flex-shrink: 0; }
+.contrib { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px 28px; margin: 4px 0 28px; }
+.contrib-row { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.contrib-label { font-size: 12px; font-weight: 700; color: var(--t3); white-space: nowrap; }
 .contrib-track {
-  width: 120px; height: 6px; border-radius: 100px;
+  width: 100%; height: 6px; border-radius: 100px;
   background: var(--surface-2); border: 1px solid var(--border-strong);
   overflow: hidden; flex-shrink: 0;
 }
 .contrib-fill { height: 100%; border-radius: 100px; background: linear-gradient(90deg, var(--blue), var(--violet)); }
-.contrib-value { font-size: 13px; font-weight: 800; color: var(--t1); width: 38px; text-align: right; font-variant-numeric: tabular-nums; }
+.contrib-value { font-size: 13px; font-weight: 800; color: var(--t1); font-variant-numeric: tabular-nums; }
+.contrib-row .contrib-track-wrap { display: flex; align-items: center; gap: 10px; width: 100%; }
 
 /* ── 플로팅 Contact 버튼 ── */
 .floating-contact {
@@ -456,6 +457,8 @@ a.card:hover { border-color: rgba(91,147,255,.4); transform: translateY(-2px); }
   transform: translateY(-50%);
   display: flex; align-items: center; gap: 0;
 }
+.pa-item.top-align { align-items: flex-start; }
+.pa-item.top-align .pa-line { margin-top: 9px; }
 .pa-item.side-right { left: calc(50% + 148px); }
 .pa-item.side-left  { right: calc(50% + 148px); flex-direction: row-reverse; }
 .pa-line {
