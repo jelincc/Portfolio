@@ -195,7 +195,7 @@ section.block.tight { padding: 44px 0; }
   color: #B7CDFF; border-color: rgba(91,147,255,.4);
 }
 .chip.dark { background: var(--t1); color: var(--bg); border-color: transparent; font-weight: 800; }
-.biz-tag { position: absolute; top: 10px; left: 10px; z-index: 2; font-size: 10.5px; padding: 4px 10px; background: var(--t1); color: var(--bg); border-color: transparent; font-weight: 800; }
+.biz-tag { position: absolute; top: 10px; left: 10px; z-index: 2; font-size: 10.5px; padding: 4px 10px; background: var(--blue); color: #fff; border-color: transparent; font-weight: 800; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
 
 /* ── 프로토타입 링크 버튼 ── */
 .proto-link {
@@ -644,6 +644,7 @@ footer.site-footer {
 @media (max-width: 720px) {
   section.block { padding: 48px 0; }
   .hero { padding: 48px 0 36px; }
+  #arf-hero-visual { max-width: 320px !important; }
   .card-grid, .card-grid.cols-3, .card-grid.cols-4 { grid-template-columns: 1fr; }
   .stat-row { flex-direction: column; }
   .stat + .stat { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 16px; }
