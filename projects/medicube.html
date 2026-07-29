@@ -70,21 +70,53 @@
 <!-- ═══════════════════════════════════ -->
 <section class="block">
   <div class="container">
-    <span class="eyebrow">문제 정의</span>
+    <span class="eyebrow">문제 정의 · 근거</span>
     <h2>설명 없이는 연결할 수 없었다</h2>
     <p>
       신규 뷰티 디바이스 출시로 처음 도입된 기능이라 4050세대 중심 고객이 설명 없이도 바로 쓸 수 있어야 했습니다.
-      출시 후에는 자동연동을 오인지한 고객의 CS 문의가 이어졌고, <strong>디바이스 등록자 중 실제 연동을 사용하는 비율은 약 45%</strong>에 그쳤습니다.
-      디바이스를 여러 대 가진 고객은 배너가 하나만 노출돼 기존 연결을 해제하고 다시 등록하는 일을 반복했습니다.
+      디바이스 등록자 중 실제 연동을 사용하는 비율은 <strong>약 45%</strong>에 그쳤고, 여러 대를 가진 고객은 배너가 하나만 노출돼
+      기존 연결을 해제하고 다시 등록하는 일을 반복했습니다.
     </p>
 
-    <div class="card-grid cols-3">
-      <div class="card"><h3>대상</h3><p style="font-size:13px;">에이지알 디바이스 보유 고객 (4050세대 중심)</p></div>
-      <div class="card"><h3>상황</h3><p style="font-size:13px;">신규 디바이스 출시로 블루투스 연동 최초 도입</p></div>
-      <div class="card"><h3>고통</h3><p style="font-size:13px;">자동연동 오인지로 CS 문의, 다중 디바이스 재등록 반복</p></div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="eyebrow" style="color:#A9C4FF;">실 사용 데이터</div>
+        <div class="hero-stat compact" style="margin-top:10px;">
+          <span class="num accent">45%</span>
+          <span class="label">디바이스 등록자 중 실제 연동 사용률</span>
+        </div>
+        <div style="display:flex; gap:28px; margin-top:18px; flex-wrap:wrap;">
+          <div>
+            <div style="font-size:22px; font-weight:800; color:var(--t1); line-height:1;">34%</div>
+            <div style="font-size:11.5px; color:var(--t3); margin-top:6px;">내부 커뮤니티 문의 중<br>블루투스 연동 관련 비중</div>
+          </div>
+          <div>
+            <div style="font-size:22px; font-weight:800; color:var(--t1); line-height:1;">30%</div>
+            <div style="font-size:11.5px; color:var(--t3); margin-top:6px;">CS 문의 중<br>블루투스 연동 관련 비중</div>
+          </div>
+        </div>
+        <div class="callout light" style="margin-top:16px; padding:12px 14px;">
+          다중 디바이스 보유 고객은 배너가 하나만 노출돼, <strong style="color:var(--t1);">기존 연결 해제 → 재등록</strong>을 반복했습니다.
+        </div>
+      </div>
+      <div class="card">
+        <div class="eyebrow" style="color:#A9C4FF;">사용자 인터뷰 + UT 결과</div>
+        <div class="quote" style="margin-top:12px;">"연동을 어떻게 하는 건지 설명이 없어도 알 것 같다"</div>
+        <div class="quote">"LED 색이 지금 상태를 바로 보여줘서 편하다"</div>
+        <p style="font-size:13px; margin-top:10px;">한 화면 노출형 레이아웃 선호 <strong style="color:var(--t1);">65%</strong></p>
+        <p style="font-size:13px; margin-top:4px;">LED 상태 직관적 표현 긍정 응답 <strong style="color:var(--t1);">80%</strong></p>
+        <div class="callout light" style="margin-top:14px; padding:14px 16px;">
+          <strong>사용성 테스트</strong>: 1·2차, 프로토타입 4종 비교, 약 60명. "LED가 메인 정보인데 화면에서 덜 강조돼 있다"는 부정 피드백도 11건 있었습니다.
+        </div>
+      </div>
     </div>
 
-    <div class="callout light">
+    <div class="callout" style="margin-top:20px;">
+      <strong>핵심 인사이트</strong>: 문제의 절반 이상은 <span class="hl">"몰라서"가 아니라 "먼저 물어보지 않아서"</span> 생겼습니다.
+      매번 사용자가 연결 방법을 찾아야 했던 구조를, 디바이스가 켜지면 앱이 먼저 인식하고 제안하는 구조로 뒤집는 것이 핵심 방향이었습니다.
+    </div>
+
+    <div class="callout light" style="margin-top:14px;">
       <strong>성공 기준</strong>: 설명 없이 이해 가능한 한손 조작 UI, 연동 사용률 상승, CS 문의 감소
     </div>
   </div>
@@ -95,64 +127,32 @@
 <!-- ═══════════════════════════════════ -->
 <section class="block tint">
   <div class="container">
-    <span class="eyebrow">Pain Point · 개선 방향</span>
-    <h2>출시 후 발견한 2가지 문제와 해결 방향</h2>
+    <span class="eyebrow">가설</span>
+    <h2>디바이스가 켜지면 앱이 먼저 인식해 연결을 제안하고, 등록된 기기는 한 화면에서 바로 제어하게 하면, 연동은 쉬워질 것이다</h2>
 
     <div class="card-grid">
       <div class="card">
         <div style="font-size:36px; font-weight:800; color:var(--border-strong); line-height:1; margin-bottom:10px; opacity:.5;">01</div>
-        <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">Pain Point:</p>
-        <h3>자동연동을 오인지해 CS 문의가 이어지고, 등록자 중 45%만 실제 연동을 사용</h3>
-        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">해결 방향:</p>
-        <p style="color:var(--t1); font-weight:600; font-size:14px;">전원 켜진 디바이스를 자동 인식해 퀵연결을 바로 제안하면 사용률이 오를 것</p>
-        <div class="callout" style="margin:14px 0 0; padding:14px 16px 14px 22px;">
-          <div class="eyebrow" style="margin-bottom:4px;">적용 후</div>
-          디바이스 등록자 중 연동 사용 <strong class="hl">약 20% 증가</strong>
+        <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">만약:</p>
+        <h3>전원 켜진 디바이스를 자동 인식해 퀵연결을 바로 제안하면</h3>
+        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">그러면:</p>
+        <p style="color:var(--t1); font-weight:600; font-size:14px;">자동연동 오인지로 인한 CS 문의가 줄고, 등록자 중 실제 연동 사용률이 오를 것</p>
+        <div class="callout light" style="margin:14px 0 0; padding:14px 16px 14px 22px;">
+          <div class="eyebrow" style="margin-bottom:4px;">UT 검증 결과</div>
+          LED 상태 직관적 표현 긍정 응답 <strong class="hl">80%</strong>(약 60명, 프로토타입 4종 비교)
         </div>
       </div>
       <div class="card">
         <div style="font-size:36px; font-weight:800; line-height:1; margin-bottom:10px; opacity:.5;">02</div>
-        <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">Pain Point:</p>
-        <h3>디바이스를 여러 대 등록해도 배너가 하나만 노출돼 해제와 재등록을 반복</h3>
-        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">해결 방향:</p>
-        <p style="color:var(--t1); font-weight:600; font-size:14px;">홈에 연결 가능한 디바이스 전체를 목록으로 보여주고, 연결된 디바이스는 1뎁스에서 바로 제어하게 하면 반복 등록이 줄 것</p>
-        <div class="callout" style="margin:14px 0 0; padding:14px 16px 14px 22px;">
-          <div class="eyebrow" style="margin-bottom:4px;">적용 후</div>
-          연동 비율 <strong class="hl">약 16%p 이상 증가</strong> · 문의 <strong class="hl">약 20% 이상 감소</strong>
+        <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">만약:</p>
+        <h3>홈에 연결 가능한 디바이스 전체를 목록으로 보여주고, 연결된 디바이스는 1뎁스에서 바로 제어하게 하면</h3>
+        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">그러면:</p>
+        <p style="color:var(--t1); font-weight:600; font-size:14px;">배너 하나로 인한 반복 해제·재등록이 줄어들 것</p>
+        <div class="callout light" style="margin:14px 0 0; padding:14px 16px 14px 22px;">
+          <div class="eyebrow" style="margin-bottom:4px;">UT 검증 결과</div>
+          한 화면 노출형 레이아웃 선호 <strong class="hl">65%</strong>(약 60명). 다만 "LED가 메인 정보인데 덜 강조" 부정 피드백 11건
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════ -->
-<!-- 04 근거 -->
-<!-- ═══════════════════════════════════ -->
-<section class="block">
-  <div class="container">
-    <span class="eyebrow">근거 기반 설득</span>
-    <h2>VOC · 사용성 테스트</h2>
-    <p>
-      내부 커뮤니티 문의의 <strong>34%</strong>, CS 문의의 <strong>30%</strong>가 블루투스 연동 관련이었습니다.
-      2뎁스 이상으로 들어가면 진입장벽이 급격히 높아지는 4050세대의 특성을 감안해, 연결된 디바이스는
-      최대한 얕은 뎁스에서 제어할 수 있도록 설계 방향을 잡았습니다.
-    </p>
-
-    <div class="card" style="margin:24px 0;">
-      <h3 style="margin-bottom:10px;">사용성 테스트 (1·2차, 프로토타입 4종 비교, 약 60명)</h3>
-      <table>
-        <tr><td style="width:65%;">한 화면 노출형 레이아웃 선호</td><td class="strong-cell">65%</td></tr>
-        <tr><td>LED 상태 직관적 표현: 긍정 응답</td><td class="strong-cell">80%</td></tr>
-      </table>
-      <p style="font-size:12px; margin-top:10px;">"LED가 메인 정보인데 화면에서 덜 강조돼 있다"는 부정 피드백도 11건 있었습니다.</p>
-    </div>
-
-    <div class="quote">"연동을 어떻게 하는 건지 설명이 없어도 알 것 같다"</div>
-    <div class="quote">"LED 색이 지금 상태를 바로 보여줘서 편하다"</div>
-
-    <div class="callout">
-      <strong>핵심 인사이트</strong>: 문제의 절반 이상은 <span class="hl">"몰라서"가 아니라 "먼저 물어보지 않아서"</span> 생겼습니다.
-      매번 사용자가 연결 방법을 찾아야 했던 구조를, 디바이스가 켜지면 앱이 먼저 인식하고 제안하는 구조로 뒤집는 것이 핵심 방향이었습니다.
     </div>
   </div>
 </section>
@@ -209,24 +209,40 @@
 <!-- ═══════════════════════════════════ -->
 <section class="block tint">
   <div class="container">
-    <span class="eyebrow">결과 · 남은 과제</span>
-    <h2>두 차례 개선, 연동은 눈에 띄게 쉬워졌다</h2>
+    <div class="outcomes-grid">
+      <div class="outcomes-main">
+        <span class="eyebrow">Outcomes</span>
+        <h2>기능을 더하지 않고 뎁스를 줄이는 방향으로,<br>디바이스 연동을 쉽게 만들다</h2>
+        <p>연동이 어려운 이유가 '기능이 없어서'가 아니라 '설명이 없어서'라는 걸 사용성 테스트로 확인한 뒤, 자동 인식과 1뎁스 컨트롤로 두 차례에 걸쳐 문제를 좁혀갔습니다.</p>
 
-    <div class="stat-row">
-      <div class="stat"><div class="num accent">+20%</div><div class="label">2건 이상 연동 비율</div><div class="sub">Solution 1 적용 후</div></div>
-      <div class="stat"><div class="num accent">+16%p</div><div class="label">연동 비율</div><div class="sub">Solution 2 적용 후</div></div>
-      <div class="stat"><div class="num accent">-20%</div><div class="label">연동 관련 CS 문의</div><div class="sub">Solution 2 적용 후</div></div>
-    </div>
-    <p style="font-size:12px; color:var(--t3);">해제 후 재등록 비율도 눈에 띄게 줄었습니다(정확한 수치는 별도 집계 필요).</p>
+        <div class="impact-label">Impact</div>
+        <div class="hero-stat">
+          <div class="num accent">+16%p</div>
+          <div class="label">연동 비율<br><span style="font-weight:400;">Solution 2 적용 후</span></div>
+        </div>
 
-    <div class="card" style="margin-top:24px;">
-      <h3 style="margin-bottom:8px;">남겨둔 과제</h3>
-      <p style="font-size:13px;">"LED가 메인 정보인데 화면에서 덜 강조돼 있다"는 1차 테스트 피드백(11건)은 2차 개선에서 명확히 해소됐는지 확인되지 않아, 다음 라운드에서 다시 짚어볼 부분으로 남겨뒀습니다.</p>
-    </div>
+        <div class="stat-row">
+          <div class="stat"><div class="num accent">+20%</div><div class="label">2건 이상 연동 비율</div><div class="sub">Solution 1 적용 후</div></div>
+          <div class="stat"><div class="num accent">-20%</div><div class="label">연동 관련 CS 문의</div><div class="sub">Solution 2 적용 후</div></div>
+        </div>
+        <p style="font-size:12px; color:var(--t3); margin-top:8px;">해제 후 재등록 비율도 눈에 띄게 줄었습니다(정확한 수치는 별도 집계 필요).</p>
+      </div>
 
-    <div class="callout">
-      <strong>학습</strong>: 이 프로젝트는 처음부터 정답을 설계한 것이 아니라, <span class="hl">출시, 문제 발견, 개선</span>을 두 번 반복하며 나온 결과입니다.
-      "몰라서"가 아니라 "먼저 물어보지 않아서" 생긴 문제라는 것을 알고 나서야, 기능을 더하지 않고도 뎁스를 줄이는 방향으로 풀 수 있었습니다.
+      <div class="outcomes-side">
+        <div class="card">
+          <span class="chip blue">What We Learned</span>
+          <p style="font-size:13px; color:var(--t1); font-weight:600; margin-top:14px;">몰라서가 아니라, 먼저 물어보지 않아서 생긴 문제였습니다.</p>
+          <ul style="font-size:13px; color:var(--t2); margin:12px 0 0; padding-left:18px; line-height:1.7;">
+            <li>1차 사용성 테스트에서 연동 실패 원인이 "기능 부족"이 아니라 "설명 부족"임을 확인</li>
+            <li>"LED가 메인 정보인데 화면에서 덜 강조돼 있다"는 1차 피드백(11건)은 2차 개선 후 해소 여부가 확인되지 않아, 다음 라운드 과제로 남겨둠</li>
+          </ul>
+        </div>
+        <div class="card" style="background:rgba(91,147,255,.08); border-color:rgba(91,147,255,.25);">
+          <span class="chip blue">Key Insight</span>
+          <p style="font-size:13px; margin-top:14px;">연동이 어려운 이유는 기능이 없어서가 아니라, 설명이 없어서였습니다.</p>
+          <p style="font-size:13px; margin-top:8px; color:var(--t1);">→ 기능을 더하지 않고 자동 인식 + 1뎁스 컨트롤로 뎁스를 줄이는 방향이 더 효과적인 해법이었습니다.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
