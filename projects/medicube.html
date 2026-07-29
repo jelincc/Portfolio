@@ -56,9 +56,10 @@
       <div class="stat"><div class="num accent">-20%</div><div class="label">연동 관련 CS 문의</div></div>
     </div>
 
-    <div class="visual" style="display:flex; gap:20px; justify-content:center; max-width:520px; margin:0 auto;">
-      <img src="../assets/images/medicube/home-1st.png" alt="에이지알 홈 화면" style="width:48%; border-radius:16px; border:1px solid var(--border); display:block;" loading="lazy" />
-      <img src="../assets/images/medicube/remote-control.png" alt="에이지알 리모트 컨트롤 화면" style="width:48%; border-radius:16px; border:1px solid var(--border); display:block;" loading="lazy" />
+    <div class="visual" style="display:flex; gap:16px; justify-content:center; max-width:640px; margin:0 auto;">
+      <img src="../assets/images/medicube/hero-home.png" alt="에이지알 홈 화면" style="width:32%; border-radius:16px; border:1px solid var(--border); display:block;" loading="lazy" />
+      <img src="../assets/images/medicube/hero-remote.png" alt="에이지알 리모트 컨트롤 화면" style="width:32%; border-radius:16px; border:1px solid var(--border); display:block;" loading="lazy" />
+      <img src="../assets/images/medicube/hero-report.png" alt="에이지알 리포트 화면" style="width:32%; border-radius:16px; border:1px solid var(--border); display:block;" loading="lazy" />
     </div>
   </div>
 </section>
@@ -71,11 +72,10 @@
 <section class="block">
   <div class="container">
     <span class="eyebrow">문제 정의 · 근거</span>
-    <h2>설명 없이는 연결할 수 없었다</h2>
+    <h2>UI가 잘못된 연결 방식을 학습시키고 있었다</h2>
     <p>
-      신규 뷰티 디바이스 출시로 처음 도입된 기능이라 4050세대 중심 고객이 설명 없이도 바로 쓸 수 있어야 했습니다.
-      디바이스 등록자 중 실제 연동을 사용하는 비율은 <strong>약 45%</strong>에 그쳤고, 여러 대를 가진 고객은 배너가 하나만 노출돼
-      기존 연결을 해제하고 다시 등록하는 일을 반복했습니다.
+      신규 뷰티 디바이스 출시로 처음 도입된 기능이었는데, 화면은 하나의 디바이스 상태만 보여줘 <strong>'한 번에 하나만 연결할 수 있다'는 인식</strong>을 심어주고 있었습니다.
+      그 결과 디바이스 등록자 중 실제 연동을 사용하는 비율은 <strong>약 45%</strong>에 그쳤고, 여러 대를 가진 고객은 기존 연결을 해제하고 다시 등록하는 일을 반복했습니다.
     </p>
 
     <div class="card-grid">
@@ -85,15 +85,9 @@
           <span class="num accent">45%</span>
           <span class="label">디바이스 등록자 중 실제 연동 사용률</span>
         </div>
-        <div style="display:flex; gap:28px; margin-top:18px; flex-wrap:wrap;">
-          <div>
-            <div style="font-size:22px; font-weight:800; color:var(--t1); line-height:1;">34%</div>
-            <div style="font-size:11.5px; color:var(--t3); margin-top:6px;">내부 커뮤니티 문의 중<br>블루투스 연동 관련 비중</div>
-          </div>
-          <div>
-            <div style="font-size:22px; font-weight:800; color:var(--t1); line-height:1;">30%</div>
-            <div style="font-size:11.5px; color:var(--t3); margin-top:6px;">CS 문의 중<br>블루투스 연동 관련 비중</div>
-          </div>
+        <div style="margin-top:22px;">
+          <p style="font-size:14px; margin:0;">내부 커뮤니티 문의 중 블루투스 연동 관련 비중 <strong style="color:var(--t1); font-size:17px;">34%</strong></p>
+          <p style="font-size:14px; margin:12px 0 0;">CS 문의 중 블루투스 연동 관련 비중 <strong style="color:var(--t1); font-size:17px;">30%</strong></p>
         </div>
         <div class="callout light" style="margin-top:16px; padding:12px 14px;">
           다중 디바이스 보유 고객은 배너가 하나만 노출돼, <strong style="color:var(--t1);">기존 연결 해제 → 재등록</strong>을 반복했습니다.
@@ -137,7 +131,6 @@
         <h3>전원 켜진 디바이스를 자동 인식해 퀵연결을 바로 제안하면</h3>
         <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">그러면:</p>
         <p style="color:var(--t1); font-weight:600; font-size:14px;">자동연동 오인지로 인한 CS 문의가 줄고, 등록자 중 실제 연동 사용률이 오를 것</p>
-        <img src="../assets/images/medicube/quick-connect-sheet.png" alt="전원 인식 시 자동 노출되는 퀵연결 바텀시트" style="width:100%; border-radius:12px; border:1px solid var(--border); display:block; margin-top:16px;" loading="lazy" />
         <div class="callout light" style="margin:14px 0 0; padding:14px 16px 14px 22px;">
           <div class="eyebrow" style="margin-bottom:4px;">UT 검증 결과</div>
           LED 상태 직관적 표현 긍정 응답 <strong class="hl">80%</strong>(약 60명, 프로토타입 4종 비교)
@@ -149,19 +142,9 @@
         <h3>홈에 연결 가능한 디바이스 전체를 목록으로 보여주고, 연결된 디바이스는 1뎁스에서 바로 제어하게 하면</h3>
         <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">그러면:</p>
         <p style="color:var(--t1); font-weight:600; font-size:14px;">배너 하나로 인한 반복 해제·재등록이 줄어들 것</p>
-        <div style="display:flex; gap:10px; margin-top:16px;">
-          <div style="width:50%;">
-            <img src="../assets/images/medicube/pain02-asis.png" alt="AS-IS: 디바이스가 여러 대여도 배너 하나만 노출" style="width:100%; border-radius:10px; border:1px solid var(--border); display:block;" loading="lazy" />
-            <p style="font-size:11px; color:var(--t3); text-align:center; margin-top:6px;">AS-IS · 배너 하나만 노출</p>
-          </div>
-          <div style="width:50%;">
-            <img src="../assets/images/medicube/pain02-tobe.png" alt="TO-BE: 연결 가능한 디바이스 전체를 목록으로 노출" style="width:100%; border-radius:10px; border:1px solid var(--border); display:block;" loading="lazy" />
-            <p style="font-size:11px; color:var(--t3); text-align:center; margin-top:6px;">TO-BE · 전체 목록 노출</p>
-          </div>
-        </div>
         <div class="callout light" style="margin:14px 0 0; padding:14px 16px 14px 22px;">
-          <div class="eyebrow" style="margin-bottom:4px;">UT 검증 결과</div>
-          한 화면 노출형 레이아웃 선호 <strong class="hl">65%</strong>(약 60명). 다만 "LED가 메인 정보인데 덜 강조" 부정 피드백 11건
+          <div class="eyebrow" style="margin-bottom:4px;">검증 근거</div>
+          실제 데이터·VOC 분석 결과, 다중 디바이스 보유 고객의 반복 해제·재등록 행동이 확인됐고, 적용 후 연동 비율 <strong class="hl">+16%p</strong> · CS 문의 <strong class="hl">-20%</strong>로 이어졌습니다.
         </div>
       </div>
     </div>
@@ -180,7 +163,7 @@
       <div class="card">
         <h3>자동 인식 · 퀵연결</h3>
         <p style="font-size:13px;">주변에 전원이 켜진 디바이스가 있으면 자동으로 인식해 바텀시트로 연결을 제안.</p>
-        <img src="../assets/images/medicube/quick-connect-sheet.png" alt="전원 인식 시 자동 노출되는 퀵연결 바텀시트" style="width:100%; border-radius:10px; border:1px solid var(--border); display:block; margin-top:14px;" loading="lazy" />
+        <img src="../assets/images/medicube/quick-connect-popup.png" alt="전원 인식 시 자동 노출되는 퀵연결 팝업" style="width:100%; border-radius:10px; border:1px solid var(--border); display:block; margin-top:14px;" loading="lazy" />
       </div>
       <div class="card">
         <h3>홈 디바이스 목록</h3>
@@ -190,7 +173,7 @@
       <div class="card">
         <h3>1뎁스 컨트롤</h3>
         <p style="font-size:13px;">이미 연결된 디바이스는 목록에서 한 번의 진입으로 바로 제어 화면 도달.</p>
-        <img src="../assets/images/medicube/remote-control.png" alt="1뎁스 컨트롤 · LED 상태 표시" style="width:100%; border-radius:10px; border:1px solid var(--border); display:block; margin-top:14px;" loading="lazy" />
+        <img src="../assets/images/medicube/remote-control-2.png" alt="1뎁스 컨트롤 · LED 상태 표시" style="width:100%; border-radius:10px; border:1px solid var(--border); display:block; margin-top:14px;" loading="lazy" />
       </div>
     </div>
 
@@ -213,7 +196,7 @@
   <div class="container">
     <span class="eyebrow">Outcomes</span>
     <h2>기능을 더하지 않고 뎁스를 줄이는 방향으로,<br>디바이스 연동을 쉽게 만들다</h2>
-    <p>연동이 어려운 이유가 '기능이 없어서'가 아니라 '설명이 없어서'라는 걸 사용성 테스트로 확인한 뒤, 자동 인식과 1뎁스 컨트롤로 두 차례에 걸쳐 문제를 좁혀갔습니다.</p>
+    <p>화면이 하나의 디바이스 상태만 보여줘 '한 번에 하나만 연결할 수 있다'는 오해를 주고 있었다는 걸 사용성 테스트와 실제 데이터로 확인한 뒤, 자동 인식과 1뎁스 컨트롤로 두 차례에 걸쳐 문제를 좁혀갔습니다.</p>
 
     <div class="impact-label">Impact</div>
     <div class="hero-stat">
@@ -225,19 +208,20 @@
       <div class="stat"><div class="num accent">+20%</div><div class="label">2건 이상 연동 비율</div><div class="sub">Solution 1 적용 후</div></div>
       <div class="stat"><div class="num accent">-20%</div><div class="label">연동 관련 CS 문의</div><div class="sub">Solution 2 적용 후</div></div>
     </div>
-    <p style="font-size:12px; color:var(--t3); margin-top:8px;">해제 후 재등록 비율도 눈에 띄게 줄었습니다(정확한 수치는 별도 집계 필요).</p>
 
     <div class="card-grid" style="margin-top:14px;">
       <div class="card">
         <span class="eyebrow" style="color:#A9C4FF;">What We Learned</span>
-        <p style="font-size:14.5px; color:var(--t1); font-weight:600; margin-top:14px; line-height:1.7;">몰라서가 아니라, 먼저 물어보지 않아서 생긴 문제였습니다.</p>
-        <p style="font-size:14px; line-height:1.75; margin-top:10px;">1차 사용성 테스트에서 연동 실패 원인이 "기능 부족"이 아니라 "설명 부족"임을 확인했습니다.</p>
-        <p style="font-size:14px; line-height:1.75; margin-top:8px;">"LED가 메인 정보인데 화면에서 덜 강조돼 있다"는 1차 피드백(11건)은 2차 개선 후 해소 여부가 확인되지 않아, 다음 라운드 과제로 남겨뒀습니다.</p>
+        <p style="font-size:14.5px; color:var(--t1); font-weight:600; margin-top:14px; line-height:1.7;">사용자는 여러 디바이스를 등록할 수 있다는 사실을 인지하지 못했습니다.</p>
+        <ul style="font-size:14px; color:var(--t2); line-height:1.75; margin:12px 0 0; padding-left:18px;">
+          <li>기존 화면은 하나의 디바이스 상태만 노출해 <strong style="color:var(--t1);">'한 번에 하나만 연결할 수 있다'는 인식</strong>을 만들었습니다.</li>
+          <li>실제 데이터와 VOC 분석 결과에서도 기존 디바이스를 해제한 뒤 새 디바이스를 연결하려는 행동이 반복적으로 관찰되었습니다.</li>
+        </ul>
       </div>
       <div class="card" style="background:rgba(91,147,255,.08); border-color:rgba(91,147,255,.25);">
         <span class="eyebrow" style="color:#A9C4FF;">Key Insight</span>
-        <p style="font-size:14px; line-height:1.75; margin-top:14px;">연동이 어려운 이유는 기능이 없어서가 아니라, 설명이 없어서였습니다.</p>
-        <p style="font-size:14px; line-height:1.75; margin-top:8px; color:var(--t1);">→ 기능을 더하지 않고 자동 인식 + 1뎁스 컨트롤로 뎁스를 줄이는 방향이 더 효과적인 해법이었습니다.</p>
+        <p style="font-size:14px; line-height:1.75; margin-top:14px;">문제는 연동 기능이 아니라, '여러 디바이스를 등록할 수 있다'는 구조를 UI가 전달하지 못한 것이었습니다.</p>
+        <p style="font-size:14px; line-height:1.75; margin-top:8px; color:var(--t1);">→ 기능을 추가하기보다, <strong>여러 디바이스를 관리할 수 있다는 구조가 자연스럽게 이해</strong>되도록 UI를 재설계했고, 관련 지표 개선으로 이어졌습니다.</p>
       </div>
     </div>
   </div>
