@@ -546,6 +546,19 @@ a.card:hover { border-color: rgba(91,147,255,.4); transform: translateY(-2px); }
 .pa-card .pa-visual-wide-wrap::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 48px; background: linear-gradient(90deg, transparent, var(--surface)); }
 .pa-card .pa-note { font-size: 11px; color: var(--t3); margin-top: 8px; line-height: 1.6; }
 
+/* ── 온보딩 실제 화면 플로우 ── */
+.onboard-flow-group { margin-top: 28px; }
+.onboard-flow-label { font-size: 13px; font-weight: 700; color: var(--t1); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.onboard-flow-label .step-badge { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 11.5px; font-weight: 800; }
+.onboard-flow { display: flex; align-items: center; gap: 4px; overflow-x: auto; padding-bottom: 12px; -webkit-overflow-scrolling: touch; }
+.onboard-flow-step { flex: 0 0 auto; width: 150px; }
+.onboard-flow-step img { width: 100%; border-radius: 20px; border: 1px solid var(--border-strong); display: block; }
+.onboard-flow-step p { font-size: 11px; color: var(--t3); text-align: center; margin-top: 8px; line-height: 1.5; }
+.onboard-flow-arrow { flex: 0 0 auto; color: var(--t3); width: 18px; height: 18px; margin: 0 2px 26px; }
+@media (max-width: 720px) {
+  .onboard-flow-step { width: 128px; }
+}
+
 @media (max-width: 860px) {
   .phone-annotate { min-height: 0; }
   .pa-item { position: static; transform: none; width: auto; margin: 0 0 18px; }

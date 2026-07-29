@@ -316,15 +316,70 @@
 <!-- ═══════════════════════════════════ -->
 <section class="block tint">
   <div class="container">
-    <span class="eyebrow">최종 디자인</span>
-    <h2>온보딩 · AI 추천 카드 · 개인화 메인</h2>
+    <span class="eyebrow">Design</span>
+    <h2>UT 가설이 실제 화면으로</h2>
+    <p>
+      온보딩·AI 추천 카드·개인화 메인 각 모듈은 UT에서 검증한 가설과 하나씩 짝지어져 있습니다.
+      실제 UT에서 온보딩을 가볍게 눌러보고 지나가는 사용자가 꽤 있었어서, 부담 없이 툭 건드려볼 수 있는 <strong style="color:var(--t1);">밸런스 게임(10초 컷)</strong>으로
+      먼저 관심사를 가볍게 파악한 뒤, 이어서 <strong style="color:var(--t1);">지역·직무</strong> 같은 조금 더 구체적인 조건을 수집해 콜드스타트를 해소하는 2단 구조로 설계했습니다.
+    </p>
 
-    <div style="max-width:480px; margin:0 auto;">
-      <img src="../assets/images/jobkorea/onboarding-real.png" alt="온보딩: 지역 선택 등 직군·경력 정보 수집 화면" style="width:100%; border-radius:12px; display:block;" loading="lazy" />
-      <p class="visual-caption">온보딩: 직군·경력 수집 · Cold Start 해소</p>
+    <div class="onboard-flow-group">
+      <div class="onboard-flow-label"><span class="step-badge">1</span>밸런스 게임 · 10초 컷</div>
+      <div class="onboard-flow">
+        <div class="onboard-flow-step">
+          <img src="../assets/images/jobkorea/onboarding-flow/step1-balance-region-job.png" alt="밸런스 게임: 가까운 직장 vs 직무핏" loading="lazy" />
+          <p>지역 vs 직무핏</p>
+        </div>
+        <svg class="onboard-flow-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="onboard-flow-step">
+          <img src="../assets/images/jobkorea/onboarding-flow/step2-balance-company.png" alt="밸런스 게임: 탄탄한 기업 vs 성장 가능성" loading="lazy" />
+          <p>기업 안정성 vs 성장성</p>
+        </div>
+        <svg class="onboard-flow-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="onboard-flow-step">
+          <img src="../assets/images/jobkorea/onboarding-flow/step3-balance-reward.png" alt="밸런스 게임: 보상 vs 워라밸" loading="lazy" />
+          <p>보상 vs 워라밸</p>
+        </div>
+        <svg class="onboard-flow-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="onboard-flow-step">
+          <img src="../assets/images/jobkorea/onboarding-flow/step4-balance-confirm.png" alt="밸런스 게임 완료 안내" loading="lazy" />
+          <p>완료 안내</p>
+        </div>
+      </div>
     </div>
 
-    <p style="margin-top:32px;">배포된 메인 화면을 위에서 아래 순서대로 뜯어보면, 검색이라는 기존 습관은 그대로 두고 그 아래에 개인화 신호를 활용하는 레이어를 순서대로 쌓아올린 구조입니다.</p>
+    <div class="onboard-flow-group">
+      <div class="onboard-flow-label"><span class="step-badge">2</span>지역·직무 추가 수집 → 개인화 완료</div>
+      <div class="onboard-flow">
+        <div class="onboard-flow-step">
+          <img src="../assets/images/jobkorea/onboarding-flow/step5-region-select.png" alt="선호 지역 선택(시/도)" loading="lazy" />
+          <p>선호 지역(시/도)</p>
+        </div>
+        <svg class="onboard-flow-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="onboard-flow-step">
+          <img src="../assets/images/jobkorea/onboarding-flow/step6-region-detail.png" alt="선호 지역 상세 선택(구 단위, 다중선택)" loading="lazy" />
+          <p>지역 상세(다중선택)</p>
+        </div>
+        <svg class="onboard-flow-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="onboard-flow-step">
+          <img src="../assets/images/jobkorea/onboarding-flow/step7-job-category.png" alt="선호 직군 선택" loading="lazy" />
+          <p>선호 직군</p>
+        </div>
+        <svg class="onboard-flow-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="onboard-flow-step">
+          <img src="../assets/images/jobkorea/onboarding-flow/step8-job-detail.png" alt="선호 직무 상세 선택(다중선택)" loading="lazy" />
+          <p>직무 상세(다중선택)</p>
+        </div>
+        <svg class="onboard-flow-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="onboard-flow-step">
+          <img src="../assets/images/jobkorea/onboarding-flow/step9-personalized-main.png" alt="온보딩 완료 후 개인화된 메인 화면" loading="lazy" />
+          <p>개인화된 메인</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;">배포된 메인 화면을 위에서 아래 순서대로 뜯어보면, 검색이라는 기존 습관은 그대로 두고 그 아래에 개인화 신호를 활용하는 레이어를 순서대로 쌓아올린 구조입니다.</p>
 
     <div class="phone-annotate">
       <div class="pa-frame">
@@ -334,8 +389,8 @@
       <div class="pa-item side-right" style="top:4%;">
         <div class="pa-line"></div>
         <div class="pa-card">
-          <h4>검색은 그대로, 지역 필터만 추가</h4>
-          <p>가장 많이 쓰던 통합검색(1위, 51~53%) 습관은 그대로 두고, 지역 필터만 상단에 얹어 새 탐색 시작점을 하나 더 만들었어요.</p>
+          <h4>검색 습관은 지키고, 개인화 신호는 더하다</h4>
+          <p>가장 많이 쓰던 통합검색(1위, 51~53%) 습관은 그대로 두고, 주 사용 필터인 지역을 추가하여 새 탐색 시작점을 하나 더 만들었습니다.</p>
         </div>
       </div>
 
@@ -446,13 +501,24 @@
 
     <div class="card-grid cols-3" style="margin-top:20px;">
       <div class="card"><h3>실험 설계</h3><p style="font-size:13px;">User-level 랜덤 배정 · 트래픽 50:50<br>2026.03.04~03.11(1주, 주중/주말 포함)</p></div>
-      <div class="card"><h3>비교 대상</h3><p style="font-size:13px;">A안: AI Insight 문구 + 추천 리스트<br>B안: 추천 리스트만(Insight 미노출)</p></div>
+      <div class="card"><h3>비교 대상</h3><p style="font-size:13px;">A안: 상세 AI Insight 문구 + 추천 리스트<br>B안: 간결한 라벨 + 추천 리스트(Insight 문구 최소화)</p></div>
       <div class="card"><h3>판단 지표</h3><p style="font-size:13px;">회원당 공고 클릭 수·지원 수(핵심)<br>메인 CTR·CVR(보조)</p></div>
     </div>
 
+    <div style="display:flex; gap:20px; justify-content:center; max-width:640px; margin:20px auto 0;">
+      <div style="width:50%;">
+        <img src="../assets/images/jobkorea/ab-test-a-with-insight.png" alt="A안: 상세 AI Insight 문구 + 추천 리스트" style="width:100%; border-radius:14px; border:1px solid var(--border); display:block;" loading="lazy" />
+        <p style="font-size:12px; color:var(--t3); text-align:center; margin-top:8px;">A안 · 상세 Insight 문구</p>
+      </div>
+      <div style="width:50%;">
+        <img src="../assets/images/jobkorea/ab-test-b-final.png" alt="B안: 간결한 라벨 + 추천 리스트, 최종 확정안" style="width:100%; border-radius:14px; border:1px solid var(--border); display:block;" loading="lazy" />
+        <p style="font-size:12px; color:var(--t3); text-align:center; margin-top:8px;">B안 · 최종 확정</p>
+      </div>
+    </div>
+
     <div class="callout" style="margin-top:20px;">
-      <strong>결과</strong>: 클릭 수·지원 수 자체는 두 안이 유사했고, 클릭률·전환율은 오히려 <span class="hl">Insight 문구가 없는 B안이 소폭 더 높게</span> 나왔습니다.
-      "추천 근거를 어떻게 잘 보여줄까"가 아니라 <strong>"이 문구 자체가 불필요했다"</strong>는 결론이었습니다.
+      <strong>결과</strong>: 클릭 수·지원 수 자체는 두 안이 유사했고, 클릭률·전환율은 오히려 <span class="hl">Insight 문구가 짧은 B안이 소폭 더 높게</span> 나왔습니다.
+      "추천 근거를 어떻게 잘 보여줄까"가 아니라 <strong>"긴 설명 자체가 불필요했다"</strong>는 결론이었습니다.
     </div>
 
     <div class="card" style="margin-top:6px;">
