@@ -232,7 +232,7 @@
       <strong>핵심 Trade-off</strong>: 순수 AI 추천(광고주 수익 리스크) vs 광고 티어만 유지(사용자 이탈 지속).
       사용자 경험뿐 아니라 이미 판매 중인 광고 상품(기업 고객의 매출)도 함께 고려해야 하는 문제였습니다.
       광고 티어(First VVIP~Excellent) 구조는 유지하되, 각 티어 내에서 <strong>AI 매칭 점수</strong>로 우선 노출해
-      비즈니스 제약 안에서 개인화를 레이어로 추가했습니다.
+      비즈니스 제약 안에서 개인화 섹션을 추가했습니다.
     </div>
 
     <div class="card" style="margin-top:14px;">
@@ -427,6 +427,16 @@
           <p>지역 맞춤·직무 맞춤·전공 맞춤 등 여러 기준으로 바로 필터링할 수 있게, 검색창 하나에만 의존하지 않고도 원하는 조건으로 탐색 범위를 좁혀갈 수 있도록 했습니다.</p>
         </div>
       </div>
+
+      <div class="pa-item side-right" style="top:56%;">
+        <div class="pa-line"></div>
+        <div class="pa-card">
+          <h4><img class="pa-icon" src="../assets/images/jobkorea/annotate-icons/emoji-heart.png" alt="" />스와이프로 수집하는 공고 선호도</h4>
+          <p>실제 공고 카드를 좌/우로 스와이프하며 남긴 반응 기반으로 사용자의 공고 선호 성향을 정밀하게 파악하고자 했습니다.</p>
+          <img class="pa-visual" src="../assets/images/jobkorea/annotate-icons/swipe-card.png" alt="어떤 공고에 관심 있으세요? 스와이프로 관심 공고를 수집하는 카드 UI" style="max-width:260px;" loading="lazy" />
+          <p class="pa-note">*조건부 랜덤 노출</p>
+        </div>
+      </div>
     </div>
     <p style="font-size:12px; color:var(--t3); text-align:center; margin-top:8px;">모바일 메인 실제 화면</p>
   </div>
@@ -445,7 +455,7 @@
     <div class="stat-row">
       <div class="stat"><div class="num accent">+142%<span class="trend-ico">↗</span></div><div class="label">PC CTR</div><div class="sub">6.76% → 16.37%</div></div>
       <div class="stat"><div class="num accent">+127%<span class="trend-ico">↗</span></div><div class="label">PC CVR</div><div class="sub">7.12% → 16.14%</div></div>
-      <div class="stat" style="visibility:hidden;"><div class="num">0%</div><div class="label">-</div></div>
+      <div class="stat"><div class="num" style="color:transparent;">-</div><div class="label" style="color:transparent;">-</div></div>
     </div>
     <div class="stat-row">
       <div class="stat"><div class="num accent">+221%<span class="trend-ico">↗</span></div><div class="label">APP CTR</div><div class="sub">9.45% → 30.35%</div></div>
@@ -457,7 +467,7 @@
       <div class="card">
         <span class="eyebrow" style="color:#A9C4FF;">What We Learned</span>
         <p style="font-size:14.5px; color:var(--t1); font-weight:600; margin-top:14px; line-height:1.7;">신뢰는 "설명"이 아니라 "매칭 정확도"에서 나왔습니다.</p>
-        <p style="font-size:14px; line-height:1.75; margin-top:10px;">후속 A/B에서 AI Insight 문구 유무는 클릭·지원 수 차이가 없었고, 오히려 문구를 뺀 안의 전환율이 소폭 더 높았습니다.</p>
+        <p style="font-size:14px; line-height:1.75; margin-top:10px;">후속 A/B테스트에서 AI Insight 문구 유무는 클릭·지원 수 차이가 없었고, 오히려 문구를 뺀 시안의 전환율이 소폭 더 높았습니다.</p>
         <p style="font-size:14px; line-height:1.75; margin-top:8px;">UT에서 예측한 "AI 신뢰도·라벨 혼란"이 출시 후 VOC로 그대로 재현돼, 사전 리서치가 실제 반응을 예측하는 데 유효했음을 확인했습니다.</p>
       </div>
       <div class="card" style="background:rgba(91,147,255,.08); border-color:rgba(91,147,255,.25);">
@@ -476,9 +486,8 @@
       </div>
       <div class="card">
         <h3>다음 과제</h3>
-        <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">01</strong> AI 추천 근거 노출: "왜 이 공고인지" 설명 추가</p>
-        <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">02</strong> 섹션명·라벨 정비: UT 혼란 구간 해소</p>
-        <p style="font-size:13px;"><strong class="hl">03</strong> PC 레이아웃 A/B 테스트: 정보 밀도 최적화</p>
+        <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">01</strong> 섹션명·라벨 정비: UT 혼란 구간 해소</p>
+        <p style="font-size:13px;"><strong class="hl">02</strong> PC 레이아웃 A/B 테스트: 정보 밀도 최적화</p>
       </div>
     </div>
   </div>
@@ -491,7 +500,7 @@
   <div class="container">
     <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
       <span class="eyebrow" style="margin-bottom:0;">후속 작업 · 2차 A/B 테스트</span>
-      <span class="chip" style="margin-left:auto;">다음 과제 01 연계</span>
+      <span class="chip" style="margin-left:auto;">AI Insight 후속 검증</span>
     </div>
     <h2>"AI 추천 근거 노출"이 정말 필요한가: 문구 자체의 순효과 검증</h2>
     <p>
@@ -509,11 +518,11 @@
 
     <div style="display:flex; gap:20px; justify-content:center; max-width:640px; margin:20px auto 0;">
       <div style="width:50%;">
-        <img src="../assets/images/jobkorea/ab-test-a-with-insight.png" alt="A안: 상세 AI Insight 문구 + 추천 리스트" style="width:100%; border-radius:14px; border:1px solid var(--border); display:block;" loading="lazy" />
+        <img src="../assets/images/jobkorea/ab-test-a-with-insight.png" alt="A안: 상세 AI Insight 문구 + 추천 리스트" style="width:100%; height:560px; object-fit:cover; object-position:top; border-radius:14px; border:1px solid var(--border); display:block;" loading="lazy" />
         <p style="font-size:12px; color:var(--t3); text-align:center; margin-top:8px;">A안 · 상세 Insight 문구</p>
       </div>
       <div style="width:50%;">
-        <img src="../assets/images/jobkorea/ab-test-b-final.png" alt="B안: 간결한 라벨 + 추천 리스트, 최종 확정안" style="width:100%; border-radius:14px; border:1px solid var(--border); display:block;" loading="lazy" />
+        <img src="../assets/images/jobkorea/ab-test-b-final.png" alt="B안: 간결한 라벨 + 추천 리스트, 최종 확정안" style="width:100%; height:560px; object-fit:cover; object-position:top; border-radius:14px; border:1px solid var(--border); display:block;" loading="lazy" />
         <p style="font-size:12px; color:var(--t3); text-align:center; margin-top:8px;">B안 · 최종 확정</p>
       </div>
     </div>
