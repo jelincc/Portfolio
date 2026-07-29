@@ -270,6 +270,7 @@ section.block.tight { padding: 44px 0; }
 .stat .num.accent { color: var(--blue); }
 .stat .label { font-size: 13px; color: var(--t3); margin-top: 7px; font-weight: 500; }
 .stat .sub   { font-size: 12px; color: var(--t3); margin-top: 4px; }
+.trend-ico { font-size: 0.5em; font-weight: 700; margin-left: 4px; vertical-align: middle; }
 
 /* ── 지표: 히어로 넘버 (핵심 결과 1개 강조) ── */
 .hero-stat { display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; margin: 8px 0 4px; }
