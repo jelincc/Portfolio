@@ -273,7 +273,7 @@ section.block.tight { padding: 44px 0; }
 
 /* ── 결과 섹션 우측 장식 이미지 ── */
 .result-frame-deco {
-  display: none; position: absolute; top: 0; right: -40px; height: 100%; width: auto; max-width: 340px;
+  display: none; position: absolute; top: 0; right: -80px; height: 100%; width: auto; max-width: 480px;
   object-fit: cover; pointer-events: none;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%), linear-gradient(to right, transparent 0%, #000 35%);
   -webkit-mask-composite: source-in;
@@ -586,6 +586,12 @@ a.card:hover { border-color: rgba(91,147,255,.4); transform: translateY(-2px); }
 .onboard-flow-step img { width: 100%; border-radius: 20px; border: 1px solid var(--border-strong); display: block; }
 .onboard-flow-step.frameless img { border: none; border-radius: 0; }
 .onboard-flow-step p { font-size: 13.5px; font-weight: 700; color: var(--t1); text-align: center; margin-top: 10px; line-height: 1.5; }
+.onboard-flow-step p.step-tag {
+  display: inline-flex; margin: 10px auto 0; padding: 5px 14px; border-radius: 100px;
+  background: rgba(91,147,255,.12); border: 1px solid rgba(91,147,255,.35); color: #A9C4FF;
+  font-size: 12.5px; font-weight: 700;
+}
+.onboard-flow-step { display: flex; flex-direction: column; align-items: center; }
 .onboard-flow-arrow { flex: 0 0 auto; color: var(--t3); width: 18px; height: 18px; margin: 0 2px 26px; }
 @media (max-width: 720px) {
   .onboard-flow-step { width: 128px; }
