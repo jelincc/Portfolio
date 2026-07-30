@@ -288,6 +288,17 @@ section.block.tight { padding: 44px 0; }
 .verdict-row .res-badge { margin-top: 1px; flex-shrink: 0; }
 .verdict-row span:last-child { font-size: 14px; color: var(--t2); line-height: 1.6; flex: 1 1 240px; }
 
+/* ── 결과 섹션 우측 장식 이미지 ── */
+.result-frame-deco {
+  display: none; position: absolute; top: 0; right: -40px; height: 100%; width: auto; max-width: 340px;
+  object-fit: cover; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%), linear-gradient(to right, transparent 0%, #000 35%);
+  -webkit-mask-composite: source-in;
+          mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%), linear-gradient(to right, transparent 0%, #000 35%);
+          mask-composite: intersect;
+}
+@media (min-width: 1100px) { .result-frame-deco { display: block; } }
+
 /* ── 지표: 서사형(문장 안에 녹임) ── */
 .stat-row {
   display: flex; flex-wrap: wrap;
