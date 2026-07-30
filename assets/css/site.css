@@ -581,10 +581,11 @@ a.card:hover { border-color: rgba(91,147,255,.4); transform: translateY(-2px); }
 .onboard-flow-group { margin-top: 28px; }
 .onboard-flow-label { font-size: 13px; font-weight: 700; color: var(--t1); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
 .onboard-flow-label .step-badge { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 11.5px; font-weight: 800; }
-.onboard-flow { display: flex; align-items: center; gap: 4px; overflow-x: auto; padding-bottom: 12px; -webkit-overflow-scrolling: touch; }
+.onboard-flow { display: flex; align-items: flex-start; gap: 4px; overflow-x: auto; padding-bottom: 12px; -webkit-overflow-scrolling: touch; }
 .onboard-flow-step { flex: 0 0 auto; width: 150px; }
 .onboard-flow-step img { width: 100%; border-radius: 20px; border: 1px solid var(--border-strong); display: block; }
-.onboard-flow-step p { font-size: 11px; color: var(--t3); text-align: center; margin-top: 8px; line-height: 1.5; }
+.onboard-flow-step.frameless img { border: none; border-radius: 0; }
+.onboard-flow-step p { font-size: 13.5px; font-weight: 700; color: var(--t1); text-align: center; margin-top: 10px; line-height: 1.5; }
 .onboard-flow-arrow { flex: 0 0 auto; color: var(--t3); width: 18px; height: 18px; margin: 0 2px 26px; }
 @media (max-width: 720px) {
   .onboard-flow-step { width: 128px; }
