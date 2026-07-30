@@ -238,7 +238,7 @@ section.block.tight { padding: 44px 0; }
   color: #B7CDFF; border-color: rgba(91,147,255,.4);
 }
 .chip.dark { background: var(--t1); color: var(--bg); border-color: transparent; font-weight: 800; }
-.biz-tag { position: absolute; top: 10px; left: 10px; z-index: 2; font-size: 10.5px; padding: 4px 10px; background: #282a30; color: #fff; border-color: transparent; font-weight: 800; }
+.chip.biz-tag { position: absolute; top: 10px; left: 10px; z-index: 2; font-size: 10.5px; padding: 4px 10px; background: #282a30; color: #fff; border-color: transparent; font-weight: 800; }
 
 /* ── 프로토타입 링크 버튼 ── */
 .proto-link {
