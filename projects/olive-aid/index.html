@@ -77,34 +77,46 @@
 
     <div class="card" style="margin-top:20px;">
       <h3 style="margin-bottom:4px;">Principles of Operation</h3>
-      <p style="font-size:12px; color:var(--t3); margin-bottom:20px;">테라피 음원 6종을 믹싱한 뒤, 사용자가 찾은 이명 주파수 대역만 제거(Notch)해 기기로 출력합니다.</p>
+      <p style="font-size:12px; color:var(--t3); margin-bottom:28px;">테라피 음원 6종을 믹싱한 뒤, 사용자가 찾은 이명 주파수 대역만 제거(Notch)해 기기로 출력합니다.</p>
 
-      <div style="display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap;">
-        <div style="font-size:11.5px; color:var(--t3); line-height:1.9; text-align:right;">
-          새소리 · 모닥불 · 파도<br>바람 · 화이트노이즈 · 음악
+      <div style="display:flex; align-items:center; gap:4px; overflow-x:auto; padding:36px 4px 8px;">
+        <div style="display:flex; flex-direction:column; gap:13px; flex-shrink:0;">
+          <div style="display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="var(--t3)" stroke-width="1.4" stroke-linecap="round"><path d="M3 11a7 7 0 0 1 0-6M6.5 13a11 11 0 0 1 0-10"/></svg><span style="font-size:11.5px; color:var(--t2); white-space:nowrap;">새소리</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 20 20" fill="var(--t3)" stroke="none"><path d="M10 1c-2.5 3-4 5-4 8a4 4 0 1 0 8 0c0-1.4-.6-2.6-1.4-3.5.3 1.5-.7 2.5-1.6 2.5-1.1 0-1.6-1.1-.8-3C10.6 3.6 10.5 2.4 10 1Z"/></svg><span style="font-size:11.5px; color:var(--t2); white-space:nowrap;">모닥불</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="var(--t3)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1 11c1.8-2.7 3.5-2.7 5.3 0s3.5 2.7 5.3 0 3.5-2.7 5.3 0"/></svg><span style="font-size:11.5px; color:var(--t2); white-space:nowrap;">파도</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="var(--t3)" stroke-width="1.4" stroke-linecap="round"><path d="M1 6h8.5a1.75 1.75 0 1 0-1.7-2.2"/><path d="M1 10h11.5a1.75 1.75 0 1 1-1.7 2.2"/><path d="M1 14h6.5a1.75 1.75 0 1 0-1.7 2.2"/></svg><span style="font-size:11.5px; color:var(--t2); white-space:nowrap;">바람</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="var(--t3)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12l1.6-5 1.6 9 1.6-9 1.6 9 1.6-9 1.6 9 1.6-5 1.6 3"/></svg><span style="font-size:11.5px; color:var(--t2); white-space:nowrap;">화이트노이즈</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="var(--t3)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 15V4.5L16 3v10.5"/><circle cx="5.2" cy="15" r="2.3"/><circle cx="13.7" cy="13.5" r="2.3"/></svg><span style="font-size:11.5px; color:var(--t2); white-space:nowrap;">음악</span></div>
         </div>
-        <svg class="arrow-ico" style="width:16px; height:16px;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
 
-        <div style="display:flex; flex-direction:column; align-items:center; gap:8px; border:1px dashed rgba(91,147,255,.4); border-radius:16px; padding:14px 16px;">
+        <svg width="40" height="192" viewBox="0 0 40 192" style="flex-shrink:0; color:var(--border-strong); overflow:visible;"><path d="M0 8 C 26 8 26 88 38 96 C 26 104 26 184 0 184" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+
+        <div style="display:flex; flex-direction:column; align-items:center; gap:10px; border:1.5px dashed rgba(91,147,255,.45); border-radius:18px; padding:16px 18px; flex-shrink:0; position:relative;">
+          <span class="chip blue" style="font-size:10.5px; padding:4px 12px;">Olive Aid</span>
           <div style="display:flex; align-items:center; gap:10px;">
-            <div style="background:var(--surface-2); border:1px solid var(--border-strong); border-radius:10px; padding:12px 16px; text-align:center; min-width:70px;">
-              <div style="font-size:12.5px; font-weight:700; color:var(--t1);">Mixer</div>
+            <div style="background:linear-gradient(155deg, var(--blue), var(--violet)); border-radius:10px; padding:14px 18px; text-align:center; min-width:78px; box-shadow:0 4px 14px rgba(91,147,255,.25);">
+              <div style="font-size:12.5px; font-weight:800; color:#fff;">Mixer</div>
             </div>
-            <svg class="arrow-ico" style="width:14px; height:14px;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div style="background:rgba(91,147,255,.12); border:1px solid rgba(91,147,255,.4); border-radius:10px; padding:12px 16px; text-align:center; min-width:70px;">
-              <div style="font-size:12.5px; font-weight:700; color:#B7CDFF;">Notch</div>
+            <svg class="arrow-ico" style="width:14px; height:14px; color:var(--t3);" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div style="position:relative; background:linear-gradient(155deg, rgba(156,140,255,.95), rgba(91,147,255,.65)); border-radius:10px; padding:14px 18px; text-align:center; min-width:78px; box-shadow:0 4px 14px rgba(156,140,255,.22);">
+              <div style="position:absolute; left:50%; top:-34px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:2px;">
+                <div style="width:26px; height:26px; border-radius:8px; background:var(--surface-2); border:1px solid var(--border-strong); display:flex; align-items:center; justify-content:center;">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#A9C4FF" stroke-width="1.4" stroke-linecap="round"><path d="M1 8h1.5l1-4 2 8 2-8 2 8 1-4H15"/></svg>
+                </div>
+                <svg width="10" height="10" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--t3);"><path d="M8 2v10M4 8l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div style="font-size:12.5px; font-weight:800; color:#fff;">Notch</div>
             </div>
           </div>
-          <span style="font-size:10px; color:var(--t3); font-weight:600;">Olive Aid</span>
         </div>
 
-        <svg class="arrow-ico" style="width:16px; height:16px;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="arrow-ico" style="width:16px; height:16px; flex-shrink:0; color:var(--t3);" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
 
-        <div style="display:flex; flex-direction:column; align-items:center; gap:8px; border:1px dashed var(--border-strong); border-radius:16px; padding:14px 16px;">
-          <div style="background:var(--surface-2); border:1px solid var(--border-strong); border-radius:10px; padding:12px 16px; text-align:center; min-width:120px;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:10px; border:1.5px dashed var(--border-strong); border-radius:18px; padding:16px 18px; flex-shrink:0;">
+          <span class="chip" style="font-size:10.5px; padding:4px 12px;">iOS / Android</span>
+          <div style="background:var(--surface-2); border:1px solid var(--border-strong); border-radius:10px; padding:14px 18px; text-align:center; min-width:128px;">
             <div style="font-size:12.5px; font-weight:700; color:var(--t1); line-height:1.4;">Audio Device<br>Speaker (A2DP)</div>
           </div>
-          <span style="font-size:10px; color:var(--t3); font-weight:600;">iOS / Android</span>
         </div>
       </div>
     </div>
@@ -257,7 +269,7 @@
 
 <section class="block">
   <div class="container">
-    <span class="eyebrow">결과</span>
+    <span class="eyebrow">Outcomes</span>
     <h2>임상 검증과 특허 출원까지</h2>
     <div class="stat-row">
       <div class="stat"><div class="num accent">77%</div><div class="label">전체 참여자 중 완화 효과 응답 비율</div></div>

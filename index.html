@@ -25,11 +25,6 @@
 <section class="hero home-hero">
   <div class="home-hero-bg" aria-hidden="true"></div>
   <div class="container">
-    <div class="chips">
-      <span class="chip blue">Product Designer</span>
-      <span class="chip">가설 검증 · 재정의</span>
-      <span class="chip">데이터 기반 의사결정</span>
-    </div>
     <h1>가설에서 시작해<br>숫자로 증명합니다</h1>
     <p class="lead">
       채용 플랫폼부터 뷰티 디바이스 앱까지, 문제 정의부터 가설, UT 검증, 디자인 결정,
@@ -136,55 +131,33 @@
       본 UT에 앞서 참여자의 의견과 인사이트를 가볍게 수집하는 용도로 사용했습니다.
     </p>
     <div class="card-grid" style="align-items:stretch;">
-      <div class="card" style="display:flex; flex-direction:column;">
-        <h3 style="color:var(--t1);">기업 리뷰 카드 티어표</h3>
-        <p style="font-size:12px; color:var(--t3); margin-top:10px;">목적</p>
-        <p style="font-size:13px; margin-top:2px;">리뷰 카드에서 정보를 제한했을 때 사용자가 가장 답답해하는 항목 파악</p>
-        <div class="barchart-meta" style="margin-top:14px;"><h3 style="margin:0; font-size:13px; color:var(--t3); font-weight:600;">답답함 순위 (5점 만점)</h3><span class="n">n=87</span></div>
-        <div class="barchart">
-          <div class="bar-row primary top">
-            <div class="bar-fill" style="width:100%">
-              <span class="bar-label">단점</span>
-              <span class="bar-pct">5.0</span>
-            </div>
+      <div class="card mini-card">
+        <div class="mini-card-thumb"><img src="assets/images/side-projects/tier-maker-thumb.jpg" alt="기업 리뷰 카드 티어표 프로토타입 미리보기" loading="lazy" /></div>
+        <div class="mini-card-body">
+          <h3>기업 리뷰 카드 티어표</h3>
+          <p class="mini-card-desc">리뷰 카드 정보를 제한했을 때, 사용자가 가장 답답해하는 항목은? · n=87</p>
+          <div class="mini-stat">
+            <span class="mini-stat-label">답답함 1위 · 단점</span>
+            <span class="mini-stat-value">5.0<span class="sub">/5.0</span></span>
           </div>
-          <div class="bar-row primary">
-            <div class="bar-fill" style="width:96%">
-              <span class="bar-label">기업명</span>
-              <span class="bar-pct">4.8</span>
-            </div>
-          </div>
+          <p class="mini-card-insight">설명을 들으면 '작성자의 정보'가 <strong style="color:var(--t1);">7위 → 3위</strong>로 급상승 — 레이블만으론 안 보이던 가치였습니다.</p>
+          <div class="callout light mini-callout">메인엔 기업명·장점·총점만 상시 노출, 나머지는 축약 후 상세에서 펼치는 구조로 설계</div>
+          <a href="https://jelincc.github.io/tier-maker/" target="_blank" rel="noopener" class="proto-link">프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
-        <p style="font-size:13px; margin-top:10px;">항목을 설명하며 다시 물으니 '작성자의 정보'가 <strong style="color:var(--t1);">7위 → 3위</strong>로 급상승. 레이블만으론 안 보이던 가치가 설명을 들으면 드러났습니다 (UT 12명)</p>
-        <div class="callout light" style="margin-top:10px; padding:12px 16px; flex:1 1 auto;">메인엔 기업명·장점·총점만 상시 노출, 나머지는 축약 후 상세에서 펼치는 구조로 설계</div>
-        <a href="https://jelincc.github.io/tier-maker/" target="_blank" rel="noopener" class="proto-link" style="margin-top:14px;">프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <div class="card" style="display:flex; flex-direction:column;">
-        <h3 style="color:var(--t1);">공고 카드 정보 나누기</h3>
-        <p style="font-size:12px; color:var(--t3); margin-top:10px;">목적</p>
-        <p style="font-size:13px; margin-top:2px;">채용 공고에서 어떤 정보를 필수로 인식하는지 파악</p>
-        <div class="barchart-meta" style="margin-top:14px;"><h3 style="margin:0; font-size:13px; color:var(--t3); font-weight:600;">필수 정보 선택률</h3><span class="n">n=64</span></div>
-        <div class="barchart">
-          <div class="bar-row primary top">
-            <div class="bar-fill" style="width:98%">
-              <span class="bar-label">직무명</span>
-              <span class="bar-pct">98%</span>
-            </div>
+      <div class="card mini-card">
+        <div class="mini-card-thumb"><img src="assets/images/side-projects/card-sorting-thumb.jpg" alt="공고 카드 정보 나누기 프로토타입 미리보기" loading="lazy" /></div>
+        <div class="mini-card-body">
+          <h3>공고 카드 정보 나누기</h3>
+          <p class="mini-card-desc">채용 공고에서 어떤 정보를 필수로 인식할까? · n=64</p>
+          <div class="mini-stat">
+            <span class="mini-stat-label">필수 선택률 1위 · 직무명</span>
+            <span class="mini-stat-value">98<span class="sub">%</span></span>
           </div>
-          <div class="bar-row primary">
-            <div class="bar-fill" style="width:86%">
-              <span class="bar-label">회사명</span>
-              <span class="bar-pct">86%</span>
-            </div>
-          </div>
-          <div class="bar-row secondary">
-            <span class="bar-label">경력조건</span>
-            <span class="bar-pct">45%</span>
-          </div>
+          <p class="mini-card-insight">이미지·로고·학력은 있으나 없으나 무관한 시각 노이즈, 지역 정보는 이직 의향이 높을수록 우선순위가 낮았습니다.</p>
+          <div class="callout light mini-callout">직무명·회사명·경력조건 중심 Primary + D-day·장점태그 Secondary로 재구성, 지역·학력은 상세로 이동</div>
+          <a href="https://jelincc.github.io/card-sorting/" target="_blank" rel="noopener" class="proto-link">프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
-        <p style="font-size:13px; margin-top:10px;">이미지·로고·학력은 있으나 없으나 탐색에 지장 없는 시각 노이즈, 지역 정보는 이직 의향 높을수록 우선순위 하락</p>
-        <div class="callout light" style="margin-top:10px; padding:12px 16px; flex:1 1 auto;">직무명·회사명·경력조건 중심 Primary + D-day·장점태그 Secondary로 재구성, 지역·학력은 상세로 이동</div>
-        <a href="https://jelincc.github.io/card-sorting/" target="_blank" rel="noopener" class="proto-link" style="margin-top:14px;">프로토타입 보기<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -235,7 +208,7 @@
         <p style="font-size:13px; margin-top:8px;">청력 검사·소음 리포트·맞춤 적응 프로그램을 갖춘 보청기 연동 앱. 출시 후 미국 건강·피트니스 분야 14위, 누적 2만 4천대 판매를 기록했습니다.</p>
       </a>
       <a class="card" href="projects/olive-aid/" style="text-decoration:none; display:block;">
-        <div class="visual-frame"><span class="chip blue biz-tag">B2C</span><img src="assets/images/appendix/olive-aid.png" alt="Olive Aid" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" /></div>
+        <div class="visual-frame"><span class="chip blue biz-tag">B2C</span><img src="assets/images/appendix/olive-aid.png" alt="Olive Aid" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" loading="lazy" /><div style="position:absolute; left:0; right:0; bottom:0; height:40%; border-radius:inherit; pointer-events:none; background:linear-gradient(to bottom, transparent, var(--surface) 100%);"></div></div>
         <h3 style="margin-top:14px;">Olive Aid</h3>
         <p style="font-size:12px; color:var(--t3); margin-top:4px;">노치 테라피 기반 이명완화 앱 · 이명완화 DTx</p>
         <p style="font-size:13px; margin-top:8px;">사용자가 직접 이명음을 찾아 노치 테라피로 완화하는 서비스. 베타 테스트 참여자의 77%가 완화 효과를 보고했습니다.</p>
@@ -262,26 +235,20 @@
 <section class="block">
   <div class="container">
     <span class="eyebrow">Side Projects</span>
-    <h2>애정하는 사이드 프로젝트</h2>
-    <div class="side-project-list">
-      <div class="side-project-card">
-        <div class="sp-visual" style="background:#F5E9CB;">
-          <img src="assets/images/side-projects/bread-home.png" alt="오늘의 식빵 앱 캘린더 화면, 하루하루 식빵으로 기록하는 일기" style="object-position:center 15%;" loading="lazy" />
-        </div>
-        <div class="sp-body">
-          <h3>오늘의 식빵</h3>
-          <p>하루를 식빵 한 장씩 구워 기록하는 데일리 저널링 앱. 매일 짧게 그날의 기록을 남기면 달력 위 식빵이 하나씩 노릇하게 구워집니다. 개인 사이드 프로젝트로 기획부터 디자인까지 직접 진행했습니다.</p>
-        </div>
-      </div>
-      <a class="side-project-card" href="https://drivingteacher.co.kr/" target="_blank" rel="noopener">
-        <div class="sp-visual" style="background:#F5D925;">
-          <img src="assets/images/side-projects/driving-teacher-og.png" alt="운전선생 서비스 소개, 초보 운전자를 위한 운전생활 종합 솔루션" style="object-position:80% center;" loading="lazy" />
-        </div>
-        <div class="sp-body">
-          <h3>운전선생</h3>
-          <p>초보 운전자를 위한 운전생활 종합 솔루션. 필기·실기 시험 준비부터 초보 운전 꿀팁까지, 운전을 처음 시작하는 사람들을 위한 콘텐츠와 예약 서비스를 제공합니다.</p>
-          <span class="sp-link">drivingteacher.co.kr<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </div>
+    <h2>쉬어가며,</h2>
+    <div class="card-grid">
+      <a class="card" href="projects/bread/" style="text-decoration:none; display:block;">
+        <div class="visual-frame" style="background:#F5E9CB;"><img src="assets/images/side-projects/bread-home.png" alt="오늘의 식빵 앱 캘린더 화면, 하루하루 식빵으로 기록하는 일기" style="width:100%; height:100%; object-fit:cover; object-position:center 15%; border-radius:inherit;" loading="lazy" /></div>
+        <h3 style="margin-top:14px;">오늘의 식빵</h3>
+        <p style="font-size:12px; color:var(--t3); margin-top:4px;">데일리 저널링 앱 · 개인 사이드 프로젝트</p>
+        <p style="font-size:13px; margin-top:8px;">하루를 식빵 한 장씩 구워 기록하는 앱. 매일 짧게 그날의 기록을 남기면 달력 위 식빵이 하나씩 노릇하게 구워집니다.</p>
+      </a>
+      <a class="card" href="https://drivingteacher.co.kr/" target="_blank" rel="noopener" style="text-decoration:none; display:block;">
+        <div class="visual-frame" style="background:#F5D925;"><img src="assets/images/side-projects/driving-teacher-og.png" alt="운전선생 서비스 소개, 초보 운전자를 위한 운전생활 종합 솔루션" style="width:100%; height:100%; object-fit:cover; object-position:center; border-radius:inherit;" loading="lazy" /></div>
+        <h3 style="margin-top:14px;">운전선생</h3>
+        <p style="font-size:12px; color:var(--t3); margin-top:4px;">초보 운전자 종합 솔루션 · drivingteacher.co.kr</p>
+        <p style="font-size:13px; margin-top:8px;">필기·실기 시험 준비부터 초보 운전 꿀팁까지, 운전을 처음 시작하는 사람들을 위한 콘텐츠와 예약 서비스를 제공합니다.</p>
+      </a>
       </a>
     </div>
   </div>
@@ -295,8 +262,8 @@
     <span class="eyebrow">Patent</span>
     <h2>특허 출원</h2>
     <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start;">
-      <a class="proto-link" href="assets/docs/patent-10-2022-0084877.pdf" target="_blank" rel="noopener">인지 행동 치료와 소리 자극 치료를 동반한 이명 디지털 치료 방법 및 장치 (10-2022-0084877)<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="proto-link" href="assets/docs/patent-10-2022-0101091.pdf" target="_blank" rel="noopener">청능 수준 평가 및 청능 훈련 서비스 제공 방법, 장치 및 컴퓨터 프로그램 (10-2022-0101091)<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="proto-link" href="assets/docs/patent-10-2022-0084877.pdf" target="_blank" rel="noopener" style="margin-top:0;">인지 행동 치료와 소리 자극 치료를 동반한 이명 디지털 치료 방법 및 장치 (10-2022-0084877)<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="proto-link" href="assets/docs/patent-10-2022-0101091.pdf" target="_blank" rel="noopener" style="margin-top:0;">청능 수준 평가 및 청능 훈련 서비스 제공 방법, 장치 및 컴퓨터 프로그램 (10-2022-0101091)<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
     <p style="font-size:12px; color:var(--t3); margin-top:14px;">두 건 모두 2022년 출원, 발명자로 참여했습니다.</p>
   </div>
