@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JobPlanet Home Redesign: Jiwon Choi</title>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="JobPlanet Home & GNB Redesign: Jiwon Choi" />
+<meta property="og:description" content="Redefining the screen in front of the search bar as a browsing hub: Jiwon Choi's product designer portfolio" />
+<meta property="og:image" content="https://jelincc.github.io/Portfolio/assets/img/og-image.jpg" />
+<meta property="og:url" content="https://jelincc.github.io/Portfolio/projects/jobplanet/en.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="JobPlanet Home & GNB Redesign: Jiwon Choi" />
+<meta name="twitter:image" content="https://jelincc.github.io/Portfolio/assets/img/og-image.jpg" />
+<link rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body>
+<div class="ambient"></div>
+
+<div class="lang-toggle"><a href="index.html">KR</a><a href="#" class="active">EN</a></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 01 HERO -->
+<!-- ═══════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="chips">
+      <span class="chip">B2C · Company Review + Job Listings Platform</span>
+      <span class="chip">2026 Q2</span>
+      <span class="chip">Lead Product Designer</span>
+    </div>
+    <img src="../../assets/images/logos/jobplanet.png" alt="JobPlanet" style="height:30px; width:auto; display:block; margin-bottom:16px;" loading="lazy" />
+    <h1>Redefining Home From a Screen<br>in Front of Search Into a Browsing Hub</h1>
+    <p class="lead">
+      As lead PD across two squads (Review&amp;Core + Hiring&amp;Member), I restructured JobPlanet's home around a
+      search-first, modular design. I designed and led an integrated UT to validate four areas at once and drove the redesign direction with data.
+    </p>
+
+    <div class="contrib">
+      <div class="contrib-row">
+        <span class="contrib-label">Planning</span>
+        <div class="contrib-track-wrap">
+          <div class="contrib-track"><div class="contrib-fill" style="width:100%"></div></div>
+          <span class="contrib-value">100%</span>
+        </div>
+      </div>
+      <div class="contrib-row">
+        <span class="contrib-label">Design</span>
+        <div class="contrib-track-wrap">
+          <div class="contrib-track"><div class="contrib-fill" style="width:100%"></div></div>
+          <span class="contrib-value">100%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stat headline">
+      <span class="num accent">+28.7%p</span>
+      <span class="label">Home Search Attempt Rate</span>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="num accent">+28.4%</div><div class="label">Listing PVs</div></div>
+      <div class="stat"><div class="num accent">+51.7%</div><div class="label">Application Attempts</div></div>
+      <div class="stat"><div class="num accent">+1.15%p</div><div class="label">Review Reach Rate</div></div>
+    </div>
+
+    <div class="card-grid cols-3" style="margin-top:8px;">
+      <div class="card" style="padding:16px 18px;"><div class="eyebrow" style="margin-bottom:4px;">Role</div><p style="font-size:13px; color:var(--t1); margin:0;">Lead PD · Cross-Squad</p></div>
+      <div class="card" style="padding:16px 18px;"><div class="eyebrow" style="margin-bottom:4px;">Scope</div><p style="font-size:13px; color:var(--t1); margin:0;">Home · GNB · Job Search</p></div>
+      <div class="card" style="padding:16px 18px;"><div class="eyebrow" style="margin-bottom:4px;">Integrated UT Scale</div><p style="font-size:13px; color:var(--t1); margin:0;">9 external + 3 internal · 70 min each</p></div>
+    </div>
+
+    <div class="visual">
+      <div class="device-pair">
+        <img class="dp-desktop" src="../../assets/images/jobplanet/home-tobe-desktop.png" alt="JobPlanet home redesign, desktop view" loading="lazy" />
+        <img class="dp-mobile" src="../../assets/images/jobplanet/home-tobe-mobile-hero.png" alt="JobPlanet home redesign, mobile view" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 02 Problem Definition -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Problem Definition</span>
+    <h2>Home is currently just "the screen in front of the search bar"</h2>
+    <p>
+      Company review views make up a stuck <strong>~64%</strong> of GNB clicks, while Home tab clicks sit at just <strong>0.401%</strong>.
+      JobPlanet's personas are meant to move through explore, compare, listings, and apply in sequence, but Home wasn't functioning as the
+      starting point for that flow — structurally blocking the path toward viewing and applying to listings.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="eyebrow" style="color:#A9C4FF;">Real Usage Data</div>
+        <div style="display:flex; gap:28px; margin-top:14px; flex-wrap:wrap;">
+          <div>
+            <div style="font-size:26px; font-weight:800; color:var(--t1); line-height:1;">0.41%</div>
+            <div style="font-size:11.5px; color:var(--t3); margin-top:6px;">Exploration entry rate after clicking Home</div>
+          </div>
+          <div>
+            <div style="font-size:26px; font-weight:800; color:#A9C4FF; line-height:1;">64%</div>
+            <div style="font-size:11.5px; color:var(--t3); margin-top:6px;">Share of GNB clicks that are company review views<br>(about 160x Home)</div>
+          </div>
+        </div>
+
+        <div class="callout light" style="margin-top:16px; padding:12px 14px;">
+          Home's content barely gets consumed — clicks concentrate almost entirely on <strong style="color:var(--t1);">the search bar</strong> (based on Clarity/heatmap data).
+        </div>
+
+        <div style="display:flex; gap:10px; margin-top:16px;">
+          <div style="width:50%;">
+            <img src="../../assets/images/jobplanet/heatmap-search.png" alt="Heatmap of the home search bar area" style="width:100%; border-radius:10px; border:1px solid var(--border); display:block;" loading="lazy" />
+            <p style="font-size:11px; color:var(--t3); text-align:center; margin-top:8px;">Search bar area <span style="color:#A9C4FF;">· click concentration</span></p>
+          </div>
+          <div style="width:50%;">
+            <img src="../../assets/images/jobplanet/heatmap-content.png" alt="Heatmap of the home content area" style="width:100%; border-radius:10px; border:1px solid var(--border); display:block;" loading="lazy" />
+            <p style="font-size:11px; color:var(--t3); text-align:center; margin-top:8px;">Content area · almost no clicks</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="eyebrow" style="color:#A9C4FF;">User Interviews + UT Results</div>
+        <div class="quote" style="margin-top:12px;">"I just come in to check reviews"</div>
+        <div class="quote">"I tend to go straight to search"</div>
+        <div class="quote">"I don't know what I'm supposed to do here"</div>
+        <p style="font-size:13px; margin-top:10px;">No voluntary exploration of Home (<strong style="color:var(--t1);">12/12</strong>)</p>
+        <p style="font-size:13px; margin-top:4px;">Went straight to the search bar or another tab (<strong style="color:var(--t1);">10/12</strong>)</p>
+        <div class="callout light" style="margin-top:14px; padding:14px 16px;">
+          <strong>UT Participants</strong>: Working professionals/job seekers who'd considered switching jobs within the past 3 months, or had researched companies
+          (7 high urgency · 5 low urgency)
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <div class="barchart-meta"><h3>Behavior Patterns</h3><span class="n">Based on 12 integrated UT participants</span></div>
+      <div class="barchart">
+        <div class="bar-row primary top">
+          <div class="bar-fill" style="width:83.3%">
+            <span class="bar-label">Never reached the bottom of Home</span>
+            <span class="bar-pct">10/12</span>
+          </div>
+        </div>
+        <div class="bar-row primary">
+          <div class="bar-fill" style="width:83.3%">
+            <span class="bar-label">Went straight to search or another tab</span>
+            <span class="bar-pct">10/12</span>
+          </div>
+        </div>
+        <div class="bar-row secondary">
+          <span class="bar-label">Cases where Home content triggered exploration</span>
+          <span class="bar-pct">3/12</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Key Point</strong>: The problem wasn't a lack of content — <span class="hl">it was that content wasn't being consumed even when it existed</span>.
+      Only 3 of 12 participants started exploring from Home content.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 03 Hypothesis -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Hypothesis</span>
+    <h2>If Home is rebuilt around search + contextual modules</h2>
+
+    <div class="card" style="margin:16px 0 20px; display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+      <img src="../../assets/images/jobplanet/ut-prototype-first-screen.png" alt="Integrated UT prototype home screen" style="width:220px; flex-shrink:0; border-radius:10px; border:1px solid var(--border); display:block;" loading="lazy" />
+      <div style="flex:1; min-width:200px;">
+        <p style="font-size:13px; color:var(--t1); margin:0 0 6px; font-weight:600;">We validated the two hypotheses below directly using this prototype</p>
+        <p style="font-size:12px; color:var(--t3); margin:0 0 4px;">Our initial hypothesis was that building Home around job-function-based recommended content would keep users exploring there — so we built it into real screens (a radar chart, followed-company content, and more) and validated it through integrated UT.</p>
+        <p style="font-size:12px; color:var(--t3); margin:0 0 12px;">The result was close to a total miss, and using that UT data as evidence, we rebuilt the hypothesis around a search-first + contextual-module structure.</p>
+        <a href="https://jelincc.github.io/jobplanet-ut/" target="_blank" rel="noopener" class="proto-link">View Prototype<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="eyebrow" style="color:var(--t3);">Hypothesis ①: A Starting Point for Exploration</div>
+        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">If:</p>
+        <h3>We place job-function-based recommendations and followed-company entry points at the top of Home</h3>
+        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">Then:</p>
+        <p style="color:var(--t1); font-weight:600; font-size:14px;">The share of users starting to explore from Home will rise, and search drop-off will fall</p>
+        <div class="callout" style="margin:14px 0 0; padding:14px 16px 14px 22px;">
+          <span class="res-badge warn"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 5v3.3M8 11h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Partially validated</span> 4/12 (external 3/9 · internal 1/3): generic personalization failed. Only "updates on companies I already know" hooked users
+        </div>
+      </div>
+      <div class="card">
+        <div class="eyebrow" style="color:var(--t3);">Hypothesis ②: Continuing Context</div>
+        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">If:</p>
+        <h3>On repeat visits, we provide a context-continuation section — closing-soon listings from followed companies, etc.</h3>
+        <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">Then:</p>
+        <p style="color:var(--t1); font-weight:600; font-size:14px;">Users will continue exploring from Home</p>
+        <div class="callout" style="margin:14px 0 0; padding:14px 16px 14px 22px;">
+          <span class="res-badge warn"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 5v3.3M8 11h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Partially validated</span> 3/12 (external 3/9 · internal 0/3): only closing-soon listings from followed companies worked. No demand for "recently viewed companies"
+        </div>
+      </div>
+    </div>
+
+    <div class="callout light">
+      <strong>Hypothesis Redefined</strong>: The direction ("personal context content hooks users") was right, but the form that actually worked was different.
+      <div class="verdict-list" style="margin:14px 0;">
+        <div class="verdict-row"><span class="res-badge ng"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Failed</span><span>Job-function-based new company recommendations (generic personalization)</span></div>
+        <div class="verdict-row"><span class="res-badge ok"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Valid</span><span>Deadline/change updates for followed companies (contextual personalization)</span></div>
+      </div>
+      We shifted to rebuild Home around the search bar, with <strong>modules that shift based on user state</strong> placed underneath it.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 04 Evidence -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Evidence-Based Case</span>
+    <h2>Behavioral Data · User Interviews · Hook-Point Analysis</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3 style="margin-bottom:8px;">Home Content That Actually Hooked Users</h3>
+        <div class="quote strong">Closing-soon listings from followed companies: 8/12 (external 6/9 · internal 2/3), the only real trigger</div>
+        <div class="quote strong">Past/current employer review feed: a reason even current employees came back (P6)</div>
+        <div class="quote strong">Review-themed listings: P5 "can leave on time," P9 "generous budget"</div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:8px;">Home Content That Failed</h3>
+        <div class="quote">Radar chart personalized recommendations: 4/7 failed to understand what it meant</div>
+        <div class="quote">3 review-insight-based recommendations: "too few, wouldn't use it"</div>
+        <div class="quote">"Recently viewed companies" side widget: no demand at all</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      Because the personalization that actually worked took the form of <span class="hl">"updates,"</span> not "recommendations," we redefined Home's role from "discovery" to "tracking."
+      We let the search bar own discovery, and the modules own tracking.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 05 UT Design -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Integrated UT: Lead</span>
+    <h2>Validating 4 Areas at Once · 12 In-Person UT Sessions · Built the Prototype Myself</h2>
+
+    <div class="card-grid cols-3">
+      <div class="card"><h3>Scale</h3><p style="font-size:13px;">12 participants: 9 external + 3 internal rehearsal<br>~70 min each · Linked with Clarity screen recording</p></div>
+      <div class="card"><h3>Participant Mix</h3><p style="font-size:13px;">7 high job-change urgency · 5 low urgency</p></div>
+      <div class="card" style="background:rgba(91,147,255,.08); border-color:rgba(91,147,255,.25);"><h3>My Contribution</h3><p style="font-size:13px;">Built the Home/GNB prototype myself (GitHub Pages)<br>Designed the UT script · led results analysis</p><a href="https://jelincc.github.io/jobplanet-ut/" target="_blank" rel="noopener" class="proto-link">View Prototype<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+
+    <div class="card" style="margin-top:6px;">
+      <h3 style="margin-bottom:10px;">Division of Labor Across Validated Areas</h3>
+      <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">Home tab structure + section layout</strong>: Owned</p>
+      <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">GNB tab navigation structure</strong>: Owned</p>
+      <p style="font-size:13px; margin-bottom:6px;"><strong class="hl">Listing card</strong>: Owned (see Appendix)</p>
+      <p style="font-size:13px; margin-bottom:6px; color:var(--t3);">Turning reviews into a feed: Collaborating PD</p>
+      <p style="font-size:13px; color:var(--t3);">Application flow · interview question search: Collaborating PD</p>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3 style="margin-bottom:10px;">Home / GNB Validation Results by Hypothesis</h3>
+      <p style="font-size:13px; margin-bottom:8px;"><span class="res-badge warn"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 5v3.3M8 11h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Partially validated</span> Does job-function-based recommendation start exploration?: generic personalization failed, only followed-company updates worked</p>
+      <p style="font-size:13px; margin-bottom:8px;"><span class="res-badge warn"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 5v3.3M8 11h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Partially validated</span> Continuing context on repeat visits: no demand for "recently viewed companies"</p>
+      <p style="font-size:13px;"><span class="res-badge ng"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Not validated</span> GNB's role in the exploration flow: only functions as a destination shortcut</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 06 Design Decisions -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Decisions</span>
+    <h2>Search-Bar-Centric + State-Based Modularity</h2>
+
+    <div class="compare-card" style="margin-top:20px;">
+      <div class="cc-head">Core Shift</div>
+      <div class="cc-row is">
+        <span class="cc-tag">AS-IS</span>
+        <p>Home = a space that lists content</p>
+      </div>
+      <div class="cc-row tobe">
+        <span class="cc-tag">TO-BE</span>
+        <p>Home = a search + context hub. The search bar is the primary entry point, with modules underneath that shift based on user state.</p>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card"><p style="font-size:13px; margin:0;"><strong style="color:var(--t1);">Search Bar (Fixed)</strong>: Top priority at the top of Home. Marks the clear starting point for exploration.</p></div>
+      <div class="card"><p style="font-size:13px; margin:0;"><strong style="color:var(--t1);">Followed-Company Closing Soon (Module A)</strong>: Shown when the user follows companies. A repeat-visit trigger. Carousel on PC; condensed to a banner on mobile to account for scroll depth.</p></div>
+      <div class="card"><p style="font-size:13px; margin:0;"><strong style="color:var(--t1);">Past/Current Employer Review Feed (Module B)</strong>: A module built to increase review consumption.</p></div>
+      <div class="card"><p style="font-size:13px; margin:0;"><strong style="color:var(--t1);">Review-Themed Listings (Module C)</strong>: Review-driven curation like "can leave on time" or "generous budget."</p></div>
+    </div>
+
+    <div class="card" style="margin-top:6px;">
+      <h3 style="margin-bottom:10px;">Decisions We Shelved: Based on UT Data</h3>
+      <p style="font-size:13px; margin-bottom:6px;"><span style="text-decoration:line-through; color:var(--t3);">Radar chart personalization</span>: 4/7 failed to grasp its meaning, adding cognitive load with nothing to show for it</p>
+      <p style="font-size:13px; margin-bottom:6px;"><span style="text-decoration:line-through; color:var(--t3);">"Recently viewed companies" side widget</span>: broke the browsing flow, and demand was low</p>
+      <p style="font-size:13px;"><span style="text-decoration:line-through; color:var(--t3);">Generic job-function-based recommendations</span>: the "companies I don't know" direction simply didn't work</p>
+    </div>
+
+    <h3 style="margin-top:20px; margin-bottom:10px;">Decisions and Trade-offs</h3>
+    <div class="tradeoff-card">
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">01</span>Narrowed personalization scope to "followed-company updates"</div>
+        <div class="to-row risk"><span class="to-label">Risk</span><span class="to-text">New or logged-out users with no followed companies never see the module at all, so the <strong>cold start problem isn't solved — it's just avoided.</strong></span></div>
+        <div class="to-row response"><span class="to-label">Response</span><span class="to-text">Plan to cover this user group with a second round of UT on contextual content placement when entering GNB tabs (Next Steps 01, see Appendix).</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">02</span>Fixed the top of Home to the search bar</div>
+        <div class="to-row risk"><span class="to-label">Risk</span><span class="to-text">Search proved a strong lever toward reviews (2.8x on PC, up to 6.6x on iOS), but <strong>the lever toward listings varied by device</strong>, so it only indirectly serves our original goal of improving the hiring funnel.</span></div>
+        <div class="to-row response"><span class="to-label">Response</span><span class="to-text">Left resolving the review-to-listing conversion bottleneck as a next step (Next Steps 02, see Appendix).</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">03</span>Made the repeat-visit trigger depend on the followed-company module</div>
+        <div class="to-row risk"><span class="to-label">Risk</span><span class="to-text">Company-follow creation itself dropped <strong>-10% after launch</strong>, shaking the very baseline the module depends on.</span></div>
+        <div class="to-row response"><span class="to-label">Response</span><span class="to-text">Continuing to monitor the follow-creation trend (Next Steps 03, see Appendix).</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">04</span>Kept GNB as a destination shortcut, shelved a redesign</div>
+        <div class="to-row risk"><span class="to-label">Risk</span><span class="to-text">Its role in the exploration flow remains <span class="res-badge ng" style="margin:0 2px;"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Not validated</span>, so the benefit of improving exploration through GNB hasn't been proven yet.</span></div>
+        <div class="to-row response"><span class="to-label">Response</span><span class="to-text">Made explicit that turning GNB into an exploration tool requires contextual content on tab entry as a precondition, and it's under further review.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 07 Final Design -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Final Design</span>
+    <h2>Real Screens Built From UT Hypotheses</h2>
+    <p>
+      Breaking down the shipped Home screen top to bottom, each module centers on core functionality meant to drive review and listing views.
+      We built it in a modular form so admins can directly control whether and in what order each module appears.
+    </p>
+
+    <div class="phone-annotate">
+      <div class="pa-frame">
+        <img src="../../assets/images/jobplanet/home-tobe.png" alt="JobPlanet home redesign, final screen" loading="lazy" />
+      </div>
+
+      <div class="pa-item side-right" style="top:11%;">
+        <div class="pa-line"></div>
+        <div class="pa-card">
+          <h4><img class="pa-icon" src="../../assets/images/jobplanet/annotate-icons/search.png" alt="" />Reinforcing an already-familiar search flow</h4>
+          <p>We made the search bar the backbone of Home, foregrounding it centrally to increase the search attempt rate.</p>
+        </div>
+      </div>
+
+      <div class="pa-item side-left" style="top:18%;">
+        <div class="pa-line"></div>
+        <div class="pa-card">
+          <h4><img class="pa-icon" src="../../assets/images/jobplanet/annotate-icons/lightning.png" alt="" />Gathering scattered menus into a quick menu</h4>
+          <p>We gathered features that had been dropped from GNB, or that already had high click-through, into a quick menu to boost accessibility.</p>
+        </div>
+      </div>
+
+      <div class="pa-item side-right top-align" style="top:23%;">
+        <div class="pa-line"></div>
+        <div class="pa-card">
+          <h4><img class="pa-icon" src="../../assets/images/jobplanet/annotate-icons/bell.png" alt="" />Closing-soon listings banner</h4>
+          <p>We added closing-soon listings — the only thing in UT that drove voluntary repeat visits — as a strip banner, sized with mobile scroll depth in mind.</p>
+          <img class="pa-visual" src="../../assets/images/jobplanet/annotate-icons/deadline-banner.png" alt="Example of a closing-soon listings banner" />
+        </div>
+      </div>
+
+      <div class="pa-item side-left" style="top:39%;">
+        <div class="pa-line"></div>
+        <div class="pa-card">
+          <h4><img class="pa-icon" src="../../assets/images/jobplanet/annotate-icons/star.png" alt="" />#Keyword-Mentioned Top Companies</h4>
+          <p>We added a review curation module to drive reach toward reviews, one of the service's core functions.</p>
+          <div class="pa-visual-row">
+            <img src="../../assets/images/jobplanet/annotate-icons/review-card-a.png" alt="Review card A" />
+            <img src="../../assets/images/jobplanet/annotate-icons/review-card-b.png" alt="Review card B" />
+          </div>
+          <p class="pa-note">In A/B testing, the review-forward card won by up to 73% on click-through, so we went with Review Card A. (Shown conditionally based on login status, follows, and whether a listing closes within D-7)</p>
+        </div>
+      </div>
+
+      <div class="pa-item side-right" style="top:64%;">
+        <div class="pa-line"></div>
+        <div class="pa-card">
+          <h4><img class="pa-icon" src="../../assets/images/jobplanet/annotate-icons/speech.png" alt="" />Review-based recommended listings</h4>
+          <p>We added a module that groups listings by review-derived theme, guiding users toward both reviews and listings together.</p>
+          <div class="pa-visual-wide-wrap"><img src="../../assets/images/jobplanet/annotate-icons/theme-keywords.png" alt="Example of review theme keywords" /></div>
+          <p class="pa-note">We consolidated 12 overlapping themes down into a new set of theme cards.</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:12px; color:var(--t3); text-align:center; margin-top:8px;">Actual web home screen</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 08 Outcomes -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Outcomes · Shipped 2026-07-08</span>
+    <h2>The hypothesis's form was wrong, but the direction was right</h2>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num accent">+51.7%</div><div class="label">Application Attempts</div><div class="sub">Week-over-week (WoW)</div></div>
+      <div class="stat"><div class="num accent">+28.4%</div><div class="label">Listing PVs</div><div class="sub">Rising for 5 straight weeks</div></div>
+      <div class="stat"><div class="num accent">+5.6%p</div><div class="label">View Coverage</div><div class="sub">39.4% <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 45.0%</div></div>
+    </div>
+    <p style="font-size:12px; color:var(--t3);">※ This reflects the cumulative effect together with the GNB and listing card redesigns shipped in the same period. Since active listing count actually fell -1.8% over this time, we read this as a genuine demand-side improvement.</p>
+
+    <div class="card-grid" style="margin-top:24px;">
+      <div class="card">
+        <h3 style="margin-bottom:8px;">Re-Confirming the Hypothesis: What Actually Worked</h3>
+        <div class="quote strong">Review curation module CTR beat the listing module: mobile web 0.789%, iOS 1.388%, Android 1.183%</div>
+        <div class="quote strong">The new Company Reviews tab saw higher usage than the Job Listings tab — across every device</div>
+        <p style="font-size:12px; margin-top:8px;">What Home actually did well wasn't <strong style="color:var(--t1);">"discovery" — it was "surfacing reviews."</strong></p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:8px;">Overall Funnel Since the Initiative Began</h3>
+        <p style="font-size:13px; margin-bottom:4px;">Share of users taking a hiring action <strong style="color:var(--t1);">2.99% <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 9.31%</strong> <span class="hl">(+6.32%p)</span></p>
+        <p style="font-size:13px; margin-bottom:4px;">Listing-to-detail entry rate <strong style="color:var(--t1);">3.82% <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 10.66%</strong> <span class="hl">(+6.84%p)</span></p>
+        <p style="font-size:13px;">Detail-to-application conversion rate <strong style="color:var(--t1);">6.26% <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 12.81%</strong> <span class="hl">(+6.55%p)</span></p>
+        <p style="font-size:11px; color:var(--t3); margin-top:8px;">Baseline = the 4-week average before the JK listing integration (excluding the Lunar New Year holiday). Reflects the cumulative effect of every initiative shipped in the period — Home, GNB, listing cards, JK integration, and more.</p>
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-top:14px;">
+      <div class="card">
+        <div class="eyebrow" style="color:#A9C4FF;">What We Learned</div>
+        <p style="font-size:13px; color:var(--t1); font-weight:600; margin-top:10px;">What moved users wasn't "personalization" — it was review browsing.</p>
+        <p style="font-size:13px; margin-top:10px;">The review curation module's CTR outperformed the listing module, and the new Company Reviews tab logged higher usage than the existing Job Listings tab.</p>
+        <p style="font-size:13px; margin-top:8px;">About <strong style="color:var(--t1);">76.8%</strong> of search users checked reviews first, meaning search functioned as the key entry point into review browsing.</p>
+      </div>
+      <div class="card" style="background:rgba(91,147,255,.08); border-color:rgba(91,147,255,.25);">
+        <div class="eyebrow" style="color:#A9C4FF;">Key Insight</div>
+        <p style="font-size:13px; margin-top:10px;">Users were more engaged when they could quickly check reviews for companies they already cared about, rather than being recommended something new.</p>
+        <p style="font-size:13px; margin-top:8px; color:var(--t1);">→ Review curation and search-first UX reinforced this behavior pattern, and that fed directly into improvements in the product's core metrics.</p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:14px;">
+      <p><strong>The Hypothesis Redefinition Was Right</strong>: Just as UT had confirmed — "generic personalization fails, only contextual personalization (followed-company updates) works" — after launch too, <span class="hl">connections to information users already knew (reviews) drove real clicks, not unfamiliar recommendations.</span></p>
+      <p>The execution of the hypothesis (which modules, exactly) kept needing refinement even after UT, but the judgment call on "what actually moves users" had already been right at the UT stage.</p>
+      <p>A later causal analysis, run through a placebo test, confirmed that users exposed to the review feed showed a net increase of <strong>+2.5 to 3.1</strong> review views per day — giving this judgment statistical backing as well.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 09 Search Bar Redesign Impact -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Search-First Redesign</span>
+    <h2>Moving the Search Bar to Top Center: Search Became the On-Ramp to Reviews</h2>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num">68.6%</div><div class="label">PC · Search attempts within Home sessions</div></div>
+      <div class="stat"><div class="num">73.4%</div><div class="label">Mobile Web</div></div>
+      <div class="stat"><div class="num">80.9%</div><div class="label">iOS</div></div>
+      <div class="stat"><div class="num accent">84.2%</div><div class="label">Android</div></div>
+    </div>
+    <p style="font-size:12px; color:var(--t3);">As of right after launch (Jul 9–14) · The search bar became the very first action users encountered on Home.</p>
+
+    <div class="card" style="margin-top:24px;">
+      <h3 style="margin-bottom:10px;">Search Sessions vs. Non-Search Sessions: Review Reach Rate</h3>
+      <div class="card-grid cols-3" style="margin:14px 0 0;">
+        <div><div style="font-size:22px; font-weight:800; color:var(--blue);">87.7%<span style="font-size:12px; color:var(--t3); font-weight:500;"> vs 30.9%</span></div><div style="font-size:11px; color:var(--t3); margin-top:2px;">PC · 2.8x</div></div>
+        <div><div style="font-size:22px; font-weight:800; color:var(--blue);">89.0%<span style="font-size:12px; color:var(--t3); font-weight:500;"> vs 50.3%</span></div><div style="font-size:11px; color:var(--t3); margin-top:2px;">Mobile Web · 1.8x</div></div>
+        <div><div style="font-size:22px; font-weight:800; color:var(--blue);">83.1%<span style="font-size:12px; color:var(--t3); font-weight:500;"> vs 12.6%</span></div><div style="font-size:11px; color:var(--t3); margin-top:2px;">iOS · 6.6x</div></div>
+      </div>
+      <p style="font-size:13px; margin-top:14px;">Listing reach splits by device (higher for search sessions on web, lower on app): <strong style="color:var(--t1);">search was a lever toward reviews, not toward listings.</strong></p>
+    </div>
+
+    <p style="font-size:11px; color:var(--t3); margin-top:16px;">※ The figure "search attempt rate 47.3% <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 76.0% (+28.7%p, session-count-weighted average)" spans two points 8 months apart with a measurement gap in between, so we treat it only as a directional reference, not the redesign's isolated effect.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 10 Extra -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <span class="eyebrow" style="margin-bottom:0;">Extra · Next Steps</span>
+      <span class="chip" style="margin-left:auto;">Supplementary Metrics for My Scope</span>
+    </div>
+    <h2>Traffic Home Handed to Search, GNB Picked Up</h2>
+
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:10px;">GNB Tab Usage Rate (share of device users, 7/9–7/14)</h3>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>Web</th><th>iOS</th><th>Android</th></tr></thead>
+        <tbody>
+          <tr><td style="color:var(--t1); font-weight:600;">Company Reviews (new tab)</td><td class="strong-cell">2.66%</td><td class="strong-cell">2.18%</td><td class="strong-cell">3.50%</td></tr>
+          <tr><td>Job Listings (moved from Quick Menu to GNB)</td><td>1.70%</td><td>1.84%</td><td>2.51%</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:12px; margin-top:10px;">Reviews tab beats Listings tab on every device. On web, Reviews is the #1 clicked item across all of GNB (ahead of even the logo click).</p>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:10px;">First Results for the New Review Feed: Validated All the Way to Causality</h3>
+      <div style="display:flex; gap:28px; flex-wrap:wrap; margin-bottom:12px;">
+        <div><div style="font-size:22px; font-weight:800; color:var(--blue);">+2.5–3.1</div><div style="font-size:11px; color:var(--t3); margin-top:2px;">Net daily review-view increase per user</div></div>
+        <div><div style="font-size:22px; font-weight:800; color:var(--blue);">82.94% <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 84.09%</div><div style="font-size:11px; color:var(--t3); margin-top:2px;">Review reach rate via Home (Web), +1.15%p</div></div>
+      </div>
+      <p style="font-size:12px; margin-bottom:8px;"><span class="res-badge ok"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Passed placebo test</span> Applied the same calculation to a period with no launch, confirming it came out near zero — this is growth layered on top of existing review views, not cannibalization</p>
+      <p style="font-size:12px; color:var(--t3);">That said, only a fraction of active users have been reached by the review feed so far, so service-wide review volume hasn't moved yet, and listing views/applications are still riding a rising trend that predates this launch — too early to credit the redesign alone. This means "reach is small," not "it doesn't work," so the next step is expanding review feed reach.</p>
+    </div>
+
+    <div class="card-grid" style="margin-top:20px; gap:24px;">
+      <div class="card">
+        <h3 style="margin-bottom:6px;">Company-Follow Trend (from operational DB)</h3>
+        <div style="font-size:22px; font-weight:800; color:var(--t1);">-10%</div>
+        <p style="font-size:12px; margin-top:6px;">Follow creation has trended down since launch. The baseline itself is shaky, so this isn't a definitive conclusion — the trend needs further tracking.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:6px;">Next Steps</h3>
+        <p style="font-size:12px; margin-bottom:4px;"><strong class="hl">01</strong> Second-round UT on contextual content placement when entering GNB tabs</p>
+        <p style="font-size:12px; margin-bottom:4px;"><strong class="hl">02</strong> Resolve the review-to-listing conversion bottleneck (revisit module placement and paywall)</p>
+        <p style="font-size:12px;"><strong class="hl">03</strong> Keep monitoring the follow-creation trend</p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:24px; margin-bottom:0;">
+      <p><strong>What These Metrics Are Pointing Toward</strong>: The ultimate goal of the Home redesign was never individual module performance — it's spinning up a <span class="hl">flywheel that runs from review → listing → application → return visit</span>.</p>
+      <p>What we've confirmed so far is that "review consumption" has clearly grown, and that a bottleneck remains in the <strong>handoff from reviews to listings</strong>. Next Step 02 targets exactly that segment.</p>
+    </div>
+
+    <div class="callout" style="margin-top:14px;">
+      <strong>Key Contribution as Lead PD</strong>: Working across a two-squad structure, I organized the direction for the Home redesign with data and
+      drove the decision to <span class="hl">shelve generic personalization in favor of contextual personalization</span>. I also used UT data to convince the team
+      to stop scaling up content experiments — like the radar chart — that had been tried in various forms to generate interest, and the post-launch results backed that call.
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<details class="appendix-group">
+  <summary class="appendix-summary">
+    <div class="container appendix-summary-inner">
+      <div class="appendix-summary-main">
+        <span class="appendix-summary-badge">Separate Project · 4 Appendix Items</span>
+        <span class="appendix-summary-title">Listing Card Redesign · Module Policy · Design System</span>
+        <span class="appendix-summary-sub">Validated in the same integrated UT, but a separate effort from this project with its own ownership, launch, and decisions. Click to expand.</span>
+      </div>
+      <svg class="appendix-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </summary>
+
+<!-- ═══════════════════════════════════ -->
+<!-- Appendix 1: Listing Card Game -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <span class="eyebrow" style="margin-bottom:0;">Appendix 1 · Side Validation Within the Integrated UT</span>
+      <span class="chip" style="margin-left:auto;">Side Activity Within the Integrated UT</span>
+    </div>
+    <h2>What Information Is "Essential" on a Listing Card?</h2>
+    <a href="https://jelincc.github.io/card-sorting/" target="_blank" rel="noopener" class="proto-link">View the Prototype We Actually Used<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+
+    <div class="card-grid" style="margin-top:20px;">
+      <div class="card">
+        <h3 style="margin-bottom:10px;">Listing Card Info: Essential-Selection Rate (n=64)</h3>
+        <div class="barchart">
+          <div class="bar-row primary top">
+            <div class="bar-fill" style="width:98%">
+              <span class="bar-label">Job title</span>
+              <span class="bar-pct">98%</span>
+            </div>
+          </div>
+          <div class="bar-row primary">
+            <div class="bar-fill" style="width:86%">
+              <span class="bar-label">Company name</span>
+              <span class="bar-pct">86%</span>
+            </div>
+          </div>
+          <div class="bar-row secondary">
+            <span class="bar-label">Experience requirement</span>
+            <span class="bar-pct">45%</span>
+          </div>
+          <div class="bar-row secondary">
+            <span class="bar-label">Key highlight tags</span>
+            <span class="bar-pct">15%</span>
+          </div>
+          <div class="bar-row secondary">
+            <span class="bar-label">Company image</span>
+            <span class="bar-pct">3%</span>
+          </div>
+        </div>
+        <p style="font-size:12px; margin-top:12px;">Image marked essential by just 3%: the basis for switching to text-based cards</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:10px;">Text Card TO-BE (validated 9/9)</h3>
+        <p style="font-size:13px; line-height:1.7;">
+          Centered on company-name typography + D-day + key highlight tags. Removing the image sharply increased how well labels and tags got noticed.
+        </p>
+        <div class="quote strong">"Without a photo, my eyes go straight to the label" (R1)</div>
+        <div class="quote">"The image isn't even a 1:1 match with the company, so it just feels like visual noise"</div>
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-top:14px;">
+      <div>
+        <span style="display:inline-block; font-size:11px; font-weight:800; letter-spacing:.03em; padding:3px 9px; border-radius:6px; background:rgba(255,255,255,.06); color:var(--t3);">AS-IS</span>
+        <img src="../../assets/images/jobplanet/card-asis.png" alt="Listing card AS-IS: thumbnail-centric card" style="width:100%; border-radius:12px; margin-top:8px; border:1px solid var(--border); display:block;" loading="lazy" />
+        <p class="visual-caption" style="text-align:left;">4-column thumbnail layout · centered on the company's featured image</p>
+      </div>
+      <div>
+        <span style="display:inline-block; font-size:11px; font-weight:800; letter-spacing:.03em; padding:3px 9px; border-radius:6px; background:rgba(91,147,255,.16); color:#A9C4FF;">TO-BE</span>
+        <img src="../../assets/images/jobplanet/card-tobe.png" alt="Listing card TO-BE: text-centric card" style="width:100%; border-radius:12px; margin-top:8px; border:1px solid var(--border); display:block;" loading="lazy" />
+        <p class="visual-caption" style="text-align:left;">3-column text layout · centered on logo icon + information</p>
+      </div>
+    </div>
+
+    <p style="font-size:11px; color:var(--t3); margin-top:14px;">The listing card redesign direction (text card, D-day, tags) was validated as a side activity within the integrated UT, using a card-sorting game. See the next section for post-launch results.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- Appendix 2: Listing Card Post-Launch Results -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <span class="eyebrow" style="margin-bottom:0;">Appendix 2 · Post-Launch Results (2026-06-21)</span>
+      <span class="chip blue" style="margin-left:auto;">Hypothesis ② Validated</span>
+    </div>
+    <h2>Switching to Text Cards: Confirmed Three Ways — UT, Heatmap, Behavioral Data</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3 style="margin-bottom:12px;">Card Clicks per View (Card CTR)</h3>
+        <div class="card-grid" style="margin:0 0 0;">
+          <div class="compare-card">
+            <div class="cc-head">PC Web<span class="cc-delta">+33.7%p</span></div>
+            <div class="cc-row is"><span class="cc-tag">AS-IS</span><p>17.6%</p></div>
+            <div class="cc-row tobe"><span class="cc-tag">TO-BE</span><p>51.3%</p></div>
+          </div>
+          <div class="compare-card">
+            <div class="cc-head">Mobile Web<span class="cc-delta">+42.5%p</span></div>
+            <div class="cc-row is"><span class="cc-tag">AS-IS</span><p>16.2%</p></div>
+            <div class="cc-row tobe"><span class="cc-tag">TO-BE</span><p>58.7%</p></div>
+          </div>
+        </div>
+        <p style="font-size:12px; margin-top:6px;">The control group (unredesigned areas) actually fell during the same period (PC Web 48.3% <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 42.5%, <strong style="color:var(--t1);">-5.8%p</strong>. Mobile Web 38.4% <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 31.2%, <strong style="color:var(--t1);">-7.2%p</strong>): a pure redesign effect, not a seasonal one.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:10px;">Heatmap: Where Clicks Moved</h3>
+        <div class="quote">AS-IS: 0 of the top 10 hotspots were <strong style="color:var(--t1);">card-related</strong></div>
+        <div class="quote strong">TO-BE: The card title became the page's top click surface</div>
+        <p style="font-size:12px; margin-top:8px;">No evidence the thumbnail contributed to clicks: grounds to stop investing image resources</p>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card"><h3 style="margin-bottom:6px;">Search and Cards: Additive, Not a Trade-off</h3><p style="font-size:13px;">Search entry rate rose at the same time, from 4.16% <svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 5.30% (<strong style="color:var(--t1);">+1.14%p</strong>). Sessions that clicked a card actually searched 2–3x more, not less.</p></div>
+      <div class="card"><h3 style="margin-bottom:6px;">Scroll Density</h3><p style="font-size:13px;">Listings visible at the 50% scroll point went from <strong style="color:var(--t1);">12</strong> with the 4-column thumbnail layout to <strong style="color:var(--t1);">21</strong> with the 3-column text layout</p></div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-bottom:8px;">Honestly Flagged: What's Still Unvalidated</h3>
+      <p style="font-size:13px; margin-bottom:6px;"><span class="res-badge ng"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Not validated</span> Hypothesis ①, showing deadline/conditions/tags: click heatmaps alone can't isolate each element's contribution</p>
+      <p style="font-size:13px;"><span class="res-badge warn"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="4.5" width="2" height="7" rx="0.6" fill="currentColor"/><rect x="9" y="4.5" width="2" height="7" rx="0.6" fill="currentColor"/></svg>On hold</span> Hypothesis ③, advancing filters: "fear of narrowing conditions too much" turned out to be the real cause. Advancing filters remains on hold</p>
+    </div>
+
+    <div class="callout">
+      <strong>Learning</strong>: The switch to text cards is a rare case where three separate methods — UT (9/9), heatmap, and behavioral data — reached the same conclusion from three different angles.
+      The UT comment that <span class="hl">the fewer images there are, the more the label draws the eye</span> was reproduced almost exactly in real click data.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- Appendix 3: Module Policy -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <span class="eyebrow" style="margin-bottom:0;">Appendix 3 · Module Policy</span>
+      <span class="chip" style="margin-left:auto;">Shared Document for Planning & Engineering</span>
+    </div>
+    <h2>Defining the Rules for Module Combinations, So Engineering and I Could Read From the Same Document</h2>
+    <p>
+      Once Home was broken down into modules, there was no clear rule for "which combinations are actually valid." We split modules along
+      two axes — behavior type and content type — and mapped only the combinations actually in use into a matrix.
+    </p>
+    <p>
+      Values that change often, like item count, were left as variables, and we built a registry for client and server engineers to fill in
+      directly — code name, API endpoint, in-use status. The key was getting planning and engineering to work from one single document.
+    </p>
+
+    <div class="card-grid cols-3" style="margin-top:20px;">
+      <div class="card"><h3>Primary Classification · Behavior Type</h3><p style="font-size:13px;">Carousel · Carousel &amp; strip banner · List · Strip banner · Ad banner — 5 types</p></div>
+      <div class="card"><h3>Secondary Classification · Content Type</h3><p style="font-size:13px;">Listing card · Image card · Review card · Popular-post card — 4 types</p></div>
+      <div class="card"><h3>Registry</h3><p style="font-size:13px;">A living document where planning and engineering jointly fill in module name, code name, API endpoint, and in-use status</p></div>
+    </div>
+
+    <h3 style="margin-top:32px; margin-bottom:6px;">PC</h3>
+    <div class="table-wrap">
+      <table class="matrix">
+        <thead><tr><th></th><th>Listing Card</th><th>Image Card</th><th>Review Card</th><th>Popular-post Card</th><th>No Type</th></tr></thead>
+        <tbody>
+          <tr><td>Carousel</td><td class="o">O</td><td class="x">X</td><td class="x">X</td><td class="o">O</td><td class="na">–</td></tr>
+          <tr><td>Carousel & Strip Banner</td><td class="o">O</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="na">–</td></tr>
+          <tr><td>List</td><td class="x">X</td><td class="o">O</td><td class="o">O</td><td class="x">X</td><td class="na">–</td></tr>
+          <tr><td>Strip Banner</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="na">–</td></tr>
+          <tr><td>Ad Banner</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="o">O</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrap" style="margin-top:6px;">
+      <table>
+        <thead><tr><th>Combination</th><th>Matching Use Case</th></tr></thead>
+        <tbody>
+          <tr><td style="color:var(--t1);">Carousel + Listing Card</td><td>Closing-soon listings</td></tr>
+          <tr><td style="color:var(--t1);">Carousel & Strip Banner + Listing Card</td><td>Closing-soon listings</td></tr>
+          <tr><td style="color:var(--t1);">Carousel + Popular-post Card</td><td>Popular posts carousel</td></tr>
+          <tr><td style="color:var(--t1);">List + Image Card</td><td>Listings discovered through reviews</td></tr>
+          <tr><td style="color:var(--t1);">List + Review Card</td><td>#Keyword-mentioned Top Companies (variants A/B)</td></tr>
+          <tr><td style="color:var(--t1);">Ad Banner</td><td>Google-creative-based ads</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:28px; margin-bottom:6px;">Mobile / Mobile Web</h3>
+    <div class="table-wrap">
+      <table class="matrix">
+        <thead><tr><th></th><th>Listing Card</th><th>Image Card</th><th>Review Card</th><th>Popular-post Card</th></tr></thead>
+        <tbody>
+          <tr><td>Carousel</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="o">O</td></tr>
+          <tr><td>Carousel & Strip Banner</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="x">X</td></tr>
+          <tr><td>List</td><td class="x">X</td><td class="o">O</td><td class="o">O</td><td class="x">X</td></tr>
+          <tr><td>Strip Banner</td><td class="o">O</td><td class="x">X</td><td class="x">X</td><td class="x">X</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrap" style="margin-top:6px;">
+      <table>
+        <thead><tr><th>Combination</th><th>Matching Use Case</th></tr></thead>
+        <tbody>
+          <tr><td style="color:var(--t1);">Strip Banner</td><td>Closing-soon listings</td></tr>
+          <tr><td style="color:var(--t1);">List + Review Card</td><td>#Keyword-mentioned Top Companies (variants A/B)</td></tr>
+          <tr><td style="color:var(--t1);">List + Image Card</td><td>Listings discovered through reviews</td></tr>
+          <tr><td style="color:var(--t1);">Carousel + Popular-post Card</td><td>Real-time popular posts</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px; color:var(--t3); margin-top:6px;">O = in use, X = not in use, – = combination doesn't apply</p>
+
+    <h3 style="margin-top:28px; margin-bottom:6px;">Module Registry (shared with engineering, excerpt)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Module Name</th><th>Description</th><th>Status</th><th>Paid Placement</th></tr></thead>
+        <tbody>
+          <tr><td style="color:var(--t1); font-weight:600;">CLOSING_SOON_JOB_POSTING_CARD_LIST</td><td>Module for closing-soon listings with no background. Shows a listing card + strip banner together (floating banner to be split into its own module later)</td><td><span class="reg-badge live">Live</span></td><td><span class="reg-badge pay-n">N</span></td></tr>
+          <tr><td style="color:var(--t1); font-weight:600;">COMPANY_CARD_LIST</td><td>Module for a specific "#Keyword-mentioned Top Companies" set. Shows 3 review cards as a list</td><td><span class="reg-badge live">Live</span></td><td><span class="reg-badge pay-n">N</span></td></tr>
+          <tr><td style="color:var(--t1); font-weight:600;">THEME_IMAGE_CARD_LIST</td><td>Module for review-theme-based listings. Shows 4 image cards; item count and other settings are admin-controllable</td><td><span class="reg-badge live">Live</span></td><td><span class="reg-badge pay-n">N</span></td></tr>
+          <tr><td style="color:var(--t1); font-weight:600;">COMMUNITY_POPULAR_POST_CAROUSEL</td><td>Community popular-post module. Shows 3 cards per screen, up to 12 total</td><td><span class="reg-badge live">Live</span></td><td><span class="reg-badge pay-n">N</span></td></tr>
+          <tr><td style="color:var(--t1); font-weight:600;">ADS_CENTER_BANNER</td><td>Ad banner on the main Home (PC). Lands on each ad's own page</td><td><span class="reg-badge live">Live</span></td><td><span class="reg-badge pay-y">Y</span></td></tr>
+          <tr><td style="color:var(--t1); font-weight:600;">AD_JOB_POST_TYPE_A</td><td>Module for JobKorea CPT paid listings. List on PC, carousel on mobile</td><td><span class="reg-badge wip">In progress (pre-launch)</span></td><td><span class="reg-badge pay-y">Y</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px; color:var(--t3); margin-top:6px;">Code names, API endpoints, and in-use status are filled in jointly by planning, client, and server engineers in a living document, so the table above is a snapshot from a specific point in time.</p>
+
+    <div class="callout light">
+      <p><strong>Why This Was Needed</strong>: When teams call the same module by different names, communication tangles easily — and if that confusion repeats, it wastes not just communication overhead but engineering effort spent building in the wrong direction.</p>
+      <p>If server query conditions, sort order, and item count match, and the display method per platform matches, it's the same module. If only visual elements like background color differ, it's a variation.</p>
+      <p>This single standard gave us a <strong>shared language</strong> for calling the same thing by the same name.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- Appendix 4: JDS 1.0 Design System -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <span class="eyebrow" style="margin-bottom:0;">Appendix 4 · Design System</span>
+      <span class="chip" style="margin-left:auto;">Unified Across Web · iOS · Android · Mobile Web</span>
+    </div>
+    <h2>Unifying Components That Had Diverged Across Platforms Into JDS 1.0</h2>
+    <p>
+      Before the Home redesign, basic components like buttons, cards, and badges were each defined separately across web, iOS, Android, and mobile web.
+      While doing the modularization work, I decided this problem couldn't be put off any longer, so I built <strong>JDS 1.0</strong>, a cross-platform component system.
+    </p>
+
+    <div class="compare-card" style="margin-top:20px;">
+      <div class="cc-head">Core Shift</div>
+      <div class="cc-row is">
+        <span class="cc-tag">AS-IS</span>
+        <p>Even for the same "card," web, iOS, Android, and mobile web each defined spacing, color, and states separately. Fixing one thing meant touching four places separately.</p>
+      </div>
+      <div class="cc-row tobe">
+        <span class="cc-tag">TO-BE</span>
+        <p>Color, typography, spacing, and component specs defined once as platform-agnostic tokens. Web, iOS, Android, and mobile web all reference the same values.</p>
+      </div>
+    </div>
+
+    <div class="tradeoff-card" style="margin-top:20px;">
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">01</span>Spacing, color, and state handling differed by platform</div>
+        <div class="to-row risk"><span class="to-label">Problem</span><span class="to-text">Even the same "card" component had slightly different values across web, iOS, Android, and mobile web, and no one was confident which one was the correct reference.</span></div>
+        <div class="to-row response"><span class="to-label">Solution</span><span class="to-text">Defined color, typography, and spacing as platform-agnostic tokens so all four platforms reference the same values.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">02</span>One fix required touching all four platforms separately</div>
+        <div class="to-row risk"><span class="to-label">Problem</span><span class="to-text">Fixing even a single button meant editing web, iOS, Android, and mobile web separately, hurting both rollout speed and consistency.</span></div>
+        <div class="to-row response"><span class="to-label">Solution</span><span class="to-text">Consolidated basic components — buttons, cards, badges, inputs — into a single spec with no per-platform variation.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">03</span>Teams called components by different names</div>
+        <div class="to-row risk"><span class="to-label">Problem</span><span class="to-text">Planning, design, and engineering called the same element by different names, so everyone pictured something different in every discussion.</span></div>
+        <div class="to-row response"><span class="to-label">Solution</span><span class="to-text">Documented component names, states, and usage conditions the same way as the module policy document.</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px; padding:32px;">
+      <div style="text-align:center; margin-bottom:28px;">
+        <span style="display:inline-block; font-size:11px; font-weight:800; letter-spacing:.03em; padding:3px 9px; border-radius:6px; background:rgba(255,255,255,.06); color:var(--t3);">AS-IS</span>
+        <p style="font-size:13px; color:var(--t3); margin-top:8px;">Each platform defines its own components</p>
+      </div>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <div style="flex:1 1 130px; max-width:160px; padding:14px; border:1px solid var(--border); border-radius:10px; text-align:center;"><p style="font-size:13px; color:var(--t1); font-weight:700; margin:0;">Web</p></div>
+        <div style="flex:1 1 130px; max-width:160px; padding:14px; border:1px solid var(--border); border-radius:10px; text-align:center;"><p style="font-size:13px; color:var(--t1); font-weight:700; margin:0;">iOS</p></div>
+        <div style="flex:1 1 130px; max-width:160px; padding:14px; border:1px solid var(--border); border-radius:10px; text-align:center;"><p style="font-size:13px; color:var(--t1); font-weight:700; margin:0;">Android</p></div>
+        <div style="flex:1 1 130px; max-width:160px; padding:14px; border:1px solid var(--border); border-radius:10px; text-align:center;"><p style="font-size:13px; color:var(--t1); font-weight:700; margin:0;">MoWeb</p></div>
+      </div>
+
+      <div style="display:flex; justify-content:center; margin:24px 0;">
+        <svg width="20" height="28" viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2v20M10 22l-6-6M10 22l6-6" stroke="var(--t3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <div style="text-align:center; margin-bottom:16px;">
+        <span style="display:inline-block; font-size:11px; font-weight:800; letter-spacing:.03em; padding:3px 9px; border-radius:6px; background:rgba(91,147,255,.16); color:#A9C4FF;">TO-BE</span>
+        <p style="font-size:13px; color:var(--t1); margin-top:8px; font-weight:600;">Unified into one system: JDS 1.0</p>
+      </div>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <div style="flex:1 1 220px; max-width:280px; padding:18px 20px; border-radius:12px; background:linear-gradient(155deg, rgba(91,147,255,.16), rgba(156,140,255,.08)), rgba(91,147,255,.06); border:1px solid rgba(91,147,255,.4); text-align:center;">
+          <p style="font-size:14px; color:#B7CDFF; font-weight:800; margin:0 0 4px;">Foundation</p>
+          <p style="font-size:12px; color:var(--t3); margin:0;">Color · Typography · Spacing</p>
+        </div>
+        <div style="flex:1 1 220px; max-width:280px; padding:18px 20px; border-radius:12px; background:linear-gradient(155deg, rgba(91,147,255,.16), rgba(156,140,255,.08)), rgba(91,147,255,.06); border:1px solid rgba(91,147,255,.4); text-align:center;">
+          <p style="font-size:14px; color:#B7CDFF; font-weight:800; margin:0 0 4px;">Components</p>
+          <p style="font-size:12px; color:var(--t3); margin:0;">Button · Chip · Tag · Checkbox …</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The Same Problem as Module Policy</strong>: The moment Home was broken into modules, it became clear that if components differed by platform, the module definitions themselves would fall apart.
+      The module policy in Appendix 3 and JDS 1.0 are ultimately two answers to the same question — <span class="hl">"are we calling the same thing by the same name?"</span> — worked out
+      at the module level and the component level, respectively.
+    </div>
+  </div>
+</section>
+
+</details>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 11 Follow-up Redesign Story -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Where This Project Started</span>
+    <h2>There Were No Personas, So We Started by Re-Asking Who Our Users Were</h2>
+    <a class="card" href="https://techblog.jobkorea.co.kr/1%ED%8E%B8-%EC%9A%B0%EB%A6%AC-%EC%9C%A0%EC%A0%80%EB%8A%94-%EC%A7%81%EC%9E%A5%EC%9D%B8%EC%9D%B4-%EC%95%84%EB%8B%88%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4-ccc83fb4dd30?sharedUserId=jelin_cc" target="_blank" rel="noopener" style="text-decoration:none; display:block; margin-top:20px;">
+      <p style="font-size:12px; color:var(--t3); margin-bottom:8px;">JobKorea Tech Blog</p>
+      <h3 style="margin-bottom:10px;">Part 1. Our Users Weren't Office Workers</h3>
+      <p style="font-size:13px; color:var(--blue); margin:0;">Read the Article<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">© 2026 Jiwon Choi. Product Designer Portfolio.</footer>
+
+<div class="floating-nav">
+  <a href="../../en.html"><svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Home</a>
+  <a class="next" href="../medicube/en.html">Next Project<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+</body>
+</html>

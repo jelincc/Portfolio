@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bannie's Adventure: Jiwon Choi</title>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Bannie's Adventure: Jiwon Choi" />
+<meta property="og:description" content="A digital therapeutic game for speech-sound discrimination training — Jiwon Choi, Product Designer Portfolio" />
+<meta property="og:image" content="https://jelincc.github.io/Portfolio/assets/img/og-image.jpg" />
+<meta property="og:url" content="https://jelincc.github.io/Portfolio/projects/bannies-adventure/en.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Bannie's Adventure: Jiwon Choi" />
+<meta name="twitter:image" content="https://jelincc.github.io/Portfolio/assets/img/og-image.jpg" />
+<link rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body>
+<div class="ambient"></div>
+
+<div class="lang-toggle"><a href="index.html">KR</a><a href="#" class="active">EN</a></div>
+
+<section class="hero">
+  <div class="container">
+    <div class="chips">
+      <span class="chip">Olive Union · Digital Therapeutics (DTx)</span>
+      <span class="chip">2021.09 ~</span>
+      <span class="chip blue">Cognitive-Behavioral · Speech-Sound Discrimination Game</span>
+    </div>
+    <h1>Training Speech-Sound Discrimination<br>Through a Sound-Memory Game</h1>
+    <p class="lead">
+      I planned Bannie's Adventure, a digital therapeutic that trains the cognitive behavior and
+      speech-sound discrimination skills of patients with hearing loss, and led its game and UI design.
+    </p>
+
+    <div class="contrib">
+      <div class="contrib-row">
+        <span class="contrib-label">Planning</span>
+        <div class="contrib-track-wrap">
+          <div class="contrib-track"><div class="contrib-fill" style="width:100%"></div></div>
+          <span class="contrib-value">100%</span>
+        </div>
+      </div>
+      <div class="contrib-row">
+        <span class="contrib-label">Web/App Design</span>
+        <div class="contrib-track-wrap">
+          <div class="contrib-track"><div class="contrib-fill" style="width:70%"></div></div>
+          <span class="contrib-value">70%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Purpose · Hypothesis</span>
+    <h2>A Game Born From the "Speech Banana" Research</h2>
+    <p>
+      Patients with hearing loss need speech-sound discrimination training, but existing training is
+      just repetitive auditory drilling — hard to stick with, and drop-off was common. While researching
+      papers and materials on speech-sound discrimination training, I came across "Speech Banana," a
+      chart that maps words and sounds across frequency bands. I judged that applying this concept to a
+      game could turn the training into something people would actually stay with.
+    </p>
+    <div class="card">
+      <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">If:</p>
+      <h3>we turn the Speech Banana concept — mapping words and sounds to frequency bands — into game rules,</h3>
+      <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">Then:</p>
+      <p style="color:var(--t1); font-weight:600; font-size:14px;">resistance to repetitive training will drop, and speech-sound discrimination will be trained naturally.</p>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h3 style="margin-bottom:6px;">Speech Banana (Phoneme Bank)</h3>
+      <p style="font-size:12.5px; color:var(--t3); margin-bottom:12px;">It refers to the banana-shaped region on an audiogram where the phonemes of everyday speech fall, and it's a reference chart used in audiology and speech rehabilitation to explain which phonemes are audible or inaudible at different degrees of hearing loss. I used this chart as the basis for classifying every word used in the game.</p>
+      <img src="../../assets/images/appendix/bannie/speech-banana-chart.png" alt="Speech Banana audiogram chart" style="width:100%; max-width:640px; border-radius:10px; display:block; margin:0 auto; background:#fff; padding:4px;" loading="lazy" />
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h3 style="margin-bottom:6px;">Word Classification by Speech Banana (Words Table)</h3>
+      <p style="font-size:12.5px; color:var(--t3); margin-bottom:12px;">I classified the actual words used in the game by frequency band (low to high) and decibel range. Low frequencies (250–1000Hz) were split into zones A and B, and high frequencies (1000–8000Hz) into zones C, D, and E, with a matching word set mapped to each zone.</p>
+      <img src="../../assets/images/appendix/bannie/words-table.png" alt="Words Table word classification based on Speech Banana" style="width:100%; border-radius:10px; display:block; background:#fff; padding:4px;" loading="lazy" />
+    </div>
+
+    <div class="card-grid cols-3" style="margin-top:16px;">
+      <div class="card"><h3>Research</h3><p style="font-size:13px;">User research · Creative ideation</p></div>
+      <div class="card"><h3>Design</h3><p style="font-size:13px;">Game strategy · Design strategy · Wireframing · Visual/UI design</p></div>
+      <div class="card"><h3>Build</h3><p style="font-size:13px;">Game Workflow · Prototyping</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Decisions & Trade-offs</span>
+    <h2>Two Mini-Games for Remembering and Finding Sound</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3 style="margin-bottom:8px;">Bannie's Cup</h3>
+        <p style="font-size:13px;">A game where players use their eyes and ears to remember and find the character saying the same word — training that links sound to both visual and auditory memory.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:8px;">Bannie's Room</h3>
+        <p style="font-size:13px;">A game where players listen for a sound hidden somewhere in a room and locate its direction and position — training the ability to pick a target sound out of background noise.</p>
+      </div>
+    </div>
+    <div class="callout light" style="margin-top:14px;">We built a prototype game while checking game composition (scenario, design), difficulty, network communication, and data management.</div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:6px;">Scoring Design by Stage and Question Type</h3>
+      <p style="font-size:12.5px; color:var(--t3); margin-bottom:12px;">Each stage randomly draws single or combined questions from the low- and high-frequency zones (based on the Words Table), and the score accumulates as a multiplier depending on how many answers are correct and whether they form a streak. We also collect game start/end time, correct answers versus attempts, and each player's percentile position within their age group.</p>
+      <img src="../../assets/images/appendix/bannie/scoring-table.png" alt="Design table for Bannie's Cup: question types, scoring criteria, and collected data by stage" style="width:100%; border-radius:10px; display:block; background:#fff; padding:4px;" loading="lazy" />
+    </div>
+
+    <div class="tradeoff-card" style="margin-top:20px;">
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">01</span>Design a game-first UI instead of a training-first one</div>
+        <div class="to-row risk"><span class="to-label">Risk</span><span class="to-text">Prioritizing pure fun risks diluting the actual speech-sound discrimination training effect.</span></div>
+        <div class="to-row response"><span class="to-label">Response</span><span class="to-text">We built the Speech Banana frequency/sound mapping directly into the game rules themselves — finding the character saying the same word, locating the object making a sound — so fun and the training objective were never separated.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">02</span>Support English, Japanese, and Korean simultaneously</div>
+        <div class="to-row risk"><span class="to-label">Risk</span><span class="to-text">Since pronunciation and word sets differ by language, content and validation resources triple.</span></div>
+        <div class="to-row response"><span class="to-label">Response</span><span class="to-text">We designed the game composition (scenario, difficulty) and data management system to be language-independent, so only the word set needed to swap per language.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">03</span>Communicate with the outsourced game studio through hand-drawn references</div>
+        <div class="to-row risk"><span class="to-label">Risk</span><span class="to-text">A text-only spec risks failing to accurately convey the intended sense of space and mood to the studio.</span></div>
+        <div class="to-row response"><span class="to-label">Response</span><span class="to-text">I drew hand sketches in stages — layout, then props/color/mood, then specific objects — to clearly guide the direction of the actual 3D asset production.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Design Process</span>
+    <h2>Guiding the Studio's Direction With Hand-Drawn References</h2>
+    <p>I hand-drew sketches and references myself to communicate the design direction I wanted to the game development studio. (Example: Bannie's Room · Living Room)</p>
+    <img src="../../assets/images/appendix/bannie/room-design.png" alt="Bannie's Room living room design process" style="width:100%; max-width:640px; border-radius:12px; display:block; margin:14px auto 0;" loading="lazy" />
+    <p style="font-size:12px; color:var(--t3); margin-top:10px;">From layout, to overall prop feel/color/mood, to specifying exactly which objects needed to appear — I set the direction with hand sketches first, then guided it through to the actual 3D assets.</p>
+
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:10px;">Storyboard · The Banana in the Cup</h3>
+      <img src="../../assets/images/appendix/bannie/storyboard.png" alt="Bannie's Cup storyboard laying out screen, context, audio, and timing" style="width:100%; max-width:640px; border-radius:10px; display:block; background:#fff; padding:4px; margin:0 auto;" loading="lazy" />
+      <p style="font-size:12px; color:var(--t3); margin-top:10px;">From stage entry to character appearance, question prompts, and correct-answer reactions, I laid out Screen, Context, Audio, and Time cut by cut and handed it to the studio.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Outcomes</span>
+    <h2>Live in Full Service Across English, Japanese, and Korean</h2>
+    <div class="callout">
+      <strong>Status</strong>: Both mini-games, Bannie's Cup and Bannie's Room, have been completed with real 3D assets and are now
+      <span class="hl">live in full service across three languages within Olive Union's DTx offering, alongside other tinnitus and hearing services like Olive Aid</span>.
+      No separate quantitative performance data was compiled, so it isn't reflected on this page.
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:10px;">Title Screens</h3>
+      <img src="../../assets/images/appendix/bannie/title-screens.png" alt="Locked-state title screens for Bannie's Cup and Bannie's Room" style="width:100%; max-width:640px; border-radius:10px; display:block; margin:0 auto;" loading="lazy" />
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3 style="margin-bottom:10px;">Theme Variations · Results/Leaderboard Screens</h3>
+      <img src="../../assets/images/appendix/bannie/result-grid.png" alt="Theme variations of the Bannie's Cup/Room title screens and results/leaderboard screens" style="width:100%; border-radius:10px; display:block;" loading="lazy" />
+      <p style="font-size:12px; color:var(--t3); margin-top:10px;">These are the per-stage theme color variations, plus the ranking and score leaderboard shown after the game ends.</p>
+    </div>
+
+    <div class="card-grid" style="margin-top:14px;">
+      <div class="card">
+        <h3 style="margin-bottom:10px;">Bannie's Cup · Actual Gameplay Footage</h3>
+        <video src="../../assets/videos/bannie/bannies-cup.mp4" poster="../../assets/images/appendix/bannie/cup-poster.jpg" controls playsinline preload="metadata" style="width:100%; max-width:280px; display:block; margin:0 auto; border-radius:10px; background:#000;"></video>
+        <a href="../../assets/videos/bannie/bannies-cup.mp4" target="_blank" rel="noopener" class="proto-link" style="margin-top:12px;">Open video in new tab<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:10px;">Bannie's Room · Actual Gameplay Footage</h3>
+        <video src="../../assets/videos/bannie/bannies-room.mp4" poster="../../assets/images/appendix/bannie/room-poster.jpg" controls playsinline preload="metadata" style="width:100%; max-width:280px; display:block; margin:0 auto; border-radius:10px; background:#000;"></video>
+        <a href="../../assets/videos/bannie/bannies-room.mp4" target="_blank" rel="noopener" class="proto-link" style="margin-top:12px;">Open video in new tab<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">© 2026 Jiwon Choi. Product Designer Portfolio.</footer>
+
+<div class="floating-nav">
+  <a href="../../en.html#projects"><svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Home</a>
+  <a class="next" href="../my-olive/en.html">Next Project<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+</body>
+</html>

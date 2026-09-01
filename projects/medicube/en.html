@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AGE-R Bluetooth Pairing Redesign: Jiwon Choi</title>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="AGE-R Bluetooth Pairing Redesign: Jiwon Choi" />
+<meta property="og:description" content="Turning a confusing connection flow into something instantly understood: Jiwon Choi's product designer portfolio" />
+<meta property="og:image" content="https://jelincc.github.io/Portfolio/assets/img/og-image.jpg" />
+<meta property="og:url" content="https://jelincc.github.io/Portfolio/projects/medicube/en.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AGE-R Bluetooth Pairing Redesign: Jiwon Choi" />
+<meta name="twitter:image" content="https://jelincc.github.io/Portfolio/assets/img/og-image.jpg" />
+<link rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body>
+<div class="ambient"></div>
+
+<div class="lang-toggle"><a href="index.html">KR</a><a href="#" class="active">EN</a></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 01 HERO -->
+<!-- ═══════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="chips">
+      <span class="chip">medicube · AGE-R</span>
+      <span class="chip">Beauty Device · App Pairing</span>
+      <span class="chip blue">Second-Round Improvement After Launch</span>
+    </div>
+    <img src="../../assets/images/logos/medicube.png" alt="medicube" style="height:24px; width:auto; display:block; margin-bottom:16px;" loading="lazy" />
+    <h1>Turning a Confusing Connection<br>Into Something Instantly Understood</h1>
+    <p class="lead">
+      Planned and designed the Bluetooth pairing feature introduced with a new beauty device launch. After launch
+      surfaced misunderstandings and CS issues, I redesigned it around auto-detection and one-step control across two rounds of improvement.
+    </p>
+
+    <div class="contrib">
+      <div class="contrib-row">
+        <span class="contrib-label">Planning</span>
+        <div class="contrib-track-wrap">
+          <div class="contrib-track"><div class="contrib-fill" style="width:100%"></div></div>
+          <span class="contrib-value">100%</span>
+        </div>
+      </div>
+      <div class="contrib-row">
+        <span class="contrib-label">Design</span>
+        <div class="contrib-track-wrap">
+          <div class="contrib-track"><div class="contrib-fill" style="width:100%"></div></div>
+          <span class="contrib-value">100%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num accent">+16%p</div><div class="label">Overall Pairing Rate</div></div>
+      <div class="stat"><div class="num accent">+20%</div><div class="label">Users Pairing 2+ Devices</div></div>
+      <div class="stat"><div class="num accent">-20%</div><div class="label">Pairing-Related CS Tickets</div></div>
+    </div>
+
+    <div class="visual" style="display:flex; gap:16px; justify-content:center; max-width:740px; margin:44px auto 0;">
+      <img src="../../assets/images/medicube/devicelist-framed.png" alt="AGE-R home screen" style="width:32%; display:block;" loading="lazy" />
+      <img src="../../assets/images/medicube/remote-control-framed.png" alt="AGE-R remote control screen" style="width:32%; display:block;" loading="lazy" />
+      <img src="../../assets/images/medicube/report-framed.png" alt="AGE-R report screen" style="width:32%; display:block;" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 02 Problem Definition -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Problem</span>
+    <h2>The UI was teaching users the wrong way to connect</h2>
+    <p>
+      As new devices were added, <strong>supporting multiple devices at once became important</strong>, but the existing UI was built to show only a single connection state at a time.
+      Users had no idea they could register several devices together, so they kept <strong>disconnecting the current one and re-registering a new one instead.</strong>
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="chip blue">Real Usage Data</span>
+        <div style="display:flex; gap:24px; margin-top:28px; flex-wrap:wrap;">
+          <div>
+            <div style="font-size:26px; font-weight:800; color:var(--t1); line-height:1;">45%</div>
+            <p style="font-size:11.5px; color:var(--t3); margin:6px 0 0; line-height:1.5;">Actual pairing usage rate<br>among all registered-device users</p>
+          </div>
+          <div>
+            <div style="font-size:26px; font-weight:800; color:var(--t1); line-height:1;">34%</div>
+            <p style="font-size:11.5px; color:var(--t3); margin:6px 0 0; line-height:1.5;">Share of internal community<br>inquiries about Bluetooth pairing</p>
+          </div>
+          <div>
+            <div style="font-size:26px; font-weight:800; color:var(--t1); line-height:1;">30%</div>
+            <p style="font-size:11.5px; color:var(--t3); margin:6px 0 0; line-height:1.5;">Share of CS inquiries<br>about Bluetooth pairing</p>
+          </div>
+        </div>
+        <hr class="divider" style="margin:24px 0;" />
+        <div class="callout light" style="margin-top:0; margin-bottom:0; padding:12px 14px;">
+          <strong style="color:var(--t1);">VOC Analysis Result</strong><br>A notably large share of users assumed the app connects automatically the moment the device powers on
+        </div>
+        <div class="callout light" style="margin-top:10px; padding:12px 14px;">
+          We confirmed that a fairly large share of users who had registered a Bluetooth device under My Devices <strong style="color:var(--t1);">never actually used the pairing feature</strong>.
+        </div>
+      </div>
+      <div class="card">
+        <span class="chip blue">User Funnel (Based on Device Registration)</span>
+        <p style="font-size:11px; color:var(--t3); margin-top:16px; text-transform:uppercase; letter-spacing:.04em;">Conversion Flow</p>
+        <div class="funnel-row">
+          <div class="funnel-step">Enter Device A<br>banner</div>
+          <svg class="funnel-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="funnel-step">Enter Device A<br>control</div>
+          <svg class="funnel-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="funnel-step">Disconnect<br>Device A</div>
+          <svg class="funnel-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="funnel-step" style="background:rgba(91,147,255,.1); border-color:rgba(91,147,255,.35);">Enter Device B<br>connect banner</div>
+        </div>
+        <p class="funnel-result">About <strong>72%</strong> of users · ~82,000 instances</p>
+
+        <div class="funnel-row" style="margin-top:16px;">
+          <svg class="funnel-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="funnel-step">Disconnect<br>Device B</div>
+          <svg class="funnel-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="funnel-step">Enter Device B<br>control</div>
+          <svg class="funnel-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="funnel-step" style="background:rgba(91,147,255,.1); border-color:rgba(91,147,255,.35);">Enter Device C<br>connect banner</div>
+        </div>
+        <p class="funnel-result">About <strong>66%</strong> of users · ~59,000 instances</p>
+
+        <div class="callout light" style="margin-top:14px; padding:12px 14px;">
+          <strong style="color:var(--t1);">72%</strong> of users disconnected their existing device and reconnected a different one, even though multi-device support already existed.
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px; margin-bottom:0;">
+      <strong>Key Insight</strong>: More than half the problem wasn't <span class="hl">users "not knowing" — it was the app "never asking first."</span>
+      The core direction was flipping a structure where users always had to hunt for how to connect, into one where the app recognizes the device the moment it powers on and proposes the connection itself.
+    </div>
+
+    <div class="callout light" style="margin-top:14px; margin-bottom:0;">
+      <strong>Success Criteria</strong>: A one-handed UI understandable without explanation, a higher pairing usage rate, and fewer CS inquiries
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 03 Hypothesis -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Hypothesis</span>
+    <h2>If the app proposes the connection first, and registered devices can be managed from a single screen, pairing will get easier</h2>
+    <p>Real usage data and VOC analysis showed that users struggled more with starting a connection than with the connection feature itself.
+    We hypothesized that if the app could recognize connectable devices proactively, and let users manage registered devices from one screen, the pairing experience would improve.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+          <span class="chip blue">Hypothesis ①</span>
+          <span style="font-size:13px; color:var(--t2); font-weight:600;">Improving How Connections Start</span>
+        </div>
+        <p style="font-size:14px; color:var(--t1); font-weight:600; margin-top:14px;">If the app detects a powered-on device first and proposes the connection, the actual Bluetooth pairing rate will rise.</p>
+        <div class="callout light" style="margin-top:14px; padding:12px 14px;">
+          <span class="chip" style="font-size:11px;">GA Data</span>
+          <p style="font-size:13px; margin-top:8px;">Actual Bluetooth pairing usage among registered-device users sat at just ~45%.<br>→ Quantitative evidence that many users register a device without ever pairing it</p>
+        </div>
+        <div class="callout light" style="margin-top:10px; padding:12px 14px;">
+          <p style="font-size:13px;">"I thought it connected automatically once I turned it on."<br>→ A misperception about auto-connect</p>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+          <span class="chip blue">Hypothesis ②</span>
+          <span style="font-size:13px; color:var(--t2); font-weight:600;">Multi-Device Management Experience</span>
+        </div>
+        <p style="font-size:14px; color:var(--t1); font-weight:600; margin-top:14px;">If users can see and control every registered device from a single screen, the repeated disconnect-and-re-register behavior will drop.</p>
+        <div class="callout light" style="margin-top:14px; padding:12px 14px;">
+          <span class="chip" style="font-size:11px;">GA Data</span>
+          <p style="font-size:13px; margin-top:8px;">72% of users disconnected an existing device before connecting a different one, every time they switched. (Quantitative evidence of the repeated behavior)</p>
+        </div>
+        <div class="callout light" style="margin-top:10px; padding:12px 14px;">
+          <p style="font-size:13px;">"I didn't know you could register more than one."<br>→ The existing UI failed to communicate that the <strong style="color:var(--t1);">structure supports multiple devices</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 05 Decisions · Final Design -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Decisions · Final Design</span>
+    <h2>Auto-Detection + One-Step Control</h2>
+
+    <div class="card-grid cols-3">
+      <div class="card">
+        <h3>Auto-Detect · Quick Connect</h3>
+        <p style="font-size:13px;">When a powered-on device is nearby, the app detects it automatically and proposes a connection via bottom sheet.</p>
+        <img src="../../assets/images/medicube/quick-connect-framed.png" alt="Quick Connect popup, shown automatically on power-on detection" style="width:112%; margin:14px -6% 0; display:block; max-width:none;" loading="lazy" />
+      </div>
+      <div class="card">
+        <h3>Home Device List</h3>
+        <p style="font-size:13px;">All connectable devices are shown as a full list on the home screen. Registering several devices no longer gets bottlenecked by a single banner.</p>
+        <img src="../../assets/images/medicube/devicelist-framed.png" alt="Home: full list of connectable devices" style="width:112%; margin:14px -6% 0; display:block; max-width:none;" loading="lazy" />
+      </div>
+      <div class="card">
+        <h3>One-Step Control</h3>
+        <p style="font-size:13px;">For any already-connected device, a single tap from the list takes you straight to the control screen.</p>
+        <img src="../../assets/images/medicube/remote-control-2.png" alt="One-step control · LED status indicator" style="width:112%; margin:14px -6% 0; border-radius:10px; display:block; max-width:none;" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3 style="margin-bottom:8px;">Separating UX Copy by Intent</h3>
+      <p style="font-size:13px;">Split copy meant to "confirm" from copy meant to "connect," so the next action is always clear.</p>
+    </div>
+
+    <div class="callout light" style="margin-top:20px;">
+      <strong>Design Principle</strong>: Users in their 30s and 40s are much more likely to drop off the moment a flow goes two steps deep.
+      Rather than add more features, our top priority was <strong>cutting the number of steps needed to reach an already-connected device</strong>.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 07 Outcomes -->
+<!-- ═══════════════════════════════════ -->
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Outcomes</span>
+    <h2>Without adding a single feature — just cutting steps —<br>device pairing got easier</h2>
+    <p>Usability testing and real data confirmed that showing only one device's status was creating the misconception that "only one device can be connected at a time." From there, we narrowed the problem down across two rounds, through auto-detection and one-step control.</p>
+
+    <div class="impact-label">Impact</div>
+    <div class="hero-stat">
+      <div class="num accent">+16%p</div>
+      <div class="label">Overall Pairing Rate<br><span style="font-weight:400;">After Solution 2</span></div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num accent">+20%</div><div class="label">Users Pairing 2+ Devices</div><div class="sub">After Solution 1</div></div>
+      <div class="stat"><div class="num accent">-20%</div><div class="label">Pairing-Related CS Tickets</div><div class="sub">After Solution 2</div></div>
+    </div>
+
+    <div class="card-grid" style="margin-top:14px;">
+      <div class="card">
+        <span class="eyebrow" style="color:#A9C4FF;">What We Learned</span>
+        <p style="font-size:14.5px; color:var(--t1); font-weight:600; margin-top:14px; line-height:1.7;">Users had no idea they could register more than one device.</p>
+        <ul style="font-size:14px; color:var(--t2); line-height:1.75; margin:12px 0 0; padding-left:18px;">
+          <li>The old screen showed only a single device's status, which created the impression that <strong style="color:var(--t1);">only one connection was possible at a time</strong>.</li>
+          <li>Both the real data and our VOC analysis repeatedly showed the same pattern: disconnecting the current device before connecting a new one.</li>
+        </ul>
+      </div>
+      <div class="card" style="background:rgba(91,147,255,.08); border-color:rgba(91,147,255,.25);">
+        <span class="eyebrow" style="color:#A9C4FF;">Key Insight</span>
+        <p style="font-size:14px; line-height:1.75; margin-top:14px;">The problem was never the pairing feature itself — it was that the UI failed to communicate the structure that supported registering multiple devices.</p>
+        <p style="font-size:14px; line-height:1.75; margin-top:8px; color:var(--t1);">→ Instead of adding features, we redesigned the UI so that "you can manage multiple devices" would be obvious at a glance, which carried through to improvements in the related metrics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ -->
+<!-- 08 Retrospective -->
+<!-- ═══════════════════════════════════ -->
+<section class="block">
+  <div class="container">
+    <span class="chip blue">Wrapping Up the Project</span>
+    <p style="font-size:15px; line-height:1.85; color:var(--t2); margin-top:16px;">
+      Staying focused on the task at hand matters when introducing a new feature, but I came away with a clearer sense that I also need to design
+      UX/UI with an eye on <strong style="color:var(--t1);">where the service is headed</strong> and <strong style="color:var(--t1);">the company's core business direction</strong>.
+    </p>
+    <div class="callout" style="margin-top:20px;">
+      → I already knew our company was focused on a device-centric business, but I hadn't given enough thought to what happens when users connect multiple devices — and that gap in consideration is exactly what created this pain point.
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">© 2026 Jiwon Choi. Product Designer Portfolio.</footer>
+
+<div class="floating-nav">
+  <a href="../../en.html"><svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Home</a>
+  <a class="next" href="../age-r-friends/en.html">Next Project<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+</body>
+</html>

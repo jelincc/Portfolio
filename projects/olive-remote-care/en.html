@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Olive Remote Care: Jiwon Choi</title>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Olive Remote Care: Jiwon Choi" />
+<meta property="og:description" content="A B2B/B2C remote device control web service: Jiwon Choi's product designer portfolio" />
+<meta property="og:image" content="https://jelincc.github.io/Portfolio/assets/img/og-image.jpg" />
+<meta property="og:url" content="https://jelincc.github.io/Portfolio/projects/olive-remote-care/en.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Olive Remote Care: Jiwon Choi" />
+<meta name="twitter:image" content="https://jelincc.github.io/Portfolio/assets/img/og-image.jpg" />
+<link rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body>
+<div class="ambient"></div>
+
+<div class="lang-toggle"><a href="index.html">KR</a><a href="#" class="active">EN</a></div>
+
+<section class="hero">
+  <div class="container">
+    <div class="chips">
+      <span class="chip">Olive Union · Healthcare</span>
+      <span class="chip">Aug 2021 – Aug 2022</span>
+      <span class="chip blue">Remote Device Control Web Service</span>
+    </div>
+    <h1>A screen where experts<br>remotely adjust hearing aids</h1>
+    <p class="lead">
+      I planned and designed Olive Remote Care, an integrated B2B/B2C web service that lets audiologists remotely
+      adjust a patient's hearing aid settings in real time during a video consultation.
+    </p>
+
+    <div class="contrib">
+      <div class="contrib-row">
+        <span class="contrib-label">Planning</span>
+        <div class="contrib-track-wrap">
+          <div class="contrib-track"><div class="contrib-fill" style="width:100%"></div></div>
+          <span class="contrib-value">100%</span>
+        </div>
+      </div>
+      <div class="contrib-row">
+        <span class="contrib-label">UI/UX Design</span>
+        <div class="contrib-track-wrap">
+          <div class="contrib-track"><div class="contrib-fill" style="width:80%"></div></div>
+          <span class="contrib-value">80%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Objective · Hypothesis</span>
+    <h2>Taking hearing aid adjustments remote, so patients don't have to visit an expert every time</h2>
+    <p>
+      Adjusting a hearing aid's settings meant patients had to visit an expert in person, every single time. For
+      patients living far away or with limited mobility, that visit alone was a major barrier — and for experts,
+      in-person-only consultations capped how many patients they could see in a day. I gathered material on remote
+      device control services, sought advice from experts, mapped out the flow task by task, and built the wireframes.
+    </p>
+    <img src="../../assets/images/appendix/olive-remote-care/hero-main.png" alt="Olive Remote Care in actual use, handling video consultation and real-time hearing aid adjustment in a single screen" style="width:100%; border-radius:14px; display:block; margin:20px 0;" loading="lazy" />
+    <div class="card">
+      <p style="margin-bottom:4px; font-size:12px; color:var(--t3);">If:</p>
+      <h3>Video consultation and real-time hearing aid adjustment could happen in a single screen,</h3>
+      <p style="margin:10px 0 4px; font-size:12px; color:var(--t3);">Then:</p>
+      <p style="color:var(--t1); font-weight:600; font-size:14px;">Patients could get the same level of adjustment service as an in-person visit — without ever visiting</p>
+    </div>
+    <div class="card-grid cols-3" style="margin-top:16px;">
+      <div class="card"><h3>Research</h3><p style="font-size:13px;">User research · Task flows</p></div>
+      <div class="card"><h3>Design</h3><p style="font-size:13px;">Wireframing · Visual/UI design · Prototyping</p></div>
+      <div class="card"><h3>Validation</h3><p style="font-size:13px;">Usability testing · Data visualization · Illustration/Iconography</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Research · Interviews</span>
+    <h2>Learning what a real fitting session looks like from a 6-year audiologist</h2>
+    <p style="font-size:13px; color:var(--t3);">We interviewed an audiologist with 6 years of experience about their real fitting-session experience and what remote adjustment would need to support.</p>
+
+    <div class="quote">"I explain to patients that hearing aids aren't smart enough to isolate just speech and play back only that."</div>
+    <div class="quote">"We don't adjust by dB — we split sound into loud, medium, and soft, and dial in each one point by point."</div>
+    <div class="quote">"A fitting session usually takes about 10 to 15 minutes, even counting the time to check the history."</div>
+
+    <div class="insight-list" style="margin-top:20px;">
+      <div class="insight-item"><span class="n">1</span><p>Audiologists reached for the Hz graph more than the dB graph, and often adjusted in loud/medium/soft groups rather than point by point</p></div>
+      <div class="insight-item"><span class="n">2</span><p>The history panel (past adjustment records) got used far more often than we expected</p></div>
+      <div class="insight-item"><span class="n">3</span><p>Most refittings were repeat visits from the same patient, spaced anywhere from a month to a year apart</p></div>
+    </div>
+
+    <div class="callout light" style="margin-top:20px;">
+      <strong>What we built into the plan and design</strong> · We restructured the dB adjustment UI into loud/medium/soft group controls, and split the history panel into its own window so it could be checked mid-consultation. We also added a new note area where audiologists could jot things down during a session.
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Prototyping</span>
+    <h2>A prototype that validated the real operating flow</h2>
+    <p style="font-size:13px; color:var(--t3);">We designed a first pass around just the core features, then worked with developers to build the prototype.</p>
+    <img src="../../assets/images/appendix/olive-remote-care/prototyping.png" alt="Prototype flow from session start through the video call connecting to graph adjustment" style="width:100%; border-radius:12px; display:block; margin-top:16px;" loading="lazy" />
+  </div>
+</section>
+
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Decisions &amp; Trade-offs</span>
+    <h2>Hearing graph, real-time adjustment, and video consultation in one screen</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3 style="margin-bottom:8px;">Hearing Graph · Fitting</h3>
+        <p style="font-size:13px;">We display left/right ear hearing-test data as a graph, designed so that any value an expert adjusts is reflected instantly.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:8px;">Video Consultation Integration</h3>
+        <p style="font-size:13px;">We placed the graph/adjustment screen and the video call screen in a single layout, so consultation and adjustment never break stride.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3 style="margin-bottom:10px;">Remote fitting over video call</h3>
+      <img src="../../assets/images/appendix/olive-remote-care/fitting-session.png" alt="Screen for remotely fitting a device with an audiologist over video call" style="width:100%; border-radius:10px; display:block;" loading="lazy" />
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3 style="margin-bottom:8px;">Shared Design System</h3>
+      <p style="font-size:13px;">We organized recurring components — Graph, Preset, Status, and more — by state (active/disabled), turning them into a system that could be reused consistently across screens.</p>
+    </div>
+
+    <div class="tradeoff-card" style="margin-top:20px;">
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">01</span>Placed the graph, adjustment controls, and video call in one layout</div>
+        <div class="to-row risk"><span class="to-label">Risk</span><span class="to-text">Cramming all three into one screen raises information density and could make it harder for experts to focus while adjusting.</span></div>
+        <div class="to-row response"><span class="to-label">Response</span><span class="to-text">We kept the video call small and made the graph/adjustment UI the main area, so consultation kept flowing while adjustment stayed the focus of the screen.</span></div>
+      </div>
+      <div class="tradeoff-item">
+        <div class="to-decision"><span class="to-num">02</span>Built components as a shared design system from day one</div>
+        <div class="to-row risk"><span class="to-label">Risk</span><span class="to-text">Designing B2B and B2C screens separately moves faster early on, but consistency tends to fall apart as more screens get added.</span></div>
+        <div class="to-row response"><span class="to-label">Response</span><span class="to-text">We organized the Graph, Preset, and Status components by state early, so new screens could scale under the same rules as the product grew.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tint">
+  <div class="container">
+    <span class="eyebrow">Round 2 Improvements</span>
+    <h2>Feeding real remote-fitting feedback into a second design pass</h2>
+    <p>After running the service in real remote fittings, we made a second round of UI improvements based on field feedback from audiologists.</p>
+    <div class="insight-list" style="margin-top:20px;">
+      <div class="insight-item"><span class="n">1</span><p>There was a real risk of misapplying an adjustment by mistake mid-consultation, so we added a flow that clearly shows each step's status: <strong style="color:var(--t1);">confirm → applying → done</strong>.</p></div>
+      <div class="insight-item"><span class="n">2</span><p>Audiologists frequently referenced a patient's past adjustments during refittings, so we <strong style="color:var(--t1);">split each patient's fitting history into its own detail panel</strong> they could check mid-session.</p></div>
+      <div class="insight-item"><span class="n">3</span><p>We added a <strong style="color:var(--t1);">register/edit modal to the customer list</strong> so new patients could be registered and existing ones edited without ever leaving the consultation screen.</p></div>
+    </div>
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-bottom:10px;">Round 2 improvement screens (Figma working file)</h3>
+      <img src="../../assets/images/appendix/olive-remote-care/round2-feedback-grid.png" alt="Round 2 screens: register/edit in the customer list, the confirm-applying-done fitting adjustment flow, and a per-patient history panel" style="width:100%; border-radius:10px; display:block; background:#fff; padding:6px;" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Outcomes</span>
+    <h2>Now running as a full B2B/B2C web service</h2>
+    <div class="callout">
+      <strong>Status</strong>: We finished designing and building a structure that handles video consultation and real-time remote adjustment in a single screen, and it's now <span class="hl">running as an actual remote fitting service</span>.
+      No quantitative performance metrics were tracked separately, so none are shown on this page.
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">© 2026 Jiwon Choi. Product Designer Portfolio.</footer>
+
+<div class="floating-nav">
+  <a href="../../en.html#projects"><svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Home</a>
+  <a class="next" href="../vplate/en.html">Next Project<svg class="arrow-ico" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+</body>
+</html>

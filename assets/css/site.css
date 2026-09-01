@@ -103,6 +103,29 @@ strong { color: var(--t1); font-weight: 700; }
 .contrib-value { font-size: 13px; font-weight: 800; color: var(--t1); font-variant-numeric: tabular-nums; flex-shrink: 0; }
 .contrib-row .contrib-track-wrap { display: flex; align-items: center; gap: 10px; width: 100%; }
 
+/* ── 언어 토글 (KR/EN) ── */
+.lang-toggle {
+  position: fixed; top: 20px; right: 24px; z-index: 40;
+  display: inline-flex; align-items: center;
+  background: var(--surface-2); border: 1px solid var(--border-strong);
+  border-radius: 100px; padding: 3px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
+}
+.lang-toggle a {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 32px; padding: 6px 12px; border-radius: 100px;
+  font-size: 12px; font-weight: 700; letter-spacing: .02em;
+  text-decoration: none; color: var(--t3);
+  transition: background .15s ease, color .15s ease;
+}
+.lang-toggle a.active { background: var(--t1); color: var(--bg); }
+.lang-toggle a:not(.active):hover { color: var(--t1); }
+@media (max-width: 720px) {
+  .lang-toggle { top: 14px; right: 14px; }
+  .lang-toggle a { padding: 5px 10px; font-size: 11px; min-width: 28px; }
+}
+
 /* ── 플로팅 Contact 버튼 ── */
 .floating-contact {
   position: fixed; right: 24px; bottom: 24px; z-index: 30;
