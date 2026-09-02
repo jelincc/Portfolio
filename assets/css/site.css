@@ -220,7 +220,7 @@ section.block.tight { padding: 44px 0; }
 .hero .visual { margin-top: 44px; }
 
 /* ── About: 이력 요약 타임라인 ── */
-.resume-summary { margin-top: 36px; max-width: 760px; }
+.resume-summary { margin-top: 36px; }
 .resume-summary-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
 .resume-summary-head .label { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--t3); }
 .resume-summary-head .meta { font-size: 14px; color: var(--t1); font-weight: 700; }
@@ -256,6 +256,8 @@ section.block.tight { padding: 44px 0; }
   color: #EAF0FF;
   border-color: rgba(91,147,255,.65);
   font-weight: 800;
+  font-size: 14px;
+  padding: 7px 15px;
 }
 
 /* ── 히어로 대표 화면(PC + 모바일 페어) ── */
