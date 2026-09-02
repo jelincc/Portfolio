@@ -236,23 +236,26 @@ section.block.tight { padding: 44px 0; }
 /* ── About: 추천 인용 ── */
 .about-quote {
   position: relative; margin-top: 32px;
-  padding: 34px 40px 30px 44px;
+  padding: 34px 40px 30px;
   background: linear-gradient(155deg, rgba(91,147,255,.1), rgba(156,140,255,.05)), var(--surface);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
 }
-.about-quote::before {
-  content: ''; position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px;
-  border-radius: 3px;
-  background: linear-gradient(180deg, var(--blue), var(--violet));
-}
-.about-quote .mark { width: 42px; height: 30px; color: var(--blue); margin-bottom: 12px; display: block; }
-.about-quote p { font-size: 16.5px; color: var(--t1); line-height: 1.75; margin: 0 0 16px; max-width: 760px; }
+.about-quote .mark { width: 32px; height: 24px; color: var(--blue); margin-bottom: 12px; display: block; }
+.about-quote p { font-size: 16.5px; color: var(--t1); line-height: 1.75; margin: 0 0 16px; max-width: none; }
 .about-quote cite { font-size: 13px; color: var(--t3); font-style: normal; }
 .about-quote cite strong { color: #A9C4FF; font-weight: 700; }
 .about-quote .proto-link { margin-top: 20px; }
 @media (max-width: 720px) {
-  .about-quote { padding: 26px 24px 24px 30px; }
+  .about-quote { padding: 26px 24px 24px; }
+}
+
+/* ── About: 키워드 칩(강조) ── */
+.chip.keyword {
+  background: linear-gradient(135deg, rgba(91,147,255,.34), rgba(156,140,255,.24));
+  color: #EAF0FF;
+  border-color: rgba(91,147,255,.65);
+  font-weight: 800;
 }
 
 /* ── 히어로 대표 화면(PC + 모바일 페어) ── */
