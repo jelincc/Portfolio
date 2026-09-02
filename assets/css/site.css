@@ -223,21 +223,35 @@ section.block.tight { padding: 44px 0; }
 .resume-summary { margin-top: 36px; max-width: 760px; }
 .resume-summary-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
 .resume-summary-head .label { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--t3); }
-.resume-summary-head .meta { font-size: 13px; color: var(--t2); font-weight: 600; }
-.resume-track { display: flex; width: 100%; height: 8px; border-radius: 100px; overflow: hidden; background: var(--surface-2); border: 1px solid var(--border-strong); }
+.resume-summary-head .meta { font-size: 14px; color: var(--t1); font-weight: 700; }
+.resume-track { display: flex; width: 100%; height: 12px; border-radius: 100px; overflow: hidden; background: var(--surface-2); border: 1px solid var(--border-strong); }
 .resume-track span { display: block; height: 100%; }
+.resume-track span:not(:last-child) { border-right: 2px solid var(--bg); }
 .resume-legend { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 14px; }
 .resume-legend-item { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--t3); }
-.resume-legend-item .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.resume-legend-item .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.resume-legend-item.current .dot { box-shadow: 0 0 0 4px rgba(91,147,255,.22); }
 .resume-legend-item strong { color: var(--t1); font-weight: 700; margin-right: 2px; }
 
 /* ── About: 추천 인용 ── */
-.about-quote { position: relative; margin-top: 32px; max-width: 720px; padding: 30px 34px 26px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
-.about-quote .mark { font-size: 36px; font-weight: 800; color: var(--blue); line-height: 1; font-family: Georgia, serif; margin-bottom: 6px; display: block; }
-.about-quote p { font-size: 15.5px; color: var(--t1); line-height: 1.75; margin: 0 0 14px; max-width: none; }
+.about-quote {
+  position: relative; margin-top: 32px; max-width: 720px;
+  padding: 30px 36px 26px 40px;
+  background: linear-gradient(155deg, rgba(91,147,255,.1), rgba(156,140,255,.05)), var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+}
+.about-quote::before {
+  content: ''; position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, var(--blue), var(--violet));
+}
+.about-quote .mark { width: 30px; height: 22px; color: var(--blue); margin-bottom: 10px; display: block; }
+.about-quote p { font-size: 16px; color: var(--t1); line-height: 1.75; margin: 0 0 16px; max-width: none; }
 .about-quote cite { font-size: 13px; color: var(--t3); font-style: normal; }
+.about-quote cite strong { color: #A9C4FF; font-weight: 700; }
 @media (max-width: 720px) {
-  .about-quote { padding: 24px 22px 22px; }
+  .about-quote { padding: 24px 22px 22px 28px; }
 }
 
 /* ── 히어로 대표 화면(PC + 모바일 페어) ── */
