@@ -748,6 +748,27 @@ tr th:first-child, tr td:first-child { padding-left: 0; }
 .pc-stats { display: flex; gap: 0; border-top: 1px solid var(--border); margin-top: 4px; }
 .pc-stat { flex: 1; padding: 14px 16px 0 0; }
 .pc-stat + .pc-stat { border-left: 1px solid var(--border); padding-left: 16px; }
+
+/* ── 프로젝트 카드에 붙는 UT 미니세션(세트로 묶어 보이기) ── */
+.pc-with-mini .project-card { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.ut-mini-attach {
+  margin-top: -1px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-top: 1px dashed var(--border-strong);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  padding: 22px clamp(28px, 4vw, 44px) 28px;
+}
+.ut-mini-tag {
+  display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--t3); margin-bottom: 10px;
+}
+.ut-mini-intro { font-size: 13px; color: var(--t3); line-height: 1.6; margin: 0 0 16px; max-width: none; }
+.ut-mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.ut-mini-grid .mini-card { background: var(--surface); }
+.ut-mini-grid .mini-card-thumb { height: 120px; }
+.ut-mini-grid .mini-card-body { padding: 14px 16px 16px; }
+.ut-mini-grid .mini-card-body h3 { font-size: 14px; }
 .pc-stat .num { font-size: 19px; font-weight: 800; color: var(--blue); }
 .pc-stat .lbl { font-size: 11px; color: var(--t3); margin-top: 3px; }
 
@@ -771,6 +792,8 @@ footer.site-footer {
   .hero { padding: 48px 0 36px; }
   #arf-hero-visual { max-width: 320px !important; }
   .card-grid, .card-grid.cols-3, .card-grid.cols-4 { grid-template-columns: 1fr; }
+  .ut-mini-grid { grid-template-columns: 1fr; }
+  .ut-mini-attach { padding-left: 20px; padding-right: 20px; }
   .stat-row { flex-direction: column; }
   .stat + .stat { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 16px; }
   .callout { padding: 22px 20px; }
